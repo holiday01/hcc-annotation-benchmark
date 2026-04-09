@@ -34,9 +34,6 @@ hcc-annotation-benchmark/
 ├── results/                          # Evaluation output
 │   ├── benchmark_summary.csv                 # All metrics, all tools, all datasets
 │   └── TableS1_perclass_metrics.csv          # Per-class F1/precision/recall
-└── manuscript/                       # Manuscript PDFs
-    ├── manuscript.pdf
-    └── supplementary.pdf
 ```
 
 ---
