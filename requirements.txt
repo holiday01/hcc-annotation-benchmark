@@ -1,0 +1,15 @@
+scanpy==1.10.*
+anndata>=0.10
+celltypist==1.6.*
+scvi-tools==0.20.*
+gseapy==1.1.12
+scgpt==0.2.4
+infercnvpy==0.6.1
+huggingface_hub
+pandas
+numpy
+matplotlib
+seaborn
+scipy
+scikit-learn
+openpyxl

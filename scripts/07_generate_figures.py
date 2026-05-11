@@ -1,12 +1,12 @@
 """
 Generate publication-quality figures for HCC scRNA-seq annotation benchmark paper.
 
-Primary GT: enrichR-based (all 5 datasets)
+Primary GT: enrichR-based (up to 6 datasets)
 Secondary GT: published author annotations (GSE125449, GSE149614 only)
 
 Figures:
-  Fig 1: Heatmap of key metrics (enrichR GT, all 5 datasets)
-  Fig 2: Bar plot Accuracy + Macro-F1 (enrichR GT, all 5 datasets)
+  Fig 1: Heatmap of key metrics (enrichR GT, all datasets)
+  Fig 2: Bar plot Accuracy + Macro-F1 (enrichR GT, all datasets)
   Fig 3: Unknown / abstention rate comparison
   Fig 4: Confusion matrices for top tools (published GT, GSE125449 + GSE149614)
   Fig 5: Radar chart — average performance on benchmark datasets (enrichR GT)
@@ -44,15 +44,19 @@ TOOL_COLORS = {
     "signacX":    "#E64B35",   # red
     "CellAssign": "#00A087",   # teal
     "scGPT":      "#8B6FAE",   # purple
+    "SingleR":    "#3C5488",   # blue
+    "ScType":     "#7E6148",   # brown
 }
-TOOL_ORDER = ["CellTypist", "CyteType", "signacX", "CellAssign", "scGPT"]
+TOOL_ORDER = ["CellTypist", "ScType", "CyteType", "scGPT", "SingleR", "signacX", "CellAssign"]
 
-DS_ORDER_ALL   = ["GSE125449", "GSE149614", "GSE162616", "GSE202642", "GSE223204"]
+DS_ORDER_ALL   = ["GSE125449", "GSE149614", "GSE156625",
+                  "GSE162616", "GSE202642", "GSE223204"]
 DS_ORDER_BENCH = ["GSE125449", "GSE149614"]
 
 DS_LABELS = {
     "GSE125449": "GSE125449\n(9.8K cells)",
     "GSE149614": "GSE149614\n(71.9K cells)",
+    "GSE156625": "GSE156625\n(73.6K cells)",
     "GSE162616": "GSE162616\n(57.3K cells)",
     "GSE202642": "GSE202642\n(122K cells)",
     "GSE223204": "GSE223204\n(23.2K cells)",
@@ -71,7 +75,7 @@ def build_matrix(df, metric, tools, datasets):
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-# Fig 1: Heatmap — enrichR GT, all 5 datasets
+# Fig 1: Heatmap — enrichR GT, all datasets
 # ─────────────────────────────────────────────────────────────────────────────
 def plot_heatmap(df, gt_label, suffix=""):
     tools = [t for t in TOOL_ORDER if t in df["Tool"].values]
@@ -103,7 +107,7 @@ def plot_heatmap(df, gt_label, suffix=""):
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-# Fig 2: Grouped bar chart — enrichR GT, all 5 datasets
+# Fig 2: Grouped bar chart — enrichR GT, all datasets
 # ─────────────────────────────────────────────────────────────────────────────
 def plot_bar_all(df, gt_label, suffix=""):
     datasets = [d for d in DS_ORDER_ALL if d in df["Dataset"].values]
@@ -319,7 +323,7 @@ if __name__ == "__main__":
     def remap_pred(pred_series, remap):
         return pred_series.map(lambda x: remap.get(x, x))
 
-    for tool in ["CellTypist", "CyteType", "signacX", "CellAssign", "scGPT"]:
+    for tool in TOOL_ORDER:
         fname_map = {
             "signacX":    lambda ds: f"{ds}_signacX_pred.csv",
             "CyteType":   lambda ds: f"{ds}_CyteType_pred.csv",
@@ -332,10 +336,12 @@ if __name__ == "__main__":
                 continue
             # For GSE125449 (broad7 GT), remap preds that are in broad6 format
             pred_df_raw = pd.read_csv(path, index_col=0)
-            if ds == "GSE125449" and tool in ("scGPT",):
-                # scGPT outputs broad6 → map to broad7 for published GT comparison
+            if ds == "GSE125449" and tool in ("scGPT", "SingleR"):
+                # scGPT/SingleR output broad6 → map to broad7 for published GT comparison
                 pred_df_raw["pred_celltype"] = remap_pred(
                     pred_df_raw["pred_celltype"], BROAD6_TO_BROAD7)
+            elif ds == "GSE125449" and tool == "ScType" and "pred_celltype_broad7" in pred_df_raw.columns:
+                pred_df_raw["pred_celltype"] = pred_df_raw["pred_celltype_broad7"]
             elif ds == "GSE149614" and tool in ("CellTypist", "CellAssign"):
                 # CellTypist/CellAssign on GSE149614 output broad6 directly — OK
                 pass

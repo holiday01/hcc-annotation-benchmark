@@ -38,6 +38,7 @@ DISCO_H5AD = Path(
 DATASETS = {
     "GSE125449": BENCHMARK / "GSE125449_benchmark.h5ad",
     "GSE149614": BENCHMARK / "GSE149614_benchmark.h5ad",
+    "GSE156625": BENCHMARK / "GSE156625_benchmark.h5ad",
     "GSE162616": BASE / "open_source_model/cytetype/adata_CyteType_GSE162616.h5ad",
     "GSE202642": BASE / "open_source_model/cytetype/adata_CyteType_GSE202642.h5ad",
     "GSE223204": BASE / "open_source_model/cytetype/adata_CyteType_GSE223204.h5ad",

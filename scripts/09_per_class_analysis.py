@@ -15,6 +15,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.metrics import f1_score, precision_score, recall_score, classification_report
 import os
+import runpy
 
 ANNOT_DIR = "/mnt/10t/assi_result/HCC/benchmark_datasets/annotation_results"
 FIG_DIR   = "/mnt/10t/assi_result/HCC/benchmark_datasets/evaluation/figures"
@@ -25,13 +26,63 @@ BROAD_LABELS    = ["T/NK", "Myeloid", "Hepatocyte", "B", "Endothelial", "Fibrobl
 LABELS_125449   = ["T cell", "CAF", "Malignant cell", "TAM", "B cell", "TEC", "HPC-like"]
 
 TOOL_COLORS = {
-    "CellAssign": "#00A087",
     "CellTypist":  "#F39B7F",
+    "ScType":      "#7E6148",
+    "CyteType":    "#4DBBD5",
+    "scGPT":       "#8B6FAE",
+    "SingleR":     "#3C5488",
+    "signacX":     "#E64B35",
+    "CellAssign":  "#00A087",
 }
+TOOL_ORDER = ["CellTypist", "ScType", "CyteType", "scGPT", "SingleR", "signacX", "CellAssign"]
+
+GT_DIR = "/mnt/10t/assi_result/HCC/benchmark_datasets/ground_truth"
+EVAL_MOD = runpy.run_path("/mnt/10t/holiday/hcc-annotation-benchmark/scripts/02_benchmark_evaluation.py")
+BROAD6_TO_BROAD7 = EVAL_MOD["BROAD6_TO_BROAD7"]
+SIGNACX_TO_BROAD6 = EVAL_MOD["SIGNACX_TO_BROAD6"]
+SIGNACX_TO_BROAD7 = EVAL_MOD["SIGNACX_TO_BROAD7"]
+apply_cytetype_fuzzy = EVAL_MOD["apply_cytetype_fuzzy"]
+apply_cytetype_fuzzy7 = EVAL_MOD["apply_cytetype_fuzzy7"]
+harmonise = EVAL_MOD["harmonise"]
 
 
-def per_class_metrics(pred_path, tool_name, dataset_name, labels):
-    df = pd.read_csv(pred_path, index_col=0).dropna(subset=["pred_celltype", "ground_truth"])
+def load_published_gt(dataset_name):
+    gt = pd.read_csv(f"{GT_DIR}/{dataset_name}_ground_truth.tsv", sep="\t", index_col=0)
+    gt = gt["celltype"].astype(str)
+    return gt[gt != "unclassified"]
+
+
+def load_prediction(tool_name, dataset_name):
+    fname = {
+        "signacX": f"{dataset_name}_signacX_pred.csv",
+        "CyteType": f"{dataset_name}_CyteType_pred.csv",
+        "ScType": f"{dataset_name}_ScType_pred.csv",
+    }.get(tool_name, f"{dataset_name}_{tool_name}_pred.csv")
+    path = f"{ANNOT_DIR}/{fname}"
+    if not os.path.exists(path):
+        return None
+
+    df = pd.read_csv(path, index_col=0)
+    if tool_name == "signacX":
+        col = "pred_broad" if "pred_broad" in df.columns else "pred_celltype"
+        mapping = SIGNACX_TO_BROAD7 if dataset_name == "GSE125449" else SIGNACX_TO_BROAD6
+        return harmonise(df[col].fillna("Unknown").astype(str), mapping)
+    if tool_name == "CyteType":
+        raw = df["pred_celltype"].fillna("Unknown").astype(str)
+        return apply_cytetype_fuzzy7(raw) if dataset_name == "GSE125449" else apply_cytetype_fuzzy(raw)
+    if tool_name == "ScType":
+        col = "pred_celltype_broad7" if dataset_name == "GSE125449" else "pred_celltype"
+        return df[col].fillna("Unknown").astype(str)
+
+    pred = df["pred_celltype"].fillna("Unknown").astype(str)
+    if dataset_name == "GSE125449" and tool_name in {"scGPT", "SingleR"}:
+        return harmonise(pred, BROAD6_TO_BROAD7)
+    return pred
+
+
+def per_class_metrics(pred, gt, tool_name, dataset_name, labels):
+    df = gt.to_frame("ground_truth").join(pred.rename("pred_celltype"), how="inner")
+    df = df.dropna(subset=["pred_celltype", "ground_truth"])
     y_true = df["ground_truth"].values
     y_pred = df["pred_celltype"].values
 
@@ -99,7 +150,7 @@ def plot_perclass_bars(dfs, dataset_name, labels, out_prefix):
     """Bar chart for F1 per class per tool."""
     combined = pd.concat(dfs, ignore_index=True)
 
-    tools = combined["Tool"].unique()
+    tools = [t for t in TOOL_ORDER if t in set(combined["Tool"])]
     x = np.arange(len(labels))
     width = 0.8 / len(tools)
 
@@ -140,14 +191,12 @@ if __name__ == "__main__":
     all_perclass = []
 
     # ─── GSE149614 ───────────────────────────────────────────────────────────
+    gt149 = load_published_gt("GSE149614")
     dfs_149614 = []
-    for tool, fname in [
-        ("CellTypist", "GSE149614_CellTypist_pred.csv"),
-        ("CellAssign", "GSE149614_CellAssign_pred.csv"),
-    ]:
-        path = f"{ANNOT_DIR}/{fname}"
-        if os.path.exists(path):
-            df_pc = per_class_metrics(path, tool, "GSE149614", BROAD_LABELS)
+    for tool in TOOL_ORDER:
+        pred = load_prediction(tool, "GSE149614")
+        if pred is not None:
+            df_pc = per_class_metrics(pred, gt149, tool, "GSE149614", BROAD_LABELS)
             dfs_149614.append(df_pc)
             all_perclass.append(df_pc)
             print(f"\n{tool} on GSE149614:")
@@ -158,14 +207,12 @@ if __name__ == "__main__":
         plot_perclass_bars(dfs_149614, "GSE149614", BROAD_LABELS, "FigS1_perclass_GSE149614")
 
     # ─── GSE125449 ───────────────────────────────────────────────────────────
+    gt125 = load_published_gt("GSE125449")
     dfs_125449 = []
-    for tool, fname in [
-        ("CellTypist", "GSE125449_CellTypist_pred.csv"),
-        ("CellAssign", "GSE125449_CellAssign_pred.csv"),
-    ]:
-        path = f"{ANNOT_DIR}/{fname}"
-        if os.path.exists(path):
-            df_pc = per_class_metrics(path, tool, "GSE125449", LABELS_125449)
+    for tool in TOOL_ORDER:
+        pred = load_prediction(tool, "GSE125449")
+        if pred is not None:
+            df_pc = per_class_metrics(pred, gt125, tool, "GSE125449", LABELS_125449)
             dfs_125449.append(df_pc)
             all_perclass.append(df_pc)
             print(f"\n{tool} on GSE125449:")

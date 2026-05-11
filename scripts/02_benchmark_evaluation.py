@@ -4,9 +4,9 @@ Benchmark Evaluation Framework for HCC scRNA-seq Cell Type Annotation Tools.
 Usage:
     python 02_benchmark_evaluation.py
 
-Evaluates: CellTypist, CellAssign, signacX, CyteType, scGPT
+Evaluates: CellTypist, CellAssign, signacX, CyteType, scGPT, SingleR, ScType
 Datasets:  GSE125449, GSE149614 (enrichR GT + published GT for comparison)
-           GSE162616, GSE202642, GSE223204 (enrichR GT)
+           GSE156625, GSE162616, GSE202642, GSE223204 (enrichR GT)
 
 Ground truth strategy:
   - Primary GT: enrichR-based (cluster marker → CellMarker_2024/PanglaoDB enrichment)
@@ -21,6 +21,8 @@ Prediction column notes:
   - CyteType new: pred_celltype has LLM fine labels → fuzzy keyword map
   - CyteType ori3: Pred cell type col + CYTETYPE_TO_BROAD map
   - scGPT:       pred_celltype already in broad6; for broad7 GT → BROAD6_TO_BROAD7
+  - SingleR:     pred_celltype already in broad6; for broad7 GT → BROAD6_TO_BROAD7
+  - ScType:      pred_celltype broad6 + pred_celltype_broad7 in file
 
 Metrics: Accuracy, Macro F1, Cohen's Kappa, Unknown rate, Per-class F1
 """
@@ -361,6 +363,28 @@ def load_scgpt(ds, broad7=False):
     return pred
 
 
+def load_singler(ds, broad7=False):
+    """SingleR HPCA baseline: pred_celltype is broad6. broad7=True → BROAD6_TO_BROAD7."""
+    path = f"{ANNOT_DIR}/{ds}_SingleR_pred.csv"
+    if not os.path.exists(path): return None
+    df = pd.read_csv(path, index_col=0)
+    pred = df["pred_celltype"].fillna("Unknown").astype(str)
+    if broad7:
+        return harmonise(pred, BROAD6_TO_BROAD7)
+    return pred
+
+
+def load_sctype(ds, broad7=False):
+    """ScType marker-scoring baseline: broad6 and broad7 predictions are saved."""
+    path = f"{ANNOT_DIR}/{ds}_ScType_pred.csv"
+    if not os.path.exists(path): return None
+    df = pd.read_csv(path, index_col=0)
+    col = "pred_celltype_broad7" if broad7 else "pred_celltype"
+    if col not in df.columns:
+        return None
+    return df[col].fillna("Unknown").astype(str)
+
+
 # ─────────────────────────────────────────────────────────────────────────────
 # Evaluation functions
 # ─────────────────────────────────────────────────────────────────────────────
@@ -394,6 +418,8 @@ def evaluate_published_gt():
         "signacX":     load_signacx_new("GSE149614"),
         "CyteType":    load_cytetype_new("GSE149614"),
         "scGPT":       load_scgpt("GSE149614"),
+        "SingleR":     load_singler("GSE149614"),
+        "ScType":      load_sctype("GSE149614"),
     }
     results += evaluate_dataset("GSE149614", gt, tools, "published", BROAD_6)
 
@@ -415,6 +441,8 @@ def evaluate_published_gt():
         "signacX":     sx125_pred,
         "CyteType":    load_cytetype_new("GSE125449", broad7=True),
         "scGPT":       load_scgpt("GSE125449", broad7=True),  # broad6 → broad7
+        "SingleR":     load_singler("GSE125449", broad7=True), # broad6 → broad7
+        "ScType":      load_sctype("GSE125449", broad7=True),
     }
     results += evaluate_dataset("GSE125449", gt2, tools2, "published", BROAD_7)
 
@@ -435,6 +463,8 @@ def evaluate_enrichr_new2():
         "signacX":     load_signacx_new("GSE149614"),
         "CyteType":    load_cytetype_new("GSE149614"),
         "scGPT":       load_scgpt("GSE149614"),
+        "SingleR":     load_singler("GSE149614"),
+        "ScType":      load_sctype("GSE149614"),
     }
     results += evaluate_dataset("GSE149614", gt149, tools149, "enrichR", BROAD_6)
 
@@ -452,6 +482,8 @@ def evaluate_enrichr_new2():
         "signacX":     sx125_pred6,
         "CyteType":    load_cytetype_new("GSE125449"),       # fuzzy → broad6
         "scGPT":       load_scgpt("GSE125449"),              # already broad6
+        "SingleR":     load_singler("GSE125449"),            # already broad6
+        "ScType":      load_sctype("GSE125449"),             # already broad6
     }
     results += evaluate_dataset("GSE125449", gt125, tools125, "enrichR", BROAD_6)
 
@@ -460,9 +492,22 @@ def evaluate_enrichr_new2():
 
 def evaluate_enrichr_original3():
     print("\n" + "=" * 70)
-    print("enrichR GT: GSE162616 + GSE202642 + GSE223204")
+    print("enrichR GT: GSE156625 + GSE162616 + GSE202642 + GSE223204")
     print("=" * 70)
     results = []
+
+    # GSE156625 — use new prediction files (run in this benchmark expansion)
+    gt156 = load_enrichr_gt("GSE156625")
+    tools156 = {
+        "CellTypist": load_celltypist("GSE156625"),
+        "signacX":     load_signacx_new("GSE156625"),
+        "CyteType":    load_cytetype_new("GSE156625"),
+        "CellAssign":  None,   # not available (scvi-tools env incompatibility)
+        "scGPT":       load_scgpt("GSE156625"),
+        "SingleR":     load_singler("GSE156625"),
+        "ScType":      load_sctype("GSE156625"),
+    }
+    results += evaluate_dataset("GSE156625", gt156, tools156, "enrichR", BROAD_6)
 
     for ds in ["GSE162616", "GSE202642", "GSE223204"]:
         gt = load_enrichr_gt(ds)
@@ -472,6 +517,8 @@ def evaluate_enrichr_original3():
             "CyteType":    load_cytetype_ori(ds),
             "CellAssign":  load_cellassign_ori(ds),
             "scGPT":       load_scgpt(ds),
+            "SingleR":     load_singler(ds),
+            "ScType":      load_sctype(ds),
         }
         results += evaluate_dataset(ds, gt, tools, "enrichR", BROAD_6)
 
@@ -482,11 +529,30 @@ def evaluate_enrichr_original3():
 # Main
 # ─────────────────────────────────────────────────────────────────────────────
 
+def evaluate_simulated():
+    """Evaluate tools on Splatter-simulated data with 100% known ground truth."""
+    print("\n" + "=" * 70)
+    print("Simulated data (Splatter, known GT = BROAD_6)")
+    print("=" * 70)
+    gt = load_enrichr_gt("simulated")
+    tools = {
+        "CellTypist": load_celltypist("simulated"),
+        "ScType":     load_sctype("simulated"),
+        "SingleR":    load_singler("simulated"),
+        "signacX":    None,   # requires network for model download
+        "CyteType":   None,   # requires cluster API
+        "CellAssign": None,   # scvi-tools incompatible
+        "scGPT":      None,   # GPU required
+    }
+    return evaluate_dataset("simulated", gt, tools, "simulated_GT", BROAD_6)
+
+
 if __name__ == "__main__":
     all_results = []
     all_results += evaluate_published_gt()
     all_results += evaluate_enrichr_new2()
     all_results += evaluate_enrichr_original3()
+    all_results += evaluate_simulated()
 
     if not all_results:
         print("No results produced.")

@@ -127,3 +127,9 @@ if __name__ == "__main__":
         CELLTYPIST_TO_BROAD,
         majority_voting=True,
     )
+    run_celltypist(
+        "/mnt/10t/assi_result/HCC/benchmark_datasets/GSE156625_benchmark.h5ad",
+        "GSE156625",
+        CELLTYPIST_TO_BROAD,
+        majority_voting=False,
+    )
