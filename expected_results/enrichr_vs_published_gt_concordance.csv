@@ -1,0 +1,3 @@
+Dataset,N_cells,N_published_broad6,N_enrichR_broad6,N_both_known,enrichR_broad6_coverage,Agreement_on_both_known,Macro_F1_on_both_known,Kappa_on_both_known
+GSE125449,9752,9752,4157,4157,0.4263,0.9711,0.9706,0.9641
+GSE149614,71915,71915,43462,43462,0.6044,0.9565,0.79,0.9412

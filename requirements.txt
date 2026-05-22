@@ -1,15 +1,30 @@
-scanpy==1.10.*
-anndata>=0.10
-celltypist==1.6.*
-scvi-tools==0.20.*
-gseapy==1.1.12
+# Tested in conda env with Python 3.11 (drug_sc / scenic_env311).
+# Versions reflect the environment used to generate the benchmark results
+# shipped under expected_results/. Tighter pinning is recommended for exact
+# numerical reproduction.
+
+# core single-cell stack
+scanpy==1.11.5
+anndata==0.12.10
+numpy>=2.0,<3.0
+pandas==2.3.3
+scipy>=1.13,<2.0
+scikit-learn>=1.6,<2.0
+matplotlib==3.10.8
+seaborn==0.13.2
+openpyxl==3.1.5
+
+# enrichR client (used by 10_build_enrichr_groundtruth.py --refresh)
+gseapy==1.1.13
+
+# annotation tools
+celltypist==1.7.1
+scvi-tools==1.4.2
+
+# scGPT foundation model
 scgpt==0.2.4
+torch>=2.0,<3.0
+huggingface_hub>=0.20
+
+# inferCNV (malignant-cell validation)
 infercnvpy==0.6.1
-huggingface_hub
-pandas
-numpy
-matplotlib
-seaborn
-scipy
-scikit-learn
-openpyxl

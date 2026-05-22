@@ -1,0 +1,4 @@
+Tool,Dataset,GT_type,N_cells,N_prediction_overlap,Prediction_overlap_fraction,N_evaluated,Evaluated_fraction_total,Unknown_rate_in_overlap,Accuracy,Macro_F1,Kappa,Coverage_adjusted_Macro_F1
+scATOMIC,GSE162616,enrichR,57261,38317,0.6692,26113,0.456,0.0453,0.9938,0.4907,0.9743,0.2238
+scATOMIC,GSE202642,enrichR,122092,92329,0.7562,52845,0.4328,0.0671,0.9555,0.7399,0.9296,0.3203
+scATOMIC,GSE223204,enrichR,23165,21048,0.9086,15576,0.6724,0.0362,0.9723,0.8072,0.9617,0.5427

@@ -1,0 +1,38 @@
+cff-version: 1.2.0
+message: >-
+  If you use this code or the EnrichR-based ground-truth snapshots in this
+  repository, please cite both the software (this record, via the Zenodo DOI)
+  and the accompanying manuscript.
+title: "HCC scRNA-seq Cell Type Annotation Benchmark"
+abstract: >-
+  Benchmarking pipeline for hepatocellular carcinoma single-cell RNA
+  sequencing cell-type annotation tools, spanning reference-based classifiers,
+  marker-database scoring, a Bayesian marker-gene model, a large language
+  model API, and a single-cell foundation model, evaluated under both
+  author-curated and EnrichR-derived ground truth, with an independent
+  inferCNV-based malignant-cell validation.
+type: software
+authors:
+  - family-names: Chiu
+    given-names: Yen-Jung
+    affiliation: Chang Gung University
+license: MIT
+repository-code: "https://github.com/holiday01/hcc-annotation-benchmark"
+keywords:
+  - single-cell RNA sequencing
+  - cell-type annotation
+  - benchmarking
+  - hepatocellular carcinoma
+  - HCC
+  - reproducibility
+preferred-citation:
+  type: article
+  title: "Benchmarking Cell Type Annotation in Hepatocellular Carcinoma Single-Cell RNA Sequencing"
+  authors:
+    - family-names: Chiu
+      given-names: Yen-Jung
+  year: 2026
+  notes: >-
+    Citation block will be updated with journal, volume, page and DOI once the
+    manuscript is accepted. Until then please cite as a preprint or this
+    software record.

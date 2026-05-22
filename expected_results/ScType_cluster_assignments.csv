@@ -1,0 +1,154 @@
+Dataset,cluster,n_cells,sctype_raw_label,sctype_raw_score,sctype_label,pred_celltype,pred_celltype_broad7
+GSE125449,0,1282,Immune system::Memory CD8+ T cells,3119.71,Immune system::Memory CD8+ T cells,T/NK,T cell
+GSE125449,1,888,Liver::Cholangiocytes,3684.0,Liver::Cholangiocytes,Hepatocyte,HPC-like
+GSE125449,10,425,Liver::Hepatocytes,5387.3911,Liver::Hepatocytes,Hepatocyte,Malignant cell
+GSE125449,11,274,Liver::Hepatic stellate cells,2305.2197,Liver::Hepatic stellate cells,Fibroblast,CAF
+GSE125449,12,182,Liver::Hepatocytes,587.6959,Liver::Hepatocytes,Hepatocyte,Malignant cell
+GSE125449,13,181,Immune system::Plasma B cells,640.8116,Immune system::Plasma B cells,B,B cell
+GSE125449,14,181,Liver::Endothelial cell,825.9654,Liver::Endothelial cell,Endothelial,TEC
+GSE125449,15,178,Liver::Hepatic stellate cells,1301.4417,Liver::Hepatic stellate cells,Fibroblast,CAF
+GSE125449,16,167,Liver::Cholangiocytes,406.1889,Liver::Cholangiocytes,Hepatocyte,HPC-like
+GSE125449,17,150,Liver::Cholangiocytes,686.855,Liver::Cholangiocytes,Hepatocyte,HPC-like
+GSE125449,18,143,Immune system::Pre-B cells,522.3688,Immune system::Pre-B cells,B,B cell
+GSE125449,19,138,Liver::Endothelial cell,731.821,Liver::Endothelial cell,Endothelial,TEC
+GSE125449,2,866,Immune system::Memory CD4+ T cells,1598.6517,Immune system::Memory CD4+ T cells,T/NK,T cell
+GSE125449,20,92,Liver::Cholangiocytes,477.8443,Liver::Cholangiocytes,Hepatocyte,HPC-like
+GSE125449,21,91,Liver::Cholangiocytes,497.538,Liver::Cholangiocytes,Hepatocyte,HPC-like
+GSE125449,22,80,Liver::Hepatocytes,746.2358,Liver::Hepatocytes,Hepatocyte,Malignant cell
+GSE125449,3,774,Liver::Endothelial cell,4104.9541,Liver::Endothelial cell,Endothelial,TEC
+GSE125449,4,751,Liver::Kupffer cells,4165.9395,Liver::Kupffer cells,Myeloid,TAM
+GSE125449,5,693,Immune system::Memory CD8+ T cells,2276.8887,Immune system::Memory CD8+ T cells,T/NK,T cell
+GSE125449,6,673,Immune system::Plasma B cells,2367.7561,Immune system::Plasma B cells,B,B cell
+GSE125449,7,531,Liver::Hepatic stellate cells,2754.5198,Liver::Hepatic stellate cells,Fibroblast,CAF
+GSE125449,8,508,Liver::Hepatocytes,3262.6724,Liver::Hepatocytes,Hepatocyte,Malignant cell
+GSE125449,9,504,Liver::Cholangiocytes,1963.7935,Liver::Cholangiocytes,Hepatocyte,HPC-like
+GSE149614,0,9426,Immune system::CD8+ NKT-like cells,29019.0801,Immune system::CD8+ NKT-like cells,T/NK,T cell
+GSE149614,1,6757,Immune system::Memory CD8+ T cells,17721.2109,Immune system::Memory CD8+ T cells,T/NK,T cell
+GSE149614,10,2392,Liver::Kupffer cells,6893.5542,Liver::Kupffer cells,Myeloid,TAM
+GSE149614,11,2254,Liver::Hepatocytes,15993.3359,Liver::Hepatocytes,Hepatocyte,Malignant cell
+GSE149614,12,2242,Liver::Hepatic stellate cells,24182.7207,Liver::Hepatic stellate cells,Fibroblast,CAF
+GSE149614,13,2002,Liver::Endothelial cell,18219.0059,Liver::Endothelial cell,Endothelial,TEC
+GSE149614,14,1956,Liver::Cholangiocytes,6666.6357,Liver::Cholangiocytes,Hepatocyte,HPC-like
+GSE149614,15,1947,Liver::Kupffer cells,12078.5596,Liver::Kupffer cells,Myeloid,TAM
+GSE149614,16,1858,Liver::Endothelial cell,18031.8555,Liver::Endothelial cell,Endothelial,TEC
+GSE149614,17,1644,Immune system::Naive B cells,6802.3052,Immune system::Naive B cells,B,B cell
+GSE149614,18,1567,Liver::Hepatocytes,7332.3701,Liver::Hepatocytes,Hepatocyte,Malignant cell
+GSE149614,19,1522,Immune system::Memory CD8+ T cells,5077.0034,Immune system::Memory CD8+ T cells,T/NK,T cell
+GSE149614,2,3900,Immune system::Macrophages,11547.8779,Immune system::Macrophages,Myeloid,TAM
+GSE149614,20,1314,Liver::Hepatocytes,14522.1973,Liver::Hepatocytes,Hepatocyte,Malignant cell
+GSE149614,21,1102,Liver::Kupffer cells,3944.9761,Liver::Kupffer cells,Myeloid,TAM
+GSE149614,22,1041,Liver::Hepatocytes,12445.5488,Liver::Hepatocytes,Hepatocyte,Malignant cell
+GSE149614,23,999,Liver::Kupffer cells,2909.7346,Liver::Kupffer cells,Myeloid,TAM
+GSE149614,24,978,Liver::Kupffer cells,4330.4141,Liver::Kupffer cells,Myeloid,TAM
+GSE149614,25,932,Immune system::Plasma B cells,4412.1084,Immune system::Plasma B cells,B,B cell
+GSE149614,26,846,Immune system::Plasma B cells,2203.4587,Immune system::Plasma B cells,B,B cell
+GSE149614,27,738,Immune system::Memory CD4+ T cells,3648.4658,Immune system::Memory CD4+ T cells,T/NK,T cell
+GSE149614,28,717,Immune system::Plasma B cells,3379.5845,Immune system::Plasma B cells,B,B cell
+GSE149614,29,646,Immune system::Macrophages,2340.7012,Immune system::Macrophages,Myeloid,TAM
+GSE149614,3,3622,Liver::Hepatocytes,31717.9766,Liver::Hepatocytes,Hepatocyte,Malignant cell
+GSE149614,30,565,Liver::Hepatocytes,5022.229,Liver::Hepatocytes,Hepatocyte,Malignant cell
+GSE149614,31,428,Immune system::Macrophages,2098.1807,Immune system::Macrophages,Myeloid,TAM
+GSE149614,32,360,Liver::Cholangiocytes,5335.3594,Liver::Cholangiocytes,Hepatocyte,HPC-like
+GSE149614,33,137,Immune system::Memory CD4+ T cells,349.0468,Immune system::Memory CD4+ T cells,T/NK,T cell
+GSE149614,34,134,Immune system::Memory CD8+ T cells,581.7529,Immune system::Memory CD8+ T cells,T/NK,T cell
+GSE149614,4,3475,Liver::Kupffer cells,10917.8623,Liver::Kupffer cells,Myeloid,TAM
+GSE149614,5,3400,Liver::Cholangiocytes,9846.7119,Liver::Cholangiocytes,Hepatocyte,HPC-like
+GSE149614,6,3195,Immune system::CD8+ NKT-like cells,4861.3398,Immune system::CD8+ NKT-like cells,T/NK,T cell
+GSE149614,7,2786,Liver::Cholangiocytes,10440.457,Liver::Cholangiocytes,Hepatocyte,HPC-like
+GSE149614,8,2600,Liver::Hepatocytes,15979.4297,Liver::Hepatocytes,Hepatocyte,Malignant cell
+GSE149614,9,2433,Immune system::Natural killer  cells,9984.3574,Immune system::Natural killer  cells,T/NK,T cell
+GSE156625,0,10042,Immune system::Memory CD4+ T cells,15724.4404,Immune system::Memory CD4+ T cells,T/NK,T cell
+GSE156625,1,7557,Immune system::CD8+ NKT-like cells,17416.7695,Immune system::CD8+ NKT-like cells,T/NK,T cell
+GSE156625,10,2649,Liver::Kupffer cells,16992.3008,Liver::Kupffer cells,Myeloid,TAM
+GSE156625,11,3046,Liver::Hepatocytes,10103.1387,Liver::Hepatocytes,Hepatocyte,Malignant cell
+GSE156625,12,2866,Immune system::Memory CD4+ T cells,7715.2588,Immune system::Memory CD4+ T cells,T/NK,T cell
+GSE156625,13,1891,Liver::Hepatic stellate cells,18559.7695,Liver::Hepatic stellate cells,Fibroblast,CAF
+GSE156625,14,1935,Liver::Hepatocytes,13656.624,Liver::Hepatocytes,Hepatocyte,Malignant cell
+GSE156625,15,1871,Immune system::Erythroid-like and erythroid precursor cells,2304.9292,Immune system::Erythroid-like and erythroid precursor cells,Unknown,Unknown
+GSE156625,16,1842,Liver::Hepatocytes,7578.7217,Liver::Hepatocytes,Hepatocyte,Malignant cell
+GSE156625,17,1269,Liver::Endothelial cell,6939.4937,Liver::Endothelial cell,Endothelial,TEC
+GSE156625,18,1376,Immune system::Memory B cells,8491.248,Immune system::Memory B cells,B,B cell
+GSE156625,19,1110,Immune system::Naive B cells,5105.1802,Immune system::Naive B cells,B,B cell
+GSE156625,2,5559,Liver::Endothelial cell,14721.3291,Liver::Endothelial cell,Endothelial,TEC
+GSE156625,20,947,Liver::Hepatocytes,6027.7554,Liver::Hepatocytes,Hepatocyte,Malignant cell
+GSE156625,21,920,Liver::Hepatocytes,5911.1055,Liver::Hepatocytes,Hepatocyte,Malignant cell
+GSE156625,22,573,Immune system::Memory CD8+ T cells,680.9221,Immune system::Memory CD8+ T cells,T/NK,T cell
+GSE156625,23,347,Immune system::Memory CD4+ T cells,301.3986,Immune system::Memory CD4+ T cells,T/NK,T cell
+GSE156625,24,336,Liver::Cholangiocytes,5756.3252,Liver::Cholangiocytes,Hepatocyte,HPC-like
+GSE156625,25,295,Liver::Hepatocytes,6308.4702,Liver::Hepatocytes,Hepatocyte,Malignant cell
+GSE156625,26,194,Liver::Endothelial cell,2341.2036,Liver::Endothelial cell,Endothelial,TEC
+GSE156625,27,174,Immune system::Endothelial,755.0843,Immune system::Endothelial,Endothelial,TEC
+GSE156625,28,119,Immune system::Basophils,3294.0813,Immune system::Basophils,Myeloid,TAM
+GSE156625,3,4920,Immune system::Memory CD8+ T cells,5135.7417,Immune system::Memory CD8+ T cells,T/NK,T cell
+GSE156625,4,4396,Immune system::Effector CD8+ T cells,5735.9644,Immune system::Effector CD8+ T cells,T/NK,T cell
+GSE156625,5,3747,Immune system::Memory CD4+ T cells,4977.1646,Immune system::Memory CD4+ T cells,T/NK,T cell
+GSE156625,6,4011,Liver::Endothelial cell,10901.6953,Liver::Endothelial cell,Endothelial,TEC
+GSE156625,7,3661,Liver::Hepatocytes,21305.6035,Liver::Hepatocytes,Hepatocyte,Malignant cell
+GSE156625,8,2967,Immune system::Myeloid Dendritic cells,11531.958,Immune system::Myeloid Dendritic cells,Myeloid,TAM
+GSE156625,9,2969,Immune system::Natural killer  cells,6590.3408,Immune system::Natural killer  cells,T/NK,T cell
+GSE162616,0,8408,Immune system::Natural killer  cells,6915.5024,Immune system::Natural killer  cells,T/NK,T cell
+GSE162616,1,7040,Immune system::Natural killer  cells,6676.6982,Immune system::Natural killer  cells,T/NK,T cell
+GSE162616,10,1898,Immune system::Memory CD4+ T cells,3610.271,Immune system::Memory CD4+ T cells,T/NK,T cell
+GSE162616,11,1501,Immune system::Plasma B cells,6721.9287,Immune system::Plasma B cells,B,B cell
+GSE162616,12,1458,Immune system::Non-classical monocytes,11100.0137,Immune system::Non-classical monocytes,Myeloid,TAM
+GSE162616,13,1371,Immune system::Naive CD8+ T cells,1164.6295,Immune system::Naive CD8+ T cells,T/NK,T cell
+GSE162616,14,1315,Liver::Hematopoietic cell,86.4531,Unknown,Unknown,Unknown
+GSE162616,15,800,Immune system::Macrophages,1763.826,Immune system::Macrophages,Myeloid,TAM
+GSE162616,16,682,Immune system::Pre-B cells,4914.3613,Immune system::Pre-B cells,B,B cell
+GSE162616,17,596,Immune system::Plasmacytoid Dendritic cells,5468.5605,Immune system::Plasmacytoid Dendritic cells,B,B cell
+GSE162616,18,495,Liver::Hepatocytes,6560.6367,Liver::Hepatocytes,Hepatocyte,Malignant cell
+GSE162616,19,107,Immune system::Erythroid-like and erythroid precursor cells,2147.0415,Immune system::Erythroid-like and erythroid precursor cells,Unknown,Unknown
+GSE162616,2,6272,Immune system::Natural killer  cells,10984.9795,Immune system::Natural killer  cells,T/NK,T cell
+GSE162616,3,6122,Immune system::Natural killer  cells,7515.4336,Immune system::Natural killer  cells,T/NK,T cell
+GSE162616,4,4650,Immune system::Natural killer  cells,3969.0325,Immune system::Natural killer  cells,T/NK,T cell
+GSE162616,5,4543,Immune system::CD8+ NKT-like cells,4135.2231,Immune system::CD8+ NKT-like cells,T/NK,T cell
+GSE162616,6,3146,Immune system::Naive CD8+ T cells,7184.5498,Immune system::Naive CD8+ T cells,T/NK,T cell
+GSE162616,7,2406,Immune system::Mast cells,4945.46,Immune system::Mast cells,T/NK,T cell
+GSE162616,8,2314,Liver::Mast cells,1222.8075,Liver::Mast cells,T/NK,T cell
+GSE162616,9,2137,Immune system::Memory CD4+ T cells,7234.1367,Immune system::Memory CD4+ T cells,T/NK,T cell
+GSE202642,0,13274,Immune system::Memory CD4+ T cells,25330.4414,Immune system::Memory CD4+ T cells,T/NK,T cell
+GSE202642,1,12427,Immune system::CD8+ NKT-like cells,26656.873,Immune system::CD8+ NKT-like cells,T/NK,T cell
+GSE202642,10,3896,Immune system::Natural killer  cells,13889.1729,Immune system::Natural killer  cells,T/NK,T cell
+GSE202642,11,3855,Immune system::Macrophages,14708.8994,Immune system::Macrophages,Myeloid,TAM
+GSE202642,12,3606,Liver::Hepatocytes,42171.3711,Liver::Hepatocytes,Hepatocyte,Malignant cell
+GSE202642,13,3575,Liver::Liver progenitor cell,-94.9376,Unknown,Unknown,Unknown
+GSE202642,14,3513,Immune system::Memory CD4+ T cells,8227.374,Immune system::Memory CD4+ T cells,T/NK,T cell
+GSE202642,15,3482,Liver::Hepatocytes,36409.4766,Liver::Hepatocytes,Hepatocyte,Malignant cell
+GSE202642,16,3326,Immune system::CD8+ NKT-like cells,5873.2539,Immune system::CD8+ NKT-like cells,T/NK,T cell
+GSE202642,17,2729,Immune system::Naive B cells,16560.6875,Immune system::Naive B cells,B,B cell
+GSE202642,18,2723,Immune system::Memory CD4+ T cells,11178.3701,Immune system::Memory CD4+ T cells,T/NK,T cell
+GSE202642,19,2598,Liver::Hepatic stellate cells,27661.8906,Liver::Hepatic stellate cells,Fibroblast,CAF
+GSE202642,2,8385,Liver::Hepatocytes,19385.3223,Liver::Hepatocytes,Hepatocyte,Malignant cell
+GSE202642,20,2587,Immune system::Memory CD4+ T cells,8814.5469,Immune system::Memory CD4+ T cells,T/NK,T cell
+GSE202642,21,2018,Immune system::Natural killer  cells,1523.957,Immune system::Natural killer  cells,T/NK,T cell
+GSE202642,22,1792,Liver::Endothelial cell,21432.2188,Liver::Endothelial cell,Endothelial,TEC
+GSE202642,23,1789,Liver::Hepatocytes,18063.3301,Liver::Hepatocytes,Hepatocyte,Malignant cell
+GSE202642,24,1712,Immune system::Plasma B cells,4718.8301,Immune system::Plasma B cells,B,B cell
+GSE202642,25,1003,Liver::Kupffer cells,6303.3711,Liver::Kupffer cells,Myeloid,TAM
+GSE202642,26,448,Liver::Cholangiocytes,8791.0146,Liver::Cholangiocytes,Hepatocyte,HPC-like
+GSE202642,3,7730,Liver::Endothelial cell,39618.7109,Liver::Endothelial cell,Endothelial,TEC
+GSE202642,4,7093,Immune system::Neutrophils,31543.6211,Immune system::Neutrophils,Myeloid,TAM
+GSE202642,5,6565,Immune system::Myeloid Dendritic cells,20570.1641,Immune system::Myeloid Dendritic cells,Myeloid,TAM
+GSE202642,6,5964,Immune system::Macrophages,23643.9512,Immune system::Macrophages,Myeloid,TAM
+GSE202642,7,5926,Immune system::Macrophages,19918.0684,Immune system::Macrophages,Myeloid,TAM
+GSE202642,8,5572,Immune system::CD8+ NKT-like cells,20967.6816,Immune system::CD8+ NKT-like cells,T/NK,T cell
+GSE202642,9,4504,Liver::Hepatocytes,8674.457,Liver::Hepatocytes,Hepatocyte,Malignant cell
+GSE223204,0,4554,Liver::Hepatocytes,32757.3672,Liver::Hepatocytes,Hepatocyte,Malignant cell
+GSE223204,1,3581,Liver::Endothelial cell,11894.6123,Liver::Endothelial cell,Endothelial,TEC
+GSE223204,10,369,Liver::Hepatocytes,1536.5459,Liver::Hepatocytes,Hepatocyte,Malignant cell
+GSE223204,11,367,Immune system::Myeloid Dendritic cells,2459.9309,Immune system::Myeloid Dendritic cells,Myeloid,TAM
+GSE223204,12,337,Liver::Endothelial cell,1051.7968,Liver::Endothelial cell,Endothelial,TEC
+GSE223204,13,249,Immune system::Natural killer  cells,1624.905,Immune system::Natural killer  cells,T/NK,T cell
+GSE223204,14,240,Immune system::Memory B cells,2125.894,Immune system::Memory B cells,B,B cell
+GSE223204,15,206,Liver::Hepatic stellate cells,2866.5417,Liver::Hepatic stellate cells,Fibroblast,CAF
+GSE223204,16,166,Liver::Cholangiocytes,710.0753,Liver::Cholangiocytes,Hepatocyte,HPC-like
+GSE223204,17,76,Immune system::Erythroid-like and erythroid precursor cells,523.3661,Immune system::Erythroid-like and erythroid precursor cells,Unknown,Unknown
+GSE223204,18,49,Immune system::Plasmacytoid Dendritic cells,737.8856,Immune system::Plasmacytoid Dendritic cells,B,B cell
+GSE223204,2,2454,Immune system::Macrophages,9931.6807,Immune system::Macrophages,Myeloid,TAM
+GSE223204,3,2362,Immune system::Effector CD8+ T cells,6498.6758,Immune system::Effector CD8+ T cells,T/NK,T cell
+GSE223204,4,2168,Immune system::Natural killer  cells,8647.8945,Immune system::Natural killer  cells,T/NK,T cell
+GSE223204,5,2023,Immune system::Memory CD4+ T cells,4998.3159,Immune system::Memory CD4+ T cells,T/NK,T cell
+GSE223204,6,1113,Immune system::Classical Monocytes,5294.7422,Immune system::Classical Monocytes,Myeloid,TAM
+GSE223204,7,1086,Immune system::Neutrophils,3176.5298,Immune system::Neutrophils,Myeloid,TAM
+GSE223204,8,899,Liver::Hepatocytes,1472.5244,Liver::Hepatocytes,Hepatocyte,Malignant cell
+GSE223204,9,866,Immune system::Memory CD8+ T cells,3350.6978,Immune system::Memory CD8+ T cells,T/NK,T cell

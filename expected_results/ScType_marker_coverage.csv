@@ -1,0 +1,283 @@
+Dataset,ScType_label,positive_markers_total,positive_markers_present,negative_markers_total,negative_markers_present
+GSE125449,Immune system::Pro-B cells,20,18,0,0
+GSE125449,Immune system::Pre-B cells,18,17,0,0
+GSE125449,Immune system::Naive B cells,21,20,0,0
+GSE125449,Immune system::Memory B cells,22,21,0,0
+GSE125449,Immune system::Plasma B cells,21,20,1,1
+GSE125449,Immune system::Naive CD8+ T cells,29,27,5,4
+GSE125449,Immune system::Naive CD4+ T cells,27,25,5,4
+GSE125449,Immune system::Memory CD8+ T cells,30,28,0,0
+GSE125449,Immune system::Memory CD4+ T cells,28,26,0,0
+GSE125449,Immune system::Effector CD8+ T cells,29,27,2,2
+GSE125449,Immune system::Effector CD4+ T cells,27,25,2,2
+GSE125449,Immune system::γδ-T cells,29,26,2,2
+GSE125449,Immune system::Platelets,10,9,0,0
+GSE125449,Immune system::CD8+ NKT-like cells,24,21,0,0
+GSE125449,Immune system::CD4+ NKT-like cells,23,20,0,0
+GSE125449,Immune system::Natural killer  cells,19,17,6,5
+GSE125449,Immune system::Eosinophils,16,9,0,0
+GSE125449,Immune system::Neutrophils,30,27,0,0
+GSE125449,Immune system::Basophils,13,8,0,0
+GSE125449,Immune system::Mast cells,9,7,0,0
+GSE125449,Immune system::Classical Monocytes,21,18,2,2
+GSE125449,Immune system::Non-classical monocytes,24,21,1,1
+GSE125449,Immune system::Intermediate monocytes,20,17,1,1
+GSE125449,Immune system::Macrophages,17,16,1,1
+GSE125449,Immune system::Megakaryocyte,7,4,0,0
+GSE125449,Immune system::Endothelial,16,16,0,0
+GSE125449,Immune system::Erythroid-like and erythroid precursor cells,10,9,0,0
+GSE125449,Immune system::HSC/MPP cells,40,25,2,2
+GSE125449,Immune system::Progenitor cells,23,17,0,0
+GSE125449,Immune system::Myeloid Dendritic cells,25,20,0,0
+GSE125449,Immune system::Plasmacytoid Dendritic cells,28,27,0,0
+GSE125449,Immune system::Granulocytes,33,27,0,0
+GSE125449,Immune system::ISG expressing immune cells,13,12,0,0
+GSE125449,Liver::Cholangiocytes,41,41,0,0
+GSE125449,Liver::Endothelial cell,77,74,0,0
+GSE125449,Liver::Hematopoietic cell,2,2,0,0
+GSE125449,Liver::Hepatic stellate cells,43,40,0,0
+GSE125449,Liver::Hepatoblasts,17,17,0,0
+GSE125449,Liver::Hepatocytes,134,133,0,0
+GSE125449,Liver::Immune system cells,26,24,0,0
+GSE125449,Liver::Kupffer cells,44,41,0,0
+GSE125449,Liver::Liver progenitor cell,2,2,0,0
+GSE125449,Liver::Mast cells,9,9,0,0
+GSE125449,Liver::Mesenchymal stem cell,5,5,0,0
+GSE125449,Liver::Monocytes,4,3,0,0
+GSE125449,Immune system::Cancer cells,6,6,0,0
+GSE125449,Liver::Cancer stem cells,6,6,0,0
+GSE149614,Immune system::Pro-B cells,20,18,0,0
+GSE149614,Immune system::Pre-B cells,18,17,0,0
+GSE149614,Immune system::Naive B cells,21,20,0,0
+GSE149614,Immune system::Memory B cells,22,21,0,0
+GSE149614,Immune system::Plasma B cells,21,20,1,1
+GSE149614,Immune system::Naive CD8+ T cells,29,27,5,4
+GSE149614,Immune system::Naive CD4+ T cells,27,25,5,4
+GSE149614,Immune system::Memory CD8+ T cells,30,28,0,0
+GSE149614,Immune system::Memory CD4+ T cells,28,26,0,0
+GSE149614,Immune system::Effector CD8+ T cells,29,27,2,2
+GSE149614,Immune system::Effector CD4+ T cells,27,25,2,2
+GSE149614,Immune system::γδ-T cells,29,26,2,2
+GSE149614,Immune system::Platelets,10,9,0,0
+GSE149614,Immune system::CD8+ NKT-like cells,24,22,0,0
+GSE149614,Immune system::CD4+ NKT-like cells,23,21,0,0
+GSE149614,Immune system::Natural killer  cells,19,18,6,5
+GSE149614,Immune system::Eosinophils,16,15,0,0
+GSE149614,Immune system::Neutrophils,30,28,0,0
+GSE149614,Immune system::Basophils,13,12,0,0
+GSE149614,Immune system::Mast cells,9,8,0,0
+GSE149614,Immune system::Classical Monocytes,21,19,2,2
+GSE149614,Immune system::Non-classical monocytes,24,22,1,1
+GSE149614,Immune system::Intermediate monocytes,20,18,1,1
+GSE149614,Immune system::Macrophages,17,16,1,1
+GSE149614,Immune system::Megakaryocyte,7,5,0,0
+GSE149614,Immune system::Endothelial,16,16,0,0
+GSE149614,Immune system::Erythroid-like and erythroid precursor cells,10,9,0,0
+GSE149614,Immune system::HSC/MPP cells,40,26,2,2
+GSE149614,Immune system::Progenitor cells,23,18,0,0
+GSE149614,Immune system::Myeloid Dendritic cells,25,20,0,0
+GSE149614,Immune system::Plasmacytoid Dendritic cells,28,27,0,0
+GSE149614,Immune system::Granulocytes,33,29,0,0
+GSE149614,Immune system::ISG expressing immune cells,13,12,0,0
+GSE149614,Liver::Cholangiocytes,41,41,0,0
+GSE149614,Liver::Endothelial cell,77,76,0,0
+GSE149614,Liver::Hematopoietic cell,2,2,0,0
+GSE149614,Liver::Hepatic stellate cells,43,41,0,0
+GSE149614,Liver::Hepatoblasts,17,17,0,0
+GSE149614,Liver::Hepatocytes,134,134,0,0
+GSE149614,Liver::Immune system cells,26,25,0,0
+GSE149614,Liver::Kupffer cells,44,44,0,0
+GSE149614,Liver::Liver progenitor cell,2,2,0,0
+GSE149614,Liver::Mast cells,9,9,0,0
+GSE149614,Liver::Mesenchymal stem cell,5,5,0,0
+GSE149614,Liver::Monocytes,4,3,0,0
+GSE149614,Immune system::Cancer cells,6,6,0,0
+GSE149614,Liver::Cancer stem cells,6,6,0,0
+GSE156625,Immune system::Pro-B cells,20,17,0,0
+GSE156625,Immune system::Pre-B cells,18,17,0,0
+GSE156625,Immune system::Naive B cells,21,20,0,0
+GSE156625,Immune system::Memory B cells,22,21,0,0
+GSE156625,Immune system::Plasma B cells,21,20,1,1
+GSE156625,Immune system::Naive CD8+ T cells,29,27,5,4
+GSE156625,Immune system::Naive CD4+ T cells,27,25,5,4
+GSE156625,Immune system::Memory CD8+ T cells,30,28,0,0
+GSE156625,Immune system::Memory CD4+ T cells,28,26,0,0
+GSE156625,Immune system::Effector CD8+ T cells,29,27,2,2
+GSE156625,Immune system::Effector CD4+ T cells,27,25,2,2
+GSE156625,Immune system::γδ-T cells,29,26,2,2
+GSE156625,Immune system::Platelets,10,8,0,0
+GSE156625,Immune system::CD8+ NKT-like cells,24,22,0,0
+GSE156625,Immune system::CD4+ NKT-like cells,23,21,0,0
+GSE156625,Immune system::Natural killer  cells,19,18,6,5
+GSE156625,Immune system::Eosinophils,16,9,0,0
+GSE156625,Immune system::Neutrophils,30,26,0,0
+GSE156625,Immune system::Basophils,13,11,0,0
+GSE156625,Immune system::Mast cells,9,8,0,0
+GSE156625,Immune system::Classical Monocytes,21,18,2,2
+GSE156625,Immune system::Non-classical monocytes,24,21,1,1
+GSE156625,Immune system::Intermediate monocytes,20,17,1,1
+GSE156625,Immune system::Macrophages,17,16,1,1
+GSE156625,Immune system::Megakaryocyte,7,4,0,0
+GSE156625,Immune system::Endothelial,16,16,0,0
+GSE156625,Immune system::Erythroid-like and erythroid precursor cells,10,8,0,0
+GSE156625,Immune system::HSC/MPP cells,40,25,2,2
+GSE156625,Immune system::Progenitor cells,23,17,0,0
+GSE156625,Immune system::Myeloid Dendritic cells,25,20,0,0
+GSE156625,Immune system::Plasmacytoid Dendritic cells,28,26,0,0
+GSE156625,Immune system::Granulocytes,33,27,0,0
+GSE156625,Immune system::ISG expressing immune cells,13,12,0,0
+GSE156625,Liver::Cholangiocytes,41,41,0,0
+GSE156625,Liver::Endothelial cell,77,75,0,0
+GSE156625,Liver::Hematopoietic cell,2,2,0,0
+GSE156625,Liver::Hepatic stellate cells,43,40,0,0
+GSE156625,Liver::Hepatoblasts,17,15,0,0
+GSE156625,Liver::Hepatocytes,134,133,0,0
+GSE156625,Liver::Immune system cells,26,24,0,0
+GSE156625,Liver::Kupffer cells,44,43,0,0
+GSE156625,Liver::Liver progenitor cell,2,2,0,0
+GSE156625,Liver::Mast cells,9,9,0,0
+GSE156625,Liver::Mesenchymal stem cell,5,5,0,0
+GSE156625,Liver::Monocytes,4,3,0,0
+GSE156625,Immune system::Cancer cells,6,6,0,0
+GSE156625,Liver::Cancer stem cells,6,6,0,0
+GSE162616,Immune system::Pro-B cells,20,18,0,0
+GSE162616,Immune system::Pre-B cells,18,17,0,0
+GSE162616,Immune system::Naive B cells,21,20,0,0
+GSE162616,Immune system::Memory B cells,22,21,0,0
+GSE162616,Immune system::Plasma B cells,21,20,1,1
+GSE162616,Immune system::Naive CD8+ T cells,29,27,5,4
+GSE162616,Immune system::Naive CD4+ T cells,27,25,5,4
+GSE162616,Immune system::Memory CD8+ T cells,30,28,0,0
+GSE162616,Immune system::Memory CD4+ T cells,28,26,0,0
+GSE162616,Immune system::Effector CD8+ T cells,29,27,2,2
+GSE162616,Immune system::Effector CD4+ T cells,27,25,2,2
+GSE162616,Immune system::γδ-T cells,29,27,2,2
+GSE162616,Immune system::Platelets,10,9,0,0
+GSE162616,Immune system::CD8+ NKT-like cells,24,22,0,0
+GSE162616,Immune system::CD4+ NKT-like cells,23,21,0,0
+GSE162616,Immune system::Natural killer  cells,19,18,6,5
+GSE162616,Immune system::Eosinophils,16,16,0,0
+GSE162616,Immune system::Neutrophils,30,28,0,0
+GSE162616,Immune system::Basophils,13,13,0,0
+GSE162616,Immune system::Mast cells,9,8,0,0
+GSE162616,Immune system::Classical Monocytes,21,19,2,2
+GSE162616,Immune system::Non-classical monocytes,24,22,1,1
+GSE162616,Immune system::Intermediate monocytes,20,18,1,1
+GSE162616,Immune system::Macrophages,17,16,1,1
+GSE162616,Immune system::Megakaryocyte,7,6,0,0
+GSE162616,Immune system::Endothelial,16,16,0,0
+GSE162616,Immune system::Erythroid-like and erythroid precursor cells,10,10,0,0
+GSE162616,Immune system::HSC/MPP cells,40,26,2,2
+GSE162616,Immune system::Progenitor cells,23,18,0,0
+GSE162616,Immune system::Myeloid Dendritic cells,25,23,0,0
+GSE162616,Immune system::Plasmacytoid Dendritic cells,28,28,0,0
+GSE162616,Immune system::Granulocytes,33,29,0,0
+GSE162616,Immune system::ISG expressing immune cells,13,11,0,0
+GSE162616,Liver::Cholangiocytes,41,41,0,0
+GSE162616,Liver::Endothelial cell,77,76,0,0
+GSE162616,Liver::Hematopoietic cell,2,2,0,0
+GSE162616,Liver::Hepatic stellate cells,43,41,0,0
+GSE162616,Liver::Hepatoblasts,17,17,0,0
+GSE162616,Liver::Hepatocytes,134,134,0,0
+GSE162616,Liver::Immune system cells,26,25,0,0
+GSE162616,Liver::Kupffer cells,44,44,0,0
+GSE162616,Liver::Liver progenitor cell,2,2,0,0
+GSE162616,Liver::Mast cells,9,9,0,0
+GSE162616,Liver::Mesenchymal stem cell,5,5,0,0
+GSE162616,Liver::Monocytes,4,3,0,0
+GSE162616,Immune system::Cancer cells,6,6,0,0
+GSE162616,Liver::Cancer stem cells,6,6,0,0
+GSE202642,Immune system::Pro-B cells,20,18,0,0
+GSE202642,Immune system::Pre-B cells,18,17,0,0
+GSE202642,Immune system::Naive B cells,21,20,0,0
+GSE202642,Immune system::Memory B cells,22,21,0,0
+GSE202642,Immune system::Plasma B cells,21,20,1,1
+GSE202642,Immune system::Naive CD8+ T cells,29,27,5,4
+GSE202642,Immune system::Naive CD4+ T cells,27,25,5,4
+GSE202642,Immune system::Memory CD8+ T cells,30,28,0,0
+GSE202642,Immune system::Memory CD4+ T cells,28,26,0,0
+GSE202642,Immune system::Effector CD8+ T cells,29,27,2,2
+GSE202642,Immune system::Effector CD4+ T cells,27,25,2,2
+GSE202642,Immune system::γδ-T cells,29,27,2,2
+GSE202642,Immune system::Platelets,10,9,0,0
+GSE202642,Immune system::CD8+ NKT-like cells,24,22,0,0
+GSE202642,Immune system::CD4+ NKT-like cells,23,21,0,0
+GSE202642,Immune system::Natural killer  cells,19,18,6,5
+GSE202642,Immune system::Eosinophils,16,16,0,0
+GSE202642,Immune system::Neutrophils,30,28,0,0
+GSE202642,Immune system::Basophils,13,13,0,0
+GSE202642,Immune system::Mast cells,9,8,0,0
+GSE202642,Immune system::Classical Monocytes,21,19,2,2
+GSE202642,Immune system::Non-classical monocytes,24,22,1,1
+GSE202642,Immune system::Intermediate monocytes,20,18,1,1
+GSE202642,Immune system::Macrophages,17,16,1,1
+GSE202642,Immune system::Megakaryocyte,7,6,0,0
+GSE202642,Immune system::Endothelial,16,16,0,0
+GSE202642,Immune system::Erythroid-like and erythroid precursor cells,10,10,0,0
+GSE202642,Immune system::HSC/MPP cells,40,26,2,2
+GSE202642,Immune system::Progenitor cells,23,18,0,0
+GSE202642,Immune system::Myeloid Dendritic cells,25,23,0,0
+GSE202642,Immune system::Plasmacytoid Dendritic cells,28,28,0,0
+GSE202642,Immune system::Granulocytes,33,29,0,0
+GSE202642,Immune system::ISG expressing immune cells,13,11,0,0
+GSE202642,Liver::Cholangiocytes,41,41,0,0
+GSE202642,Liver::Endothelial cell,77,76,0,0
+GSE202642,Liver::Hematopoietic cell,2,2,0,0
+GSE202642,Liver::Hepatic stellate cells,43,41,0,0
+GSE202642,Liver::Hepatoblasts,17,17,0,0
+GSE202642,Liver::Hepatocytes,134,134,0,0
+GSE202642,Liver::Immune system cells,26,25,0,0
+GSE202642,Liver::Kupffer cells,44,44,0,0
+GSE202642,Liver::Liver progenitor cell,2,2,0,0
+GSE202642,Liver::Mast cells,9,9,0,0
+GSE202642,Liver::Mesenchymal stem cell,5,5,0,0
+GSE202642,Liver::Monocytes,4,3,0,0
+GSE202642,Immune system::Cancer cells,6,6,0,0
+GSE202642,Liver::Cancer stem cells,6,6,0,0
+GSE223204,Immune system::Pro-B cells,20,18,0,0
+GSE223204,Immune system::Pre-B cells,18,17,0,0
+GSE223204,Immune system::Naive B cells,21,20,0,0
+GSE223204,Immune system::Memory B cells,22,21,0,0
+GSE223204,Immune system::Plasma B cells,21,20,1,1
+GSE223204,Immune system::Naive CD8+ T cells,29,27,5,4
+GSE223204,Immune system::Naive CD4+ T cells,27,25,5,4
+GSE223204,Immune system::Memory CD8+ T cells,30,28,0,0
+GSE223204,Immune system::Memory CD4+ T cells,28,26,0,0
+GSE223204,Immune system::Effector CD8+ T cells,29,27,2,2
+GSE223204,Immune system::Effector CD4+ T cells,27,25,2,2
+GSE223204,Immune system::γδ-T cells,29,27,2,2
+GSE223204,Immune system::Platelets,10,9,0,0
+GSE223204,Immune system::CD8+ NKT-like cells,24,22,0,0
+GSE223204,Immune system::CD4+ NKT-like cells,23,21,0,0
+GSE223204,Immune system::Natural killer  cells,19,18,6,5
+GSE223204,Immune system::Eosinophils,16,16,0,0
+GSE223204,Immune system::Neutrophils,30,28,0,0
+GSE223204,Immune system::Basophils,13,13,0,0
+GSE223204,Immune system::Mast cells,9,8,0,0
+GSE223204,Immune system::Classical Monocytes,21,19,2,2
+GSE223204,Immune system::Non-classical monocytes,24,22,1,1
+GSE223204,Immune system::Intermediate monocytes,20,18,1,1
+GSE223204,Immune system::Macrophages,17,16,1,1
+GSE223204,Immune system::Megakaryocyte,7,6,0,0
+GSE223204,Immune system::Endothelial,16,16,0,0
+GSE223204,Immune system::Erythroid-like and erythroid precursor cells,10,10,0,0
+GSE223204,Immune system::HSC/MPP cells,40,26,2,2
+GSE223204,Immune system::Progenitor cells,23,18,0,0
+GSE223204,Immune system::Myeloid Dendritic cells,25,23,0,0
+GSE223204,Immune system::Plasmacytoid Dendritic cells,28,28,0,0
+GSE223204,Immune system::Granulocytes,33,29,0,0
+GSE223204,Immune system::ISG expressing immune cells,13,11,0,0
+GSE223204,Liver::Cholangiocytes,41,41,0,0
+GSE223204,Liver::Endothelial cell,77,76,0,0
+GSE223204,Liver::Hematopoietic cell,2,2,0,0
+GSE223204,Liver::Hepatic stellate cells,43,41,0,0
+GSE223204,Liver::Hepatoblasts,17,17,0,0
+GSE223204,Liver::Hepatocytes,134,134,0,0
+GSE223204,Liver::Immune system cells,26,25,0,0
+GSE223204,Liver::Kupffer cells,44,44,0,0
+GSE223204,Liver::Liver progenitor cell,2,2,0,0
+GSE223204,Liver::Mast cells,9,9,0,0
+GSE223204,Liver::Mesenchymal stem cell,5,5,0,0
+GSE223204,Liver::Monocytes,4,3,0,0
+GSE223204,Immune system::Cancer cells,6,6,0,0
+GSE223204,Liver::Cancer stem cells,6,6,0,0

@@ -1,0 +1,53 @@
+layer_6,pred_broad6,N_cells
+B Cell,B,2994
+Plasmablast,B,1273
+B cell or Plasmablast,B,60
+Endothelial Cells,Endothelial,10599
+CAFmyo,Fibroblast,1542
+Cancer Associated Fibroblasts,Fibroblast,413
+CAFinfla,Fibroblast,101
+CAFadi,Fibroblast,80
+Normal Fibroblast,Fibroblast,32
+CAFendmt,Fibroblast,8
+Liver Cancer Cell,Hepatocyte,8736
+Biliary/Hepatic Cancer Cell,Hepatocyte,15
+Endometrial Cancer Cell,Hepatocyte,8
+Ovarian Cancer Cell,Hepatocyte,8
+Lung Cancer Cell,Hepatocyte,6
+Breast Cancer Cell,Hepatocyte,2
+Phagocytosis Macrophage,Myeloid,15006
+Pro-angiogenesis Macrophage,Myeloid,5088
+cDC2,Myeloid,3746
+CD14 Monocyte,Myeloid,2347
+CD16 Monocyte,Myeloid,1758
+Macrophage,Myeloid,1313
+Macrophage or Dendritic Cell,Myeloid,1178
+cDC1,Myeloid,537
+Pro-inflammatory Macrophage,Myeloid,281
+Macrophage or Monocyte,Myeloid,264
+cDC,Myeloid,249
+pDC,Myeloid,176
+LAMP3 cDC,Myeloid,151
+Monocyte,Myeloid,96
+Dendritic Cell,Myeloid,27
+Natural killer cell,T/NK,39869
+Effector/Memory CD8+ T cells,T/NK,13779
+Effector/Memory CD4+ T cells,T/NK,13158
+T regulatory cells,T/NK,4291
+CD4 or CD8 T cell,T/NK,2898
+CD8+ T cell,T/NK,2383
+CD4+ T cell,T/NK,2270
+MAIT cells,T/NK,2189
+CD8 T or NK cell,T/NK,2056
+Exhausted CD8+ T cells,T/NK,888
+Naive CD4+ T cells,T/NK,552
+Tfh/Th1 helper CD4+ T cells,T/NK,293
+Naive CD8+ T cells,T/NK,131
+T or NK Cell,T/NK,127
+Mast cell,T/NK,18
+Terminally differentiated effector CD4+ T cells,T/NK,8
+Blood Cell,Unknown,4363
+Any Cell,Unknown,3617
+Non Blood Cell,Unknown,488
+Stromal Cell,Unknown,125
+Non Stromal Cell,Unknown,97
