@@ -1,0 +1,8 @@
+Tool,CNV_TBonly_Precision,CNV_TBonly_Recall,CNV_TBonly_F1,N_CNV_predicted_malignant,Threshold_75p
+CellTypist,0.607,0.751,0.672,2438,0.0133
+scGPT,0.606,0.603,0.604,2438,0.0133
+SignacX,0.0,0.0,0.0,2438,0.0133
+CellAssign,0.373,0.104,0.163,2438,0.0133
+SingleR,0.601,0.748,0.667,2438,0.0133
+ScType,0.598,0.757,0.668,2438,0.0133
+CyteType,0.0,0.0,0.0,2438,0.0133

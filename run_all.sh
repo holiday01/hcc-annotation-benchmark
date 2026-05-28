@@ -19,11 +19,14 @@
 #     preprocess   — 01 (count matrices → h5ad)
 #     groundtruth  — 10 (attach EnrichR snapshot to h5ad)
 #     annotate     — 03–06, 17 (run 7 tools on benchmark datasets)
-#     external     — 16, 18–20 (external GSE156625 cohort)
-#     cnv          — 22 (CNV-based malignant validation)
+#     external     — 16, 18–20, 27 (external GSE156625 cohort; 27 adds CellAssign)
+#     cnv          — 22, 26, 29 (CNV malignant validation + T+B-only sensitivity + GSE149614 extension)
 #     simulate     — 21, 23, 24 (Splatter negative control)
 #     evaluate     — 02, 09, 12 (metrics)
+#     robustness   — 25 (cell-level bootstrap CI, label-permutation null, Friedman/Nemenyi)
 #     figures      — 07, 15 (figures)
+#     scgpt_sweep  — 28 (KNN k sensitivity on cached scGPT embeddings; needs scgpt env)
+#     scgpt_ft     — 30 (scGPT fine-tune skeleton; needs scgpt + GPU env)
 
 set -euo pipefail
 
@@ -60,10 +63,45 @@ stage_external() {
     run_py 18_run_CellAssign_GSE156625.py
     run_r  19_run_SignacX_GSE156625.R
     run_py 20_run_CyteType_GSE156625.py
+    # CellAssign GSE156625 re-run in a Python 3.11 + scvi-tools 1.4.2 env
+    # (resolves the original Python 3.13 incompatibility); produces
+    # annotation_results/GSE156625_CellAssign_pred.csv.
+    run_py 27_run_CellAssign_GSE156625.py
 }
 
 stage_cnv() {
     run_py 22_cnv_malignant_validation.py
+    # T+B-only normal-panel sensitivity check for GSE125449 inferCNV
+    # (Tirosh/Patel convention; removes TAM ambient-RNA confounding).
+    run_py 26_cnv_sensitivity_TBonly.py
+    # CNV-derived Malignant labels extended to GSE149614 (the larger
+    # benchmark cohort); produces FigS_cnv_malignant_GSE149614.pdf and
+    # expected_results/cnv_malignant_validation_GSE149614.csv.
+    run_py 29_cnv_malignant_GSE149614.py
+}
+
+stage_robustness() {
+    # Cell-level non-parametric bootstrap 95% CIs (B=1000), within-dataset
+    # label-permutation null (B=1000), paired-intersection means, and
+    # Friedman + Nemenyi post-hoc tests on Macro F1. Outputs:
+    #   expected_results/bootstrap_ci.csv
+    #   expected_results/permutation_null.csv
+    #   expected_results/paired_intersection_means.csv
+    #   expected_results/friedman_test.csv
+    #   expected_results/friedman_nemenyi.csv
+    run_py 25_statistical_robustness.py
+}
+
+stage_scgpt_sweep() {
+    # KNN k sensitivity sweep on cached scGPT embeddings.
+    # k ∈ {5, 10, 15, 20, 30}; requires the scgpt Python env.
+    run_py 28_scgpt_knn_k_sensitivity.py
+}
+
+stage_scgpt_ft() {
+    # scGPT supervised fine-tuning skeleton (Cell-Type Annotation task).
+    # Requires scgpt + working CUDA torch build. Currently a placeholder.
+    run_py 30_scgpt_finetune.py
 }
 
 stage_simulate() {
@@ -94,7 +132,10 @@ run_stage() {
         cnv)         stage_cnv         ;;
         simulate)    stage_simulate    ;;
         evaluate)    stage_evaluate    ;;
+        robustness)  stage_robustness  ;;
         figures)     stage_figures     ;;
+        scgpt_sweep) stage_scgpt_sweep ;;
+        scgpt_ft)    stage_scgpt_ft    ;;
         all)
             stage_preprocess
             stage_groundtruth
@@ -103,11 +144,13 @@ run_stage() {
             stage_cnv
             stage_simulate
             stage_evaluate
+            stage_robustness
             stage_figures
             ;;
         *)
             echo "Unknown stage: $1"
-            echo "Valid stages: preprocess groundtruth annotate external cnv simulate evaluate figures all"
+            echo "Valid stages: preprocess groundtruth annotate external cnv simulate evaluate robustness figures scgpt_sweep scgpt_ft all"
+            echo "  (scgpt_sweep and scgpt_ft are excluded from 'all' because they require a working scgpt + CUDA env.)"
             exit 1
             ;;
     esac

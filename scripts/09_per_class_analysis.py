@@ -140,8 +140,8 @@ def plot_perclass_heatmap(dfs, dataset_name, labels, out_prefix):
     plt.suptitle(f"Per-class Performance: {dataset_name}", fontsize=13, fontweight="bold", y=1.02)
     plt.tight_layout()
     out = f"{FIG_DIR}/{out_prefix}.pdf"
-    plt.savefig(out, bbox_inches="tight", dpi=300)
-    plt.savefig(out.replace(".pdf", ".png"), bbox_inches="tight", dpi=300)
+    plt.savefig(out, bbox_inches="tight", dpi=600)
+    plt.savefig(out.replace(".pdf", ".png"), bbox_inches="tight", dpi=600)
     plt.close()
     print(f"Saved: {out}")
 
@@ -181,8 +181,8 @@ def plot_perclass_bars(dfs, dataset_name, labels, out_prefix):
     plt.tight_layout()
 
     out = f"{FIG_DIR}/{out_prefix}_bars.pdf"
-    plt.savefig(out, bbox_inches="tight", dpi=300)
-    plt.savefig(out.replace(".pdf", ".png"), bbox_inches="tight", dpi=300)
+    plt.savefig(out, bbox_inches="tight", dpi=600)
+    plt.savefig(out.replace(".pdf", ".png"), bbox_inches="tight", dpi=600)
     plt.close()
     print(f"Saved: {out}")
 

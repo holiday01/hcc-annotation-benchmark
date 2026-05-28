@@ -58,65 +58,17 @@ N_MARKERS = 100
 
 # ─────────────────────────────────────────────────────────────────────────────
 # Broad category mapping — collapses fine-grained enrichR hits to standard
-# labels. Used both when re-attaching snapshots (idempotent on broad labels
-# already present) and when re-querying.
+# labels. Single canonical implementation is in _broad_label.py and is
+# shared with 16_prepare_gse156625_external.py (previously these two
+# scripts maintained drifted copies; cf. _broad_label.py header).
 # ─────────────────────────────────────────────────────────────────────────────
-REJECT_KEYWORDS = [
-    "goblet", "intestinal crypt", "paneth", "microglia", "microglial",
-    "mesangial", "medullary", "leydig", "spermatogon", "trophoblast",
-    "villous", "pancreatic acinar", "pancreatic ductal", "pancreatic duct",
-    "osteoblast", "osteoclast", "chondrocyte", "adipocyte", "keratinocyte",
-    "melanocyte", "secretory cell lung", "transit amplifying",
-    "cardiac", "cardiomyocyte", "podocyte", "proximal tubule", "distal tubule",
-    "collecting duct", "loop of henle", "bowman", "glomerular",
-    "enterocyte", "colonocyte", "crypt", "epithelial cell lung",
-    "epithelial cell ovary", "fetal germ", "germinal center",
-    "multilymphoid progenitor", "megakaryocyte progenitor",
-    "stromal cell bone", "schwann", "oligodendrocyte", "astrocyte",
-    "dopaminergic", "purkinje", "granule cell", "cortical neuron",
-    "leydig", "sertoli", "granulocyte progenitor", "erythroid progenitor",
-    "common myeloid progenitor", "common lymphoid progenitor",
-]
-
-BROAD_MAP = {
-    "t cell": "T/NK", "cd4": "T/NK", "cd8": "T/NK", "treg": "T/NK",
-    "regulatory t": "T/NK", "mait": "T/NK", "nkt": "T/NK",
-    "exhausted": "T/NK", "cytotoxic t": "T/NK", "gamma delta": "T/NK",
-    "gdelta": "T/NK", "intraepithelial lymphocyte": "T/NK",
-    "mucosal": "T/NK", "natural killer": "T/NK", "nk cell": "T/NK",
-    "nk-cell": "T/NK", "innate lymphoid": "T/NK", "ilc": "T/NK",
-    "macrophage": "Myeloid", "kupffer": "Myeloid",
-    "tumor-associated macrophage": "Myeloid", "monocyte": "Myeloid",
-    "dendritic cell": "Myeloid", "dendritic": "Myeloid",
-    "plasmacytoid dendritic": "Myeloid", "conventional dc": "Myeloid",
-    " dc": "Myeloid", "neutrophil": "Myeloid", "mast cell": "Myeloid",
-    "basophil": "Myeloid", "eosinophil": "Myeloid",
-    "b cell": "B", "b-cell": "B", "plasma cell": "B", "plasmablast": "B",
-    "memory b": "B", "naive b": "B", "germinal centre b": "B",
-    "hepatocyte": "Hepatocyte", "liver bud hepatic": "Hepatocyte",
-    "hepatic progenitor": "Hepatocyte",
-    "endothelial": "Endothelial", "vascular smooth muscle": "Endothelial",
-    "lymphatic": "Endothelial",
-    "fibroblast": "Fibroblast", "stellate cell": "Fibroblast",
-    "myofibroblast": "Fibroblast",
-    "cancer-associated fibroblast": "Fibroblast", "caf": "Fibroblast",
-    "pericyte": "Fibroblast", "smooth muscle cell": "Fibroblast",
-    "cholangiocyte": "Cholangiocyte", "biliary": "Cholangiocyte",
-    "hpc": "HPC-like",
-    "erythroid": "Erythroid", "erythrocyte": "Erythroid",
-    "red blood cell": "Erythroid",
-}
-
-
-def broad_label(cell_type_str: str) -> str:
-    ct_lower = cell_type_str.lower()
-    for rej in REJECT_KEYWORDS:
-        if rej in ct_lower:
-            return "Unknown"
-    for key, broad in BROAD_MAP.items():
-        if key.lower() in ct_lower:
-            return broad
-    return "Unknown"
+import importlib.util as _ilu, os as _os
+_spec = _ilu.spec_from_file_location(
+    "_broad_label", _os.path.join(_os.path.dirname(__file__), "_broad_label.py"))
+_bl = _ilu.module_from_spec(_spec); _spec.loader.exec_module(_bl)
+REJECT_KEYWORDS = _bl.REJECT_KEYWORDS
+BROAD_MAP       = _bl.BROAD_MAP
+broad_label     = _bl.broad_label
 
 
 # ─────────────────────────────────────────────────────────────────────────────

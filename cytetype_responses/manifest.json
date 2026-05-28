@@ -1,0 +1,29 @@
+{
+  "archived_datasets": [
+    {
+      "dataset": "GSE156625",
+      "job_id": "a4c9beb9-6cb7-4e03-a588-b3db6a903262",
+      "n_clusters": 35,
+      "file": "GSE156625_cytetype_response.json"
+    },
+    {
+      "dataset": "GSE162616",
+      "job_id": "bf3d5293-9d6a-4296-ad5c-b90f98f18c6e",
+      "n_clusters": 20,
+      "file": "GSE162616_cytetype_response.json"
+    },
+    {
+      "dataset": "GSE202642",
+      "job_id": "7cd695f2-5477-44b9-87f7-0ff2ba5da5d5",
+      "n_clusters": 27,
+      "file": "GSE202642_cytetype_response.json"
+    },
+    {
+      "dataset": "GSE223204",
+      "job_id": "07c903ae-f3af-4dce-af73-841c33c0ca2c",
+      "n_clusters": 19,
+      "file": "GSE223204_cytetype_response.json"
+    }
+  ],
+  "note": "Per-cluster CyteType API responses for the four validation datasets. For GSE125449 and GSE149614 (benchmark datasets), the API runner script 04_run_CyteType_on_benchmark.py did not save the full adata.uns; only per-cell post-mapping CSVs are available, archived in expected_results/. auth_token has been stripped from jobDetails."
+}

@@ -18,7 +18,7 @@ ground truth, with an independent inferCNV-based malignant-cell validation.
 ```
 .
 ├── scripts/                  # Analysis pipeline (numbered execution order)
-├── ground_truth/             # Author-curated AND EnrichR snapshot labels
+├── ground_truth/             # Author-curated, EnrichR snapshot labels, and CellAssign marker matrix
 │   ├── GSE125449_ground_truth.tsv       (author-curated)
 │   ├── GSE149614_ground_truth.tsv       (author-curated)
 │   ├── GSE125449_enrichr_ground_truth.tsv
@@ -27,7 +27,14 @@ ground truth, with an independent inferCNV-based malignant-cell validation.
 │   ├── GSE156625_enrichr_cluster_labels.tsv
 │   ├── GSE162616_enrichr_ground_truth.tsv
 │   ├── GSE202642_enrichr_ground_truth.tsv
-│   └── GSE223204_enrichr_ground_truth.tsv
+│   ├── GSE223204_enrichr_ground_truth.tsv
+│   └── cellassign_markers.tsv           (CellAssign marker matrix used in the paper)
+├── cytetype_responses/       # Frozen per-cluster CyteType API JSON (4 validation datasets)
+│   ├── GSE156625_cytetype_response.json
+│   ├── GSE162616_cytetype_response.json
+│   ├── GSE202642_cytetype_response.json
+│   ├── GSE223204_cytetype_response.json
+│   └── manifest.json
 ├── expected_results/         # CSVs the manuscript reports (for diff-style verification)
 ├── external/sc-type/         # Third-party ScType R scripts and marker DB
 ├── download_data.sh          # Fetch all 6 GEO datasets into ./data/
@@ -115,11 +122,15 @@ To run individual stages (defined in `run_all.sh`):
 bash run_all.sh preprocess         # 01
 bash run_all.sh groundtruth        # 10 (loads EnrichR snapshot by default)
 bash run_all.sh annotate           # 03–06, 17 (7 tools on benchmark data)
-bash run_all.sh external           # 16, 18–20 (GSE156625 generalisation)
-bash run_all.sh cnv                # 22 (inferCNV malignant validation)
+bash run_all.sh external           # 16, 18–20, 27 (GSE156625 generalisation; 27 adds CellAssign)
+bash run_all.sh cnv                # 22, 26, 29 (inferCNV: baseline + T+B-only sensitivity + GSE149614 extension)
 bash run_all.sh simulate           # 21, 23, 24 (Splatter negative control)
 bash run_all.sh evaluate           # 02, 09, 12, 13 (metrics)
+bash run_all.sh robustness         # 25 (bootstrap CI, permutation null, Friedman/Nemenyi)
 bash run_all.sh figures            # 07, 15 (figure assets)
+# Optional (require scgpt + working CUDA env; not part of `all`):
+bash run_all.sh scgpt_sweep        # 28 (KNN k sensitivity on cached scGPT embeddings)
+bash run_all.sh scgpt_ft           # 30 (scGPT supervised fine-tune skeleton)
 ```
 
 The numbered scripts in `scripts/` can also be run individually:

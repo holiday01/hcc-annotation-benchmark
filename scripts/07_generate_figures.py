@@ -100,8 +100,8 @@ def plot_heatmap(df, gt_label, suffix=""):
         fontsize=14, fontweight="bold", y=1.02)
     plt.tight_layout()
     out = f"{FIG_DIR}/Fig1_heatmap_metrics{suffix}.pdf"
-    plt.savefig(out, bbox_inches="tight", dpi=300)
-    plt.savefig(out.replace(".pdf", ".png"), bbox_inches="tight", dpi=300)
+    plt.savefig(out, bbox_inches="tight", dpi=600)
+    plt.savefig(out.replace(".pdf", ".png"), bbox_inches="tight", dpi=600)
     plt.close()
     print(f"Saved: {out}")
 
@@ -146,8 +146,8 @@ def plot_bar_all(df, gt_label, suffix=""):
 
     plt.tight_layout()
     out = f"{FIG_DIR}/Fig2_bar_all{suffix}.pdf"
-    plt.savefig(out, bbox_inches="tight", dpi=300)
-    plt.savefig(out.replace(".pdf", ".png"), bbox_inches="tight", dpi=300)
+    plt.savefig(out, bbox_inches="tight", dpi=600)
+    plt.savefig(out.replace(".pdf", ".png"), bbox_inches="tight", dpi=600)
     plt.close()
     print(f"Saved: {out}")
 
@@ -186,8 +186,8 @@ def plot_unknown_rate():
 
     plt.tight_layout()
     out = f"{FIG_DIR}/Fig3_unknown_rate.pdf"
-    plt.savefig(out, bbox_inches="tight", dpi=300)
-    plt.savefig(out.replace(".pdf", ".png"), bbox_inches="tight", dpi=300)
+    plt.savefig(out, bbox_inches="tight", dpi=600)
+    plt.savefig(out.replace(".pdf", ".png"), bbox_inches="tight", dpi=600)
     plt.close()
     print(f"Saved: {out}")
 
@@ -247,8 +247,8 @@ def plot_confusion_matrix(pred_path, dataset_name, tool_name, labels):
     plt.colorbar(im, ax=ax, shrink=0.8, label="Row proportion")
     plt.tight_layout()
     out = f"{FIG_DIR}/Fig4_confusion_{dataset_name}_{tool_name}.pdf"
-    plt.savefig(out, bbox_inches="tight", dpi=300)
-    plt.savefig(out.replace(".pdf", ".png"), bbox_inches="tight", dpi=300)
+    plt.savefig(out, bbox_inches="tight", dpi=600)
+    plt.savefig(out.replace(".pdf", ".png"), bbox_inches="tight", dpi=600)
     plt.close()
     print(f"Saved: {out}")
 
@@ -287,8 +287,8 @@ def plot_radar_summary():
 
     plt.tight_layout()
     out = f"{FIG_DIR}/Fig5_radar_summary.pdf"
-    plt.savefig(out, bbox_inches="tight", dpi=300)
-    plt.savefig(out.replace(".pdf", ".png"), bbox_inches="tight", dpi=300)
+    plt.savefig(out, bbox_inches="tight", dpi=600)
+    plt.savefig(out.replace(".pdf", ".png"), bbox_inches="tight", dpi=600)
     plt.close()
     print(f"Saved: {out}")
 

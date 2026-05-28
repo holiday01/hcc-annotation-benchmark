@@ -1,0 +1,130 @@
+# CellAssign marker matrix used in this study.
+# Source: CellMarker 2.0, Human Cell Atlas Liver, Ma et al. 2019 (Cancer Cell),
+#         Sharma et al. 2020 (Cell), Lu et al. 2022 (Hepatology),
+#         Guilliams et al. 2022 (Cell).
+# Two panels are released: (a) Broad6 markers for GSE149614 and the four
+# validation datasets, (b) GSE125449-specific markers including HCC tumour
+# microenvironment populations (Malignant cell, TAM, CAF, TEC, HPC-like).
+# Format: cell_type<TAB>gene_symbol  (long-form). Each row pairs one marker
+# gene with one cell type. The binary marker matrix used by CellAssign is
+# reconstructed by 05_run_CellAssign_on_benchmark.py:build_marker_matrix().
+
+# ── Panel A: Broad6 (GSE149614 + validation cohorts) ────────────────────────
+panel	cell_type	gene_symbol
+Broad6	T/NK	CD3D
+Broad6	T/NK	CD3E
+Broad6	T/NK	CD3G
+Broad6	T/NK	CD8A
+Broad6	T/NK	CD4
+Broad6	T/NK	GNLY
+Broad6	T/NK	NKG7
+Broad6	T/NK	KLRD1
+Broad6	T/NK	GZMB
+Broad6	T/NK	GZMK
+Broad6	T/NK	PRF1
+Broad6	T/NK	NCAM1
+Broad6	Myeloid	CD14
+Broad6	Myeloid	CD68
+Broad6	Myeloid	LYZ
+Broad6	Myeloid	CSF1R
+Broad6	Myeloid	ITGAM
+Broad6	Myeloid	FCGR3A
+Broad6	Myeloid	S100A8
+Broad6	Myeloid	S100A9
+Broad6	Myeloid	HLA-DRA
+Broad6	Myeloid	MARCO
+Broad6	Hepatocyte	ALB
+Broad6	Hepatocyte	APOE
+Broad6	Hepatocyte	APOA1
+Broad6	Hepatocyte	CYP3A4
+Broad6	Hepatocyte	CYP2E1
+Broad6	Hepatocyte	FABP1
+Broad6	Hepatocyte	HPX
+Broad6	Hepatocyte	FGB
+Broad6	Hepatocyte	FGA
+Broad6	Hepatocyte	AFP
+Broad6	Hepatocyte	TF
+Broad6	B	CD79A
+Broad6	B	CD79B
+Broad6	B	MS4A1
+Broad6	B	CD19
+Broad6	B	BANK1
+Broad6	B	IGHM
+Broad6	B	CD27
+Broad6	B	JCHAIN
+Broad6	B	MZB1
+Broad6	Endothelial	PECAM1
+Broad6	Endothelial	VWF
+Broad6	Endothelial	CDH5
+Broad6	Endothelial	CLDN5
+Broad6	Endothelial	PLVAP
+Broad6	Endothelial	ENG
+Broad6	Endothelial	LYVE1
+Broad6	Endothelial	CLEC4G
+Broad6	Endothelial	FCN2
+Broad6	Endothelial	FCN3
+Broad6	Fibroblast	COL1A1
+Broad6	Fibroblast	COL1A2
+Broad6	Fibroblast	COL3A1
+Broad6	Fibroblast	ACTA2
+Broad6	Fibroblast	FAP
+Broad6	Fibroblast	PDGFRA
+Broad6	Fibroblast	DCN
+Broad6	Fibroblast	LUM
+Broad6	Fibroblast	PDPN
+Broad6	Fibroblast	THY1
+
+# ── Panel B: GSE125449-specific (7 classes including HCC TME) ───────────────
+GSE125449	T cell	CD3D
+GSE125449	T cell	CD3E
+GSE125449	T cell	CD8A
+GSE125449	T cell	CD4
+GSE125449	T cell	GNLY
+GSE125449	T cell	NKG7
+GSE125449	T cell	GZMB
+GSE125449	T cell	FOXP3
+GSE125449	CAF	COL1A1
+GSE125449	CAF	COL1A2
+GSE125449	CAF	ACTA2
+GSE125449	CAF	FAP
+GSE125449	CAF	PDGFRA
+GSE125449	CAF	DCN
+GSE125449	CAF	LUM
+GSE125449	Malignant cell	AFP
+GSE125449	Malignant cell	GPC3
+GSE125449	Malignant cell	EPCAM
+GSE125449	Malignant cell	KRT8
+GSE125449	Malignant cell	KRT18
+GSE125449	Malignant cell	KRT19
+GSE125449	Malignant cell	ALB
+GSE125449	Malignant cell	APOE
+GSE125449	TAM	CD68
+GSE125449	TAM	CD163
+GSE125449	TAM	MRC1
+GSE125449	TAM	CSF1R
+GSE125449	TAM	MARCO
+GSE125449	TAM	ADGRE1
+GSE125449	TAM	SPP1
+GSE125449	TAM	APOC1
+GSE125449	B cell	CD79A
+GSE125449	B cell	MS4A1
+GSE125449	B cell	CD19
+GSE125449	B cell	IGHM
+GSE125449	B cell	CD27
+GSE125449	B cell	JCHAIN
+GSE125449	B cell	MZB1
+GSE125449	TEC	PECAM1
+GSE125449	TEC	VWF
+GSE125449	TEC	CDH5
+GSE125449	TEC	CLDN5
+GSE125449	TEC	PLVAP
+GSE125449	TEC	ENG
+GSE125449	TEC	MMRN1
+GSE125449	HPC-like	SOX9
+GSE125449	HPC-like	KRT7
+GSE125449	HPC-like	KRT19
+GSE125449	HPC-like	PROM1
+GSE125449	HPC-like	EPCAM
+GSE125449	HPC-like	CD24
+GSE125449	HPC-like	ANXA4
+GSE125449	HPC-like	TACSTD2

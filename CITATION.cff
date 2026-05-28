@@ -17,6 +17,11 @@ authors:
     given-names: Yen-Jung
     affiliation: Chang Gung University
 license: MIT
+doi: 10.5281/zenodo.19596757
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.19596757
+    description: Archived release on Zenodo
 repository-code: "https://github.com/holiday01/hcc-annotation-benchmark"
 keywords:
   - single-cell RNA sequencing

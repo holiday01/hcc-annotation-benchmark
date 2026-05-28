@@ -172,8 +172,8 @@ def main() -> None:
 
     out_pdf = FIG_DIR / "FigS3_ground_truth_robustness.pdf"
     out_png = FIG_DIR / "FigS3_ground_truth_robustness.png"
-    fig.savefig(out_pdf, bbox_inches="tight", dpi=300)
-    fig.savefig(out_png, bbox_inches="tight", dpi=300)
+    fig.savefig(out_pdf, bbox_inches="tight", dpi=600)
+    fig.savefig(out_png, bbox_inches="tight", dpi=600)
     plt.close(fig)
     print(f"Wrote {out_pdf}")
     print(f"Wrote {out_png}")

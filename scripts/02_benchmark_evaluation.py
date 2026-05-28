@@ -497,12 +497,14 @@ def evaluate_enrichr_original3():
     results = []
 
     # GSE156625 — use new prediction files (run in this benchmark expansion)
+    # CellAssign GSE156625 was re-run in the drug_sc env (Python 3.11 + scvi-tools 1.4.2)
+    # by scripts/27_run_CellAssign_GSE156625.py during the revision.
     gt156 = load_enrichr_gt("GSE156625")
     tools156 = {
         "CellTypist": load_celltypist("GSE156625"),
         "signacX":     load_signacx_new("GSE156625"),
         "CyteType":    load_cytetype_new("GSE156625"),
-        "CellAssign":  None,   # not available (scvi-tools env incompatibility)
+        "CellAssign":  load_cellassign("GSE156625"),
         "scGPT":       load_scgpt("GSE156625"),
         "SingleR":     load_singler("GSE156625"),
         "ScType":      load_sctype("GSE156625"),

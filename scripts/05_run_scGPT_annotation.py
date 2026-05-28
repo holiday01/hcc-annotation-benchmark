@@ -13,6 +13,7 @@ Model: wanglab/scGPT-human (downloaded from HuggingFace)
 
 import os
 import json
+import random
 import warnings
 import numpy as np
 import pandas as pd
@@ -21,6 +22,22 @@ from pathlib import Path
 
 warnings.filterwarnings("ignore")
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
+
+# ── Deterministic seeding for reproducibility ────────────────────────────────
+# Pinned by manuscript Methods (Statistical analysis and reproducibility).
+SEED = 42
+random.seed(SEED)
+np.random.seed(SEED)
+os.environ["PYTHONHASHSEED"] = str(SEED)
+try:
+    import torch
+    torch.manual_seed(SEED)
+    if torch.cuda.is_available():
+        torch.cuda.manual_seed_all(SEED)
+    torch.backends.cudnn.deterministic = True
+    torch.backends.cudnn.benchmark = False
+except ImportError:
+    pass
 
 # ── paths ─────────────────────────────────────────────────────────────────────
 BASE = Path("/mnt/10t/assi_result/HCC")
