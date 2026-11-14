@@ -1,0 +1,33 @@
+Dataset,GT,Vocab,ToolSet,Tools,N_GT_labelled,N_common,Frac_common,N_called_by_all,N_samples,Classes
+GSE125449,published,broad6,all7,CellTypist|SingleR|ScType|CellAssign|SignacX|CyteType|scGPT,9752,9752,1.0,7809,19,T/NK|Myeloid|Hepatocyte|B|Endothelial|Fibroblast
+GSE125449,published,broad6,all,CellTypist|SingleR|ScType|CellAssign|SignacX|CyteType|scGPT|SeuratLT|SingleRdisco|scmap|scPred|SingleCellNet,9752,9752,1.0,6782,19,T/NK|Myeloid|Hepatocyte|B|Endothelial|Fibroblast
+GSE149614,published,broad6,all7,CellTypist|SingleR|ScType|CellAssign|SignacX|CyteType|scGPT,71915,71915,1.0,54508,21,T/NK|Myeloid|Hepatocyte|B|Endothelial|Fibroblast
+GSE149614,published,broad6,all,CellTypist|SingleR|ScType|CellAssign|SignacX|CyteType|scGPT|SeuratLT|SingleRdisco|scmap|scPred|SingleCellNet,71915,71915,1.0,50022,21,T/NK|Myeloid|Hepatocyte|B|Endothelial|Fibroblast
+GSE156625,published,broad6,all7,CellTypist|SingleR|ScType|CellAssign|SignacX|CyteType|scGPT,71809,71809,1.0,60007,15,T/NK|Myeloid|Hepatocyte|B|Endothelial|Fibroblast
+GSE156625,published,broad6,all,CellTypist|SingleR|ScType|CellAssign|SignacX|CyteType|scGPT|SeuratLT|SingleRdisco|scmap|scPred|SingleCellNet,71809,71809,1.0,40505,15,T/NK|Myeloid|Hepatocyte|B|Endothelial|Fibroblast
+GSE125449,published,broad7,all7,CellTypist|SingleR|ScType|CellAssign|SignacX|CyteType|scGPT,9752,9752,1.0,7809,19,T cell|TAM|B cell|Malignant cell|HPC-like|TEC|CAF
+GSE125449,published,broad7,all,CellTypist|SingleR|ScType|CellAssign|SignacX|CyteType|scGPT|SeuratLT|SingleRdisco|scmap|scPred|SingleCellNet,9752,9752,1.0,6782,19,T cell|TAM|B cell|Malignant cell|HPC-like|TEC|CAF
+GSE125449,enrichR,broad6,all7,CellTypist|SingleR|ScType|CellAssign|SignacX|CyteType|scGPT,4157,4157,1.0,3346,19,T/NK|Myeloid|Hepatocyte|B|Endothelial|Fibroblast
+GSE125449,enrichR,broad6,all,CellTypist|SingleR|ScType|CellAssign|SignacX|CyteType|scGPT|SeuratLT|SingleRdisco|scmap|scPred|SingleCellNet,4157,4157,1.0,3160,19,T/NK|Myeloid|Hepatocyte|B|Endothelial|Fibroblast
+GSE125449,enrichR,broad6,noSignacX,CellTypist|SingleR|ScType|CellAssign|CyteType|scGPT,4157,4157,1.0,4089,19,T/NK|Myeloid|Hepatocyte|B|Endothelial|Fibroblast
+GSE125449,enrichR,broad6,noncircular,CellTypist|SingleR|CellAssign|scGPT|SeuratLT|SingleRdisco|scmap|scPred|SingleCellNet,4157,4157,1.0,3782,19,T/NK|Myeloid|Hepatocyte|B|Endothelial|Fibroblast
+GSE149614,enrichR,broad6,all7,CellTypist|SingleR|ScType|CellAssign|SignacX|CyteType|scGPT,43462,43462,1.0,32932,21,T/NK|Myeloid|Hepatocyte|B|Endothelial
+GSE149614,enrichR,broad6,all,CellTypist|SingleR|ScType|CellAssign|SignacX|CyteType|scGPT|SeuratLT|SingleRdisco|scmap|scPred|SingleCellNet,43462,43462,1.0,30642,21,T/NK|Myeloid|Hepatocyte|B|Endothelial
+GSE149614,enrichR,broad6,noSignacX,CellTypist|SingleR|ScType|CellAssign|CyteType|scGPT,43462,43462,1.0,40813,21,T/NK|Myeloid|Hepatocyte|B|Endothelial
+GSE149614,enrichR,broad6,noncircular,CellTypist|SingleR|CellAssign|scGPT|SeuratLT|SingleRdisco|scmap|scPred|SingleCellNet,43462,43462,1.0,40124,21,T/NK|Myeloid|Hepatocyte|B|Endothelial
+GSE156625,enrichR,broad6,all7,CellTypist|SingleR|ScType|CellAssign|SignacX|CyteType|scGPT,53327,53327,1.0,44063,15,T/NK|Myeloid|Hepatocyte|B|Endothelial
+GSE156625,enrichR,broad6,all,CellTypist|SingleR|ScType|CellAssign|SignacX|CyteType|scGPT|SeuratLT|SingleRdisco|scmap|scPred|SingleCellNet,53327,53327,1.0,28310,15,T/NK|Myeloid|Hepatocyte|B|Endothelial
+GSE156625,enrichR,broad6,noSignacX,CellTypist|SingleR|ScType|CellAssign|CyteType|scGPT,53327,53327,1.0,50865,15,T/NK|Myeloid|Hepatocyte|B|Endothelial
+GSE156625,enrichR,broad6,noncircular,CellTypist|SingleR|CellAssign|scGPT|SeuratLT|SingleRdisco|scmap|scPred|SingleCellNet,53327,53327,1.0,33367,15,T/NK|Myeloid|Hepatocyte|B|Endothelial
+GSE162616,enrichR,broad6,all7,CellTypist|SingleR|ScType|CellAssign|SignacX|CyteType|scGPT,43219,43219,1.0,39660,4,T/NK|Myeloid|B
+GSE162616,enrichR,broad6,all,CellTypist|SingleR|ScType|CellAssign|SignacX|CyteType|scGPT|SeuratLT|SingleRdisco|scmap|scPred|SingleCellNet,43219,43219,1.0,36781,4,T/NK|Myeloid|B
+GSE162616,enrichR,broad6,noSignacX,CellTypist|SingleR|ScType|CellAssign|CyteType|scGPT,43219,43219,1.0,41880,4,T/NK|Myeloid|B
+GSE162616,enrichR,broad6,noncircular,CellTypist|SingleR|CellAssign|scGPT|SeuratLT|SingleRdisco|scmap|scPred|SingleCellNet,43219,43219,1.0,38514,4,T/NK|Myeloid|B
+GSE202642,enrichR,broad6,all7,CellTypist|SingleR|ScType|CellAssign|SignacX|CyteType|scGPT,82782,82782,1.0,59838,11,T/NK|Myeloid|Hepatocyte|B|Endothelial
+GSE202642,enrichR,broad6,all,CellTypist|SingleR|ScType|CellAssign|SignacX|CyteType|scGPT|SeuratLT|SingleRdisco|scmap|scPred|SingleCellNet,82782,82782,1.0,34831,11,T/NK|Myeloid|Hepatocyte|B|Endothelial
+GSE202642,enrichR,broad6,noSignacX,CellTypist|SingleR|ScType|CellAssign|CyteType|scGPT,82782,82782,1.0,71358,11,T/NK|Myeloid|Hepatocyte|B|Endothelial
+GSE202642,enrichR,broad6,noncircular,CellTypist|SingleR|CellAssign|scGPT|SeuratLT|SingleRdisco|scmap|scPred|SingleCellNet,82782,82782,1.0,46295,11,T/NK|Myeloid|Hepatocyte|B|Endothelial
+GSE223204,enrichR,broad6,all7,CellTypist|SingleR|ScType|CellAssign|SignacX|CyteType|scGPT,18039,18039,1.0,10933,2,T/NK|Myeloid|Hepatocyte|B|Endothelial
+GSE223204,enrichR,broad6,all,CellTypist|SingleR|ScType|CellAssign|SignacX|CyteType|scGPT|SeuratLT|SingleRdisco|scmap|scPred|SingleCellNet,18039,18039,1.0,8191,2,T/NK|Myeloid|Hepatocyte|B|Endothelial
+GSE223204,enrichR,broad6,noSignacX,CellTypist|SingleR|ScType|CellAssign|CyteType|scGPT,18039,18039,1.0,16091,2,T/NK|Myeloid|Hepatocyte|B|Endothelial
+GSE223204,enrichR,broad6,noncircular,CellTypist|SingleR|CellAssign|scGPT|SeuratLT|SingleRdisco|scmap|scPred|SingleCellNet,18039,18039,1.0,11590,2,T/NK|Myeloid|Hepatocyte|B|Endothelial

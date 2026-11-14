@@ -1,0 +1,4 @@
+Analysis,n_datasets,k_tools,chi2,p,mean_rank,mean_MacroF1
+A_6cohorts_6tools_noSignacX,6,6,16.29,0.006074,ScType:1.67|CellTypist:2.83|scGPT:2.83|CyteType:3.83|SingleR:4.17|CellAssign:5.67,ScType:0.969|scGPT:0.933|CellTypist:0.894|SingleR:0.873|CyteType:0.761|CellAssign:0.371
+B_5cohorts_7tools,5,7,17.06,0.009076,ScType:2.00|scGPT:2.80|CellTypist:3.20|CyteType:3.40|SingleR:4.40|SignacX:5.60|CellAssign:6.60,ScType:0.970|scGPT:0.926|CellTypist:0.876|SingleR:0.876|CyteType:0.816|SignacX:0.527|CellAssign:0.302
+C_6cohorts_noncircular,6,4,12.2,0.006729,scGPT:1.67|CellTypist:1.83|SingleR:2.50|CellAssign:4.00,scGPT:0.933|CellTypist:0.894|SingleR:0.873|CellAssign:0.371

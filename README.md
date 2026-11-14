@@ -149,6 +149,75 @@ numbers — see `expected_results/README.md` for tolerance guidance.
 
 ---
 
+## Revision 2 (2026-11): revised evaluation
+
+The second revision re-implements the evaluation in response to the reviewers.
+Its outputs are kept separate from the original release (`expected_results/`),
+so both can be compared.
+
+**What changed**
+
+- **Scoring** (`scripts/31_rescore_common_cells.py`): every tool is scored on the
+  same cells; abstentions (Unknown, unassigned, pruned, quality-control flags)
+  count as errors; macro F1 is averaged over the reference classes only (the
+  same class set for every tool); coverage, Cohen's kappa and selective scores
+  are reported; sample-level bootstrap intervals, paired bootstrap differences,
+  permutation nulls and Friedman/Nemenyi tests.
+- **One label harmonisation** for every tool and for the database-derived labels
+  (`scripts/_canonical_broad.py`; full table in
+  `expected_results_rev2/rev2_label_mapping.csv`).
+- **Reference labels**: investigator-curated labels for GSE125449, GSE149614 and
+  GSE156625 (the latter extracted from the authors' GEO object:
+  `ground_truth/GSE156625_published_ground_truth.tsv`); the flow-sorted design of
+  GSE162616; copy-number inference. The enrichR labels are a secondary
+  concordance reference only.
+- **Tools**: Seurat label transfer, scmap, scPred and SingleCellNet added, and
+  SingleR additionally run with a liver reference (12 configurations of 11
+  tools). Every tool that accepts a reference is trained on one shared DISCO liver
+  reference from which all samples of the six benchmark series were removed
+  (`reference_rev2/`).
+- **Re-runs**: SignacX and CellAssign on raw counts for every cell; scGPT with
+  the shared reference (the original scGPT reference contained cells of four
+  benchmark cohorts).
+
+**Scripts** (each script's docstring lists its inputs and outputs)
+
+| Step | Scripts |
+|---|---|
+| Inputs: raw counts for every cell, GSE156625 author labels, shared reference | `33_prepare_counts_rev2.py`, `38_extract_GSE156625_author_labels.R`, `42_build_shared_reference.py` |
+| Re-runs | `34_rerun_SignacX_rev2.R` (+ `_signacx_patched.R`), `36_rerun_CellAssign_rev2.py`, `35_scgpt_leave_cohort_out.py` (+ `torchtext_shim_for_scgpt/`) |
+| Added tools | `43_run_reference_tools_rev2.R` (Seurat label transfer, SingleR with the liver reference), `44_run_scmap_scn_scpred_rev2.R` |
+| Scoring and statistics | `31_rescore_common_cells.py`, `32_rev2_decomposition.py` (original → revised scores, step by step) |
+| Additional analyses | `37_scgpt_k_sensitivity.py`, `41_sorted_ILC_check_GSE162616.py`, `45_cnv_simulation_rev2.py` |
+| Manuscript tables, figures and number checks | `46_manuscript_numbers.py`, `47_make_tables_figures_rev2.py`, `48_make_supplement_rev2.py`, `49_crosscheck_numbers.py` (47–49 write to the manuscript folder set in each script) |
+| Per-cell predictions | `50_export_predictions_rev2.py` → `predictions_rev2/` |
+| Optional, not used in the paper | `39_build_annotation_package.py`, `40_ingest_annotations.py` (blinded cluster-annotation package) |
+
+**Outputs**
+
+- `expected_results_rev2/`: all scores (`rev2_scores.csv`), decomposition,
+  bootstrap and statistical tests, CNV and simulation results, the label
+  harmonisation table, and `rev2_manuscript_numbers.md` (every number quoted in
+  the revised manuscript with its source). `original_predictions/` and
+  `original_mapping/` hold the same analysis with the original predictions or
+  the original label mappings, for comparison. See `expected_results_rev2/README.md`.
+- `predictions_rev2/<GSE>_predictions_rev2.csv.gz`: raw label of every
+  configuration for every benchmark cell.
+- `reference_rev2/`: the 16,141 cells of the shared reference and the benchmark
+  samples removed from DISCO.
+
+**Environment notes**
+
+- scGPT ran with PyTorch 2.10 on a Blackwell GPU. The last `torchtext` release
+  cannot be loaded with such PyTorch builds, so `torchtext_shim_for_scgpt/`
+  provides a pure-Python replacement of the vocabulary class that scGPT uses
+  (put it on `PYTHONPATH`; token indices are identical to the checkpoint
+  vocabulary). numpy 2.1.3 was used for numba compatibility.
+- scPred 1.9.2 imports `harmony::HarmonyMatrix`, which harmony 2.x no longer
+  provides; install harmony 1.2.3. scPred runs with Seurat 4.4.0.
+- SignacX 2.2.5 needs the patches in `_signacx_patched.R` with current versions
+  of the `Matrix` package.
+
 ## Acknowledgements
 
 Third-party tool code under `external/sc-type/` is from

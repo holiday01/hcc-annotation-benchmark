@@ -1,0 +1,25 @@
+# Large data files (download from GEO instead)
+data/
+*.h5ad
+*.h5seurat
+*.h5
+*.loom
+
+# Model weights (download from HuggingFace)
+models/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+.env
+
+# R
+.Rhistory
+.RData
+.Rproj.user/
+
+# System
+.DS_Store
+Thumbs.db

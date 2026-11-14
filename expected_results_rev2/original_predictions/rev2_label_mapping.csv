@@ -1,0 +1,790 @@
+Dataset,Vocab,Tool,Raw_label,Mapped,Rule,N_cells
+GSE125449,broad6,CellTypist,T cells,T/NK,head,2851
+GSE125449,broad6,CellTypist,Cholangiocytes,Hepatocyte,head,2489
+GSE125449,broad6,CellTypist,Endothelial cells,Endothelial,head,1116
+GSE125449,broad6,CellTypist,Fibroblasts,Fibroblast,exact,982
+GSE125449,broad6,CellTypist,Plasma cells,B,head,860
+GSE125449,broad6,CellTypist,Hepatocytes,Hepatocyte,head,526
+GSE125449,broad6,CellTypist,Mono+mono derived cells,Myeloid,head,353
+GSE125449,broad6,CellTypist,B cells,B,head,249
+GSE125449,broad6,CellTypist,Macrophages,Myeloid,exact,197
+GSE125449,broad6,CellTypist,cDC2s,Myeloid,head,129
+GSE125449,broad6,SingleR,T_cells,T/NK,head,2633
+GSE125449,broad6,SingleR,Hepatocytes,Hepatocyte,head,1876
+GSE125449,broad6,SingleR,Epithelial_cells,Hepatocyte,head,1155
+GSE125449,broad6,SingleR,Endothelial_cells,Endothelial,head,1094
+GSE125449,broad6,SingleR,B_cell,B,head,998
+GSE125449,broad6,SingleR,Tissue_stem_cells,Unknown,excluded-lineage,578
+GSE125449,broad6,SingleR,Monocyte,Myeloid,head,364
+GSE125449,broad6,SingleR,Macrophage,Myeloid,head,241
+GSE125449,broad6,SingleR,NK_cell,T/NK,head,230
+GSE125449,broad6,SingleR,Smooth_muscle_cells,Fibroblast,head,229
+GSE125449,broad6,SingleR,Fibroblasts,Fibroblast,exact,166
+GSE125449,broad6,SingleR,DC,Myeloid,exact,79
+GSE125449,broad6,SingleR,Pre-B_cell_CD34-,B,head,30
+GSE125449,broad6,SingleR,Unknown,Unknown,exact,22
+GSE125449,broad6,SingleR,Chondrocytes,Unknown,excluded-lineage,17
+GSE125449,broad6,SingleR,Pro-B_cell_CD34+,B,head,13
+GSE125449,broad6,SingleR,Osteoblasts,Unknown,excluded-lineage,6
+GSE125449,broad6,SingleR,GMP,Unknown,excluded-lineage,5
+GSE125449,broad6,SingleR,Embryonic_stem_cells,Unknown,excluded-lineage,4
+GSE125449,broad6,SingleR,CMP,Unknown,excluded-lineage,3
+GSE125449,broad6,SingleR,iPS_cells,Unknown,excluded-lineage,3
+GSE125449,broad6,SingleR,MSC,Fibroblast,head,2
+GSE125449,broad6,SingleR,Gametocytes,Unknown,excluded-lineage,1
+GSE125449,broad6,SingleR,HSC_CD34+,Unknown,excluded-lineage,1
+GSE125449,broad6,SingleR,Neurons,Unknown,excluded-lineage,1
+GSE125449,broad6,SingleR,Pro-Myelocyte,Myeloid,head,1
+GSE125449,broad6,ScType,Immune system::Memory CD8+ T cells,T/NK,head,1975
+GSE125449,broad6,ScType,Liver::Cholangiocytes,Hepatocyte,head,1892
+GSE125449,broad6,ScType,Liver::Hepatocytes,Hepatocyte,head,1195
+GSE125449,broad6,ScType,Liver::Endothelial cell,Endothelial,head,1093
+GSE125449,broad6,ScType,Liver::Hepatic stellate cells,Fibroblast,head,983
+GSE125449,broad6,ScType,Immune system::Memory CD4+ T cells,T/NK,head,866
+GSE125449,broad6,ScType,Immune system::Plasma B cells,B,head,854
+GSE125449,broad6,ScType,Liver::Kupffer cells,Myeloid,head,751
+GSE125449,broad6,ScType,Immune system::Pre-B cells,B,head,143
+GSE125449,broad6,scGPT,T/NK,T/NK,broad,2818
+GSE125449,broad6,scGPT,Hepatocyte,Hepatocyte,broad,2427
+GSE125449,broad6,scGPT,Fibroblast,Fibroblast,broad,1569
+GSE125449,broad6,scGPT,B,B,broad,1120
+GSE125449,broad6,scGPT,Endothelial,Endothelial,broad,1118
+GSE125449,broad6,scGPT,Myeloid,Myeloid,broad,700
+GSE125449,broad6,CellAssign,B cell,B,exact,2701
+GSE125449,broad6,CellAssign,T cell,T/NK,exact,2655
+GSE125449,broad6,CellAssign,TAM,Myeloid,exact,2259
+GSE125449,broad6,CellAssign,TEC,Endothelial,exact,1182
+GSE125449,broad6,CellAssign,HPC-like,Hepatocyte,exact,409
+GSE125449,broad6,CellAssign,CAF,Fibroblast,exact,274
+GSE125449,broad6,CellAssign,Malignant cell,Hepatocyte,exact,272
+GSE125449,broad6,CyteType,Stress-responsive CD8+ cytotoxic T cell,T/NK,head,1452
+GSE125449,broad6,CyteType,ECM-Secretory Perivascular SMC,Fibroblast,head,985
+GSE125449,broad6,CyteType,Mucin-secreting cholangiocellular carcinoma,Hepatocyte,head,885
+GSE125449,broad6,CyteType,IgG-secreting plasma cell,B,head,855
+GSE125449,broad6,CyteType,Central memory T cell,T/NK,head,832
+GSE125449,broad6,CyteType,Kupffer cell,Myeloid,head,691
+GSE125449,broad6,CyteType,Tumor blood vessel endothelium,Endothelial,head,644
+GSE125449,broad6,CyteType,Proliferating cytotoxic CD8+ T cell,T/NK,head,533
+GSE125449,broad6,CyteType,Secretory cholangiocellular carcinoma,Hepatocyte,head,503
+GSE125449,broad6,CyteType,Hypoxic proliferating HCC,Hepatocyte,head,489
+GSE125449,broad6,CyteType,Metabolically active HCC cell,Hepatocyte,head,476
+GSE125449,broad6,CyteType,Tumor endothelial cell (lipoprotein-contaminated),Endothelial,head,340
+GSE125449,broad6,CyteType,EMT-high stem-like HCC,Hepatocyte,head,276
+GSE125449,broad6,CyteType,Mature B cell,B,head,219
+GSE125449,broad6,CyteType,Inflammatory HCC cell,Hepatocyte,head,170
+GSE125449,broad6,CyteType,Biliary-differentiated HCC,Hepatocyte,head,153
+GSE125449,broad6,CyteType,Liver Sinusoidal Endothelial Cell,Endothelial,head,106
+GSE125449,broad6,CyteType,Fetal-like HCC cell,Hepatocyte,head,92
+GSE125449,broad6,CyteType,Stem-like malignant hepatocyte,Hepatocyte,head,51
+GSE125449,broad6,SignacX,Epithelial,Hepatocyte,exact,2260
+GSE125449,broad6,SignacX,Endothelial,Endothelial,exact,1125
+GSE125449,broad6,SignacX,T.CD8.em,T/NK,signacx-T,995
+GSE125449,broad6,SignacX,Fibroblasts,Fibroblast,exact,965
+GSE125449,broad6,SignacX,T.CD4.naive,T/NK,signacx-T,778
+GSE125449,broad6,SignacX,NonImmune,Unknown,exact,738
+GSE125449,broad6,SignacX,Plasma.cells,B,exact,648
+GSE125449,broad6,SignacX,T.CD4.memory,T/NK,signacx-T,543
+GSE125449,broad6,SignacX,Unclassified,Unknown,exact,392
+GSE125449,broad6,SignacX,Macrophages,Myeloid,exact,257
+GSE125449,broad6,SignacX,Mon.Classical,Myeloid,exact,246
+GSE125449,broad6,SignacX,T.CD8.naive,T/NK,signacx-T,234
+GSE125449,broad6,SignacX,NK,T/NK,exact,155
+GSE125449,broad6,SignacX,B.memory,B,exact,124
+GSE125449,broad6,SignacX,T.regs,T/NK,signacx-T,94
+GSE125449,broad6,SignacX,DC,Myeloid,exact,79
+GSE125449,broad6,SignacX,B.naive,B,exact,57
+GSE125449,broad6,SignacX,Mon.NonClassical,Myeloid,exact,39
+GSE125449,broad6,SignacX,T.CD8.cm,T/NK,signacx-T,21
+GSE125449,broad6,SignacX,MPh,Myeloid,exact,1
+GSE125449,broad6,SignacX,TNK,T/NK,exact,1
+GSE149614,broad6,CellTypist,T cells,T/NK,head,21918
+GSE149614,broad6,CellTypist,Hepatocytes,Hepatocyte,head,10049
+GSE149614,broad6,CellTypist,Cholangiocytes,Hepatocyte,head,9606
+GSE149614,broad6,CellTypist,Macrophages,Myeloid,exact,9469
+GSE149614,broad6,CellTypist,Mono+mono derived cells,Myeloid,head,5213
+GSE149614,broad6,CellTypist,Endothelial cells,Endothelial,head,3960
+GSE149614,broad6,CellTypist,Resident NK,T/NK,head,2996
+GSE149614,broad6,CellTypist,Fibroblasts,Fibroblast,exact,2161
+GSE149614,broad6,CellTypist,Plasma cells,B,head,2159
+GSE149614,broad6,CellTypist,B cells,B,head,1542
+GSE149614,broad6,CellTypist,Circulating NK/NKT,T/NK,head,1508
+GSE149614,broad6,CellTypist,cDC2s,Myeloid,head,765
+GSE149614,broad6,CellTypist,cDC1s,Myeloid,head,355
+GSE149614,broad6,CellTypist,pDCs,Myeloid,head,154
+GSE149614,broad6,CellTypist,Basophils,Myeloid,head,60
+GSE149614,broad6,SingleR,Hepatocytes,Hepatocyte,head,23493
+GSE149614,broad6,SingleR,T_cells,T/NK,head,16527
+GSE149614,broad6,SingleR,Macrophage,Myeloid,head,9072
+GSE149614,broad6,SingleR,NK_cell,T/NK,head,7911
+GSE149614,broad6,SingleR,Monocyte,Myeloid,head,4695
+GSE149614,broad6,SingleR,Endothelial_cells,Endothelial,head,2745
+GSE149614,broad6,SingleR,B_cell,B,head,2231
+GSE149614,broad6,SingleR,DC,Myeloid,exact,1359
+GSE149614,broad6,SingleR,Tissue_stem_cells,Unknown,excluded-lineage,1257
+GSE149614,broad6,SingleR,iPS_cells,Unknown,excluded-lineage,684
+GSE149614,broad6,SingleR,Embryonic_stem_cells,Unknown,excluded-lineage,487
+GSE149614,broad6,SingleR,Unknown,Unknown,exact,270
+GSE149614,broad6,SingleR,Smooth_muscle_cells,Fibroblast,head,265
+GSE149614,broad6,SingleR,Pre-B_cell_CD34-,B,head,207
+GSE149614,broad6,SingleR,Neurons,Unknown,excluded-lineage,166
+GSE149614,broad6,SingleR,Fibroblasts,Fibroblast,exact,162
+GSE149614,broad6,SingleR,Epithelial_cells,Hepatocyte,head,124
+GSE149614,broad6,SingleR,Chondrocytes,Unknown,excluded-lineage,71
+GSE149614,broad6,SingleR,CMP,Unknown,excluded-lineage,52
+GSE149614,broad6,SingleR,GMP,Unknown,excluded-lineage,42
+GSE149614,broad6,SingleR,Neutrophils,Myeloid,exact,26
+GSE149614,broad6,SingleR,Pro-B_cell_CD34+,B,head,24
+GSE149614,broad6,SingleR,HSC_CD34+,Unknown,excluded-lineage,19
+GSE149614,broad6,SingleR,MSC,Fibroblast,head,9
+GSE149614,broad6,SingleR,BM & Prog.,Unknown,excluded-lineage,5
+GSE149614,broad6,SingleR,BM,Unknown,excluded-lineage,3
+GSE149614,broad6,SingleR,HSC_-G-CSF,Unknown,excluded-lineage,2
+GSE149614,broad6,SingleR,MEP,Unknown,excluded-lineage,2
+GSE149614,broad6,SingleR,Osteoblasts,Unknown,excluded-lineage,2
+GSE149614,broad6,SingleR,Erythroblast,Unknown,excluded-lineage,1
+GSE149614,broad6,SingleR,Myelocyte,Myeloid,head,1
+GSE149614,broad6,SingleR,Platelets,Unknown,excluded-lineage,1
+GSE149614,broad6,ScType,Liver::Hepatocytes,Hepatocyte,head,12963
+GSE149614,broad6,ScType,Immune system::CD8+ NKT-like cells,T/NK,head,12621
+GSE149614,broad6,ScType,Liver::Kupffer cells,Myeloid,head,10893
+GSE149614,broad6,ScType,Liver::Cholangiocytes,Hepatocyte,head,8502
+GSE149614,broad6,ScType,Immune system::Memory CD8+ T cells,T/NK,head,8413
+GSE149614,broad6,ScType,Immune system::Macrophages,Myeloid,exact,4974
+GSE149614,broad6,ScType,Liver::Endothelial cell,Endothelial,head,3860
+GSE149614,broad6,ScType,Immune system::Plasma B cells,B,head,2495
+GSE149614,broad6,ScType,Immune system::Natural killer  cells,T/NK,head,2433
+GSE149614,broad6,ScType,Liver::Hepatic stellate cells,Fibroblast,head,2242
+GSE149614,broad6,ScType,Immune system::Naive B cells,B,head,1644
+GSE149614,broad6,ScType,Immune system::Memory CD4+ T cells,T/NK,head,875
+GSE149614,broad6,scGPT,T/NK,T/NK,broad,24137
+GSE149614,broad6,scGPT,Hepatocyte,Hepatocyte,broad,21747
+GSE149614,broad6,scGPT,Myeloid,Myeloid,broad,15994
+GSE149614,broad6,scGPT,Endothelial,Endothelial,broad,3866
+GSE149614,broad6,scGPT,B,B,broad,3818
+GSE149614,broad6,scGPT,Fibroblast,Fibroblast,broad,2353
+GSE149614,broad6,CellAssign,Fibroblast,Fibroblast,exact,53999
+GSE149614,broad6,CellAssign,Endothelial,Endothelial,exact,14949
+GSE149614,broad6,CellAssign,T/NK,T/NK,exact,1427
+GSE149614,broad6,CellAssign,B,B,exact,1306
+GSE149614,broad6,CellAssign,Myeloid,Myeloid,exact,219
+GSE149614,broad6,CellAssign,Hepatocyte,Hepatocyte,exact,15
+GSE149614,broad6,CyteType,Tissue-resident memory CD8+ T cell,T/NK,head,6794
+GSE149614,broad6,CyteType,Oxidative stress-responsive liver progenitor,Hepatocyte,head,5311
+GSE149614,broad6,CyteType,Tumor-infiltrating CD4+ T cell,T/NK,head,5147
+GSE149614,broad6,CyteType,Progenitor exhausted T cell,T/NK,head,5097
+GSE149614,broad6,CyteType,Well-differentiated HCC with acute phase response,Hepatocyte,head,3654
+GSE149614,broad6,CyteType,Hepatocyte-contaminated T cell,T/NK,head,3319
+GSE149614,broad6,CyteType,CT antigen-positive malignant hepatocyte,Hepatocyte,head,2761
+GSE149614,broad6,CyteType,SPP1-high hepatocellular carcinoma,Hepatocyte,head,2599
+GSE149614,broad6,CyteType,Cytotoxic NK cell,T/NK,head,2541
+GSE149614,broad6,CyteType,TREM2+ antigen-presenting TAM,Myeloid,head,2296
+GSE149614,broad6,CyteType,Ig-expressing hepatocyte,Hepatocyte,head,2261
+GSE149614,broad6,CyteType,Kupffer cell with hepatocyte contamination,Myeloid,head,2175
+GSE149614,broad6,CyteType,Inflammatory monocyte-derived macrophage,Myeloid,head,2051
+GSE149614,broad6,CyteType,Homeostatic Kupffer cell,Myeloid,head,1922
+GSE149614,broad6,CyteType,Myofibroblastic CAF,Fibroblast,head,1865
+GSE149614,broad6,CyteType,Interferon-stimulated endothelial cell,Endothelial,head,1799
+GSE149614,broad6,CyteType,Hepatocyte-contaminated tumor endothelial cell,Endothelial,head,1799
+GSE149614,broad6,CyteType,CYP-expressing well-differentiated HCC,Hepatocyte,head,1648
+GSE149614,broad6,CyteType,SPP1-high macrophage with hepatocyte contamination,Myeloid,head,1633
+GSE149614,broad6,CyteType,Pro-inflammatory TAM,Myeloid,head,1629
+GSE149614,broad6,CyteType,CT antigen-expressing ER-stressed HCC,Hepatocyte,head,1574
+GSE149614,broad6,CyteType,Stressed immunomodulatory macrophage,Myeloid,head,1556
+GSE149614,broad6,CyteType,Activated T cell / Hepatocyte doublet,Unknown,qc-flag,1481
+GSE149614,broad6,CyteType,Hepatocyte-contaminated plasma cell,B,head,1395
+GSE149614,broad6,CyteType,Hepatocyte/Macrophage doublet,Unknown,qc-flag,1348
+GSE149614,broad6,CyteType,Mature B cell,B,head,1348
+GSE149614,broad6,CyteType,Tumor-associated macrophage with hepatocyte contamination,Myeloid,head,1101
+GSE149614,broad6,CyteType,Periportal hepatocyte,Hepatocyte,head,1006
+GSE149614,broad6,CyteType,Inflammatory plasma cell,B,head,807
+GSE149614,broad6,CyteType,Cholangiocyte,Hepatocyte,head,619
+GSE149614,broad6,CyteType,Antigen-presenting plasma cell doublet,Unknown,qc-flag,607
+GSE149614,broad6,CyteType,ECM-remodeling pericyte,Fibroblast,head,537
+GSE149614,broad6,CyteType,Serum-contaminated HCC cell,Hepatocyte,head,235
+GSE149614,broad6,SignacX,T.CD8.em,T/NK,signacx-T,14583
+GSE149614,broad6,SignacX,Epithelial,Hepatocyte,exact,14268
+GSE149614,broad6,SignacX,Macrophages,Myeloid,exact,8082
+GSE149614,broad6,SignacX,NonImmune,Unknown,exact,5559
+GSE149614,broad6,SignacX,Unclassified,Unknown,exact,5041
+GSE149614,broad6,SignacX,NK,T/NK,exact,5000
+GSE149614,broad6,SignacX,Mon.Classical,Myeloid,exact,3808
+GSE149614,broad6,SignacX,Endothelial,Endothelial,exact,3739
+GSE149614,broad6,SignacX,Mon.NonClassical,Myeloid,exact,2446
+GSE149614,broad6,SignacX,Fibroblasts,Fibroblast,exact,1999
+GSE149614,broad6,SignacX,T.CD4.memory,T/NK,signacx-T,1916
+GSE149614,broad6,SignacX,DC,Myeloid,exact,1783
+GSE149614,broad6,SignacX,T.CD8.naive,T/NK,signacx-T,1432
+GSE149614,broad6,SignacX,B.memory,B,exact,810
+GSE149614,broad6,SignacX,T.CD4.naive,T/NK,signacx-T,695
+GSE149614,broad6,SignacX,B.naive,B,exact,252
+GSE149614,broad6,SignacX,T.regs,T/NK,signacx-T,167
+GSE149614,broad6,SignacX,Plasma.cells,B,exact,150
+GSE149614,broad6,SignacX,T.CD8.cm,T/NK,signacx-T,122
+GSE149614,broad6,SignacX,Neutrophils,Myeloid,exact,61
+GSE149614,broad6,SignacX,TNK,T/NK,exact,2
+GSE125449,broad7,CellTypist,T cells,T cell,head,2851
+GSE125449,broad7,CellTypist,Cholangiocytes,HPC-like,head,2489
+GSE125449,broad7,CellTypist,Endothelial cells,TEC,head,1116
+GSE125449,broad7,CellTypist,Fibroblasts,CAF,exact,982
+GSE125449,broad7,CellTypist,Plasma cells,B cell,head,860
+GSE125449,broad7,CellTypist,Hepatocytes,Malignant cell,head,526
+GSE125449,broad7,CellTypist,Mono+mono derived cells,TAM,head,353
+GSE125449,broad7,CellTypist,B cells,B cell,head,249
+GSE125449,broad7,CellTypist,Macrophages,TAM,exact,197
+GSE125449,broad7,CellTypist,cDC2s,TAM,head,129
+GSE125449,broad7,SingleR,T_cells,T cell,head,2633
+GSE125449,broad7,SingleR,Hepatocytes,Malignant cell,head,1876
+GSE125449,broad7,SingleR,Epithelial_cells,Malignant cell,head,1155
+GSE125449,broad7,SingleR,Endothelial_cells,TEC,head,1094
+GSE125449,broad7,SingleR,B_cell,B cell,head,998
+GSE125449,broad7,SingleR,Tissue_stem_cells,Unknown,excluded-lineage,578
+GSE125449,broad7,SingleR,Monocyte,TAM,head,364
+GSE125449,broad7,SingleR,Macrophage,TAM,head,241
+GSE125449,broad7,SingleR,NK_cell,T cell,head,230
+GSE125449,broad7,SingleR,Smooth_muscle_cells,CAF,head,229
+GSE125449,broad7,SingleR,Fibroblasts,CAF,exact,166
+GSE125449,broad7,SingleR,DC,TAM,exact,79
+GSE125449,broad7,SingleR,Pre-B_cell_CD34-,B cell,head,30
+GSE125449,broad7,SingleR,Unknown,Unknown,exact,22
+GSE125449,broad7,SingleR,Chondrocytes,Unknown,excluded-lineage,17
+GSE125449,broad7,SingleR,Pro-B_cell_CD34+,B cell,head,13
+GSE125449,broad7,SingleR,Osteoblasts,Unknown,excluded-lineage,6
+GSE125449,broad7,SingleR,GMP,Unknown,excluded-lineage,5
+GSE125449,broad7,SingleR,Embryonic_stem_cells,Unknown,excluded-lineage,4
+GSE125449,broad7,SingleR,CMP,Unknown,excluded-lineage,3
+GSE125449,broad7,SingleR,iPS_cells,Unknown,excluded-lineage,3
+GSE125449,broad7,SingleR,MSC,CAF,head,2
+GSE125449,broad7,SingleR,Gametocytes,Unknown,excluded-lineage,1
+GSE125449,broad7,SingleR,HSC_CD34+,Unknown,excluded-lineage,1
+GSE125449,broad7,SingleR,Neurons,Unknown,excluded-lineage,1
+GSE125449,broad7,SingleR,Pro-Myelocyte,TAM,head,1
+GSE125449,broad7,ScType,Immune system::Memory CD8+ T cells,T cell,head,1975
+GSE125449,broad7,ScType,Liver::Cholangiocytes,HPC-like,head,1892
+GSE125449,broad7,ScType,Liver::Hepatocytes,Malignant cell,head,1195
+GSE125449,broad7,ScType,Liver::Endothelial cell,TEC,head,1093
+GSE125449,broad7,ScType,Liver::Hepatic stellate cells,CAF,head,983
+GSE125449,broad7,ScType,Immune system::Memory CD4+ T cells,T cell,head,866
+GSE125449,broad7,ScType,Immune system::Plasma B cells,B cell,head,854
+GSE125449,broad7,ScType,Liver::Kupffer cells,TAM,head,751
+GSE125449,broad7,ScType,Immune system::Pre-B cells,B cell,head,143
+GSE125449,broad7,scGPT,T/NK,T cell,broad,2818
+GSE125449,broad7,scGPT,Hepatocyte,Malignant cell,broad,2427
+GSE125449,broad7,scGPT,Fibroblast,CAF,broad,1569
+GSE125449,broad7,scGPT,B,B cell,broad,1120
+GSE125449,broad7,scGPT,Endothelial,TEC,broad,1118
+GSE125449,broad7,scGPT,Myeloid,TAM,broad,700
+GSE125449,broad7,CellAssign,B cell,B cell,exact,2701
+GSE125449,broad7,CellAssign,T cell,T cell,exact,2655
+GSE125449,broad7,CellAssign,TAM,TAM,exact,2259
+GSE125449,broad7,CellAssign,TEC,TEC,exact,1182
+GSE125449,broad7,CellAssign,HPC-like,HPC-like,exact,409
+GSE125449,broad7,CellAssign,CAF,CAF,exact,274
+GSE125449,broad7,CellAssign,Malignant cell,Malignant cell,exact,272
+GSE125449,broad7,CyteType,Stress-responsive CD8+ cytotoxic T cell,T cell,head,1452
+GSE125449,broad7,CyteType,ECM-Secretory Perivascular SMC,CAF,head,985
+GSE125449,broad7,CyteType,Mucin-secreting cholangiocellular carcinoma,Malignant cell,head,885
+GSE125449,broad7,CyteType,IgG-secreting plasma cell,B cell,head,855
+GSE125449,broad7,CyteType,Central memory T cell,T cell,head,832
+GSE125449,broad7,CyteType,Kupffer cell,TAM,head,691
+GSE125449,broad7,CyteType,Tumor blood vessel endothelium,TEC,head,644
+GSE125449,broad7,CyteType,Proliferating cytotoxic CD8+ T cell,T cell,head,533
+GSE125449,broad7,CyteType,Secretory cholangiocellular carcinoma,Malignant cell,head,503
+GSE125449,broad7,CyteType,Hypoxic proliferating HCC,Malignant cell,head,489
+GSE125449,broad7,CyteType,Metabolically active HCC cell,Malignant cell,head,476
+GSE125449,broad7,CyteType,Tumor endothelial cell (lipoprotein-contaminated),TEC,head,340
+GSE125449,broad7,CyteType,EMT-high stem-like HCC,Malignant cell,head,276
+GSE125449,broad7,CyteType,Mature B cell,B cell,head,219
+GSE125449,broad7,CyteType,Inflammatory HCC cell,Malignant cell,head,170
+GSE125449,broad7,CyteType,Biliary-differentiated HCC,Malignant cell,head,153
+GSE125449,broad7,CyteType,Liver Sinusoidal Endothelial Cell,TEC,head,106
+GSE125449,broad7,CyteType,Fetal-like HCC cell,Malignant cell,head,92
+GSE125449,broad7,CyteType,Stem-like malignant hepatocyte,Malignant cell,head,51
+GSE125449,broad7,SignacX,Epithelial,Malignant cell,exact,2260
+GSE125449,broad7,SignacX,Endothelial,TEC,exact,1125
+GSE125449,broad7,SignacX,T.CD8.em,T cell,signacx-T,995
+GSE125449,broad7,SignacX,Fibroblasts,CAF,exact,965
+GSE125449,broad7,SignacX,T.CD4.naive,T cell,signacx-T,778
+GSE125449,broad7,SignacX,NonImmune,Unknown,exact,738
+GSE125449,broad7,SignacX,Plasma.cells,B cell,exact,648
+GSE125449,broad7,SignacX,T.CD4.memory,T cell,signacx-T,543
+GSE125449,broad7,SignacX,Unclassified,Unknown,exact,392
+GSE125449,broad7,SignacX,Macrophages,TAM,exact,257
+GSE125449,broad7,SignacX,Mon.Classical,TAM,exact,246
+GSE125449,broad7,SignacX,T.CD8.naive,T cell,signacx-T,234
+GSE125449,broad7,SignacX,NK,T cell,exact,155
+GSE125449,broad7,SignacX,B.memory,B cell,exact,124
+GSE125449,broad7,SignacX,T.regs,T cell,signacx-T,94
+GSE125449,broad7,SignacX,DC,TAM,exact,79
+GSE125449,broad7,SignacX,B.naive,B cell,exact,57
+GSE125449,broad7,SignacX,Mon.NonClassical,TAM,exact,39
+GSE125449,broad7,SignacX,T.CD8.cm,T cell,signacx-T,21
+GSE125449,broad7,SignacX,MPh,TAM,exact,1
+GSE125449,broad7,SignacX,TNK,T cell,exact,1
+GSE156625,broad6,CellTypist,T cells,T/NK,head,42622
+GSE156625,broad6,CellTypist,Endothelial cells,Endothelial,head,7786
+GSE156625,broad6,CellTypist,Circulating NK/NKT,T/NK,head,3728
+GSE156625,broad6,CellTypist,Hepatocytes,Hepatocyte,head,3658
+GSE156625,broad6,CellTypist,Mono+mono derived cells,Myeloid,head,3295
+GSE156625,broad6,CellTypist,Macrophages,Myeloid,exact,2967
+GSE156625,broad6,CellTypist,Resident NK,T/NK,head,2314
+GSE156625,broad6,CellTypist,Fibroblasts,Fibroblast,exact,1671
+GSE156625,broad6,CellTypist,Cholangiocytes,Hepatocyte,head,1657
+GSE156625,broad6,CellTypist,Plasma cells,B,head,1213
+GSE156625,broad6,CellTypist,Neutrophils,Myeloid,exact,817
+GSE156625,broad6,CellTypist,B cells,B,head,755
+GSE156625,broad6,CellTypist,cDC2s,Myeloid,head,402
+GSE156625,broad6,CellTypist,cDC1s,Myeloid,head,352
+GSE156625,broad6,CellTypist,pDCs,Myeloid,head,168
+GSE156625,broad6,CellTypist,Basophils,Myeloid,head,125
+GSE156625,broad6,CellTypist,Mig.cDCs,Myeloid,head,59
+GSE156625,broad6,SingleR,T_cells,T/NK,head,29613
+GSE156625,broad6,SingleR,Hepatocytes,Hepatocyte,head,13341
+GSE156625,broad6,SingleR,Endothelial_cells,Endothelial,head,10411
+GSE156625,broad6,SingleR,NK_cell,T/NK,head,10021
+GSE156625,broad6,SingleR,Monocyte,Myeloid,head,2334
+GSE156625,broad6,SingleR,Macrophage,Myeloid,head,1810
+GSE156625,broad6,SingleR,B_cell,B,head,1493
+GSE156625,broad6,SingleR,Tissue_stem_cells,Unknown,excluded-lineage,1306
+GSE156625,broad6,SingleR,DC,Myeloid,exact,817
+GSE156625,broad6,SingleR,Pre-B_cell_CD34-,B,head,765
+GSE156625,broad6,SingleR,HSC_CD34+,Unknown,excluded-lineage,321
+GSE156625,broad6,SingleR,Smooth_muscle_cells,Fibroblast,head,277
+GSE156625,broad6,SingleR,Epithelial_cells,Hepatocyte,head,258
+GSE156625,broad6,SingleR,Fibroblasts,Fibroblast,exact,226
+GSE156625,broad6,SingleR,Neutrophils,Myeloid,exact,83
+GSE156625,broad6,SingleR,CMP,Unknown,excluded-lineage,81
+GSE156625,broad6,SingleR,Pro-B_cell_CD34+,B,head,76
+GSE156625,broad6,SingleR,Unknown,Unknown,exact,74
+GSE156625,broad6,SingleR,GMP,Unknown,excluded-lineage,73
+GSE156625,broad6,SingleR,Chondrocytes,Unknown,excluded-lineage,73
+GSE156625,broad6,SingleR,Neurons,Unknown,excluded-lineage,50
+GSE156625,broad6,SingleR,Astrocyte,Unknown,excluded-lineage,28
+GSE156625,broad6,SingleR,BM & Prog.,Unknown,excluded-lineage,18
+GSE156625,broad6,SingleR,BM,Unknown,excluded-lineage,9
+GSE156625,broad6,SingleR,MSC,Fibroblast,head,7
+GSE156625,broad6,SingleR,Erythroblast,Unknown,excluded-lineage,6
+GSE156625,broad6,SingleR,HSC_-G-CSF,Unknown,excluded-lineage,6
+GSE156625,broad6,SingleR,Embryonic_stem_cells,Unknown,excluded-lineage,3
+GSE156625,broad6,SingleR,Keratinocytes,Unknown,excluded-lineage,2
+GSE156625,broad6,SingleR,MEP,Unknown,excluded-lineage,2
+GSE156625,broad6,SingleR,Gametocytes,Unknown,excluded-lineage,1
+GSE156625,broad6,SingleR,Neuroepithelial_cell,Unknown,excluded-lineage,1
+GSE156625,broad6,SingleR,Myelocyte,Myeloid,head,1
+GSE156625,broad6,SingleR,Pro-Myelocyte,Myeloid,head,1
+GSE156625,broad6,SingleR,Osteoblasts,Unknown,excluded-lineage,1
+GSE156625,broad6,ScType,Immune system::Memory CD4+ T cells,T/NK,head,17002
+GSE156625,broad6,ScType,Liver::Hepatocytes,Hepatocyte,head,12646
+GSE156625,broad6,ScType,Liver::Endothelial cell,Endothelial,head,11033
+GSE156625,broad6,ScType,Immune system::CD8+ NKT-like cells,T/NK,head,7557
+GSE156625,broad6,ScType,Immune system::Memory CD8+ T cells,T/NK,head,5493
+GSE156625,broad6,ScType,Immune system::Effector CD8+ T cells,T/NK,head,4396
+GSE156625,broad6,ScType,Immune system::Natural killer  cells,T/NK,head,2969
+GSE156625,broad6,ScType,Immune system::Myeloid Dendritic cells,Myeloid,head,2967
+GSE156625,broad6,ScType,Liver::Kupffer cells,Myeloid,head,2649
+GSE156625,broad6,ScType,Liver::Hepatic stellate cells,Fibroblast,head,1891
+GSE156625,broad6,ScType,Immune system::Erythroid-like and erythroid precursor cells,Unknown,excluded-lineage,1871
+GSE156625,broad6,ScType,Immune system::Memory B cells,B,head,1376
+GSE156625,broad6,ScType,Immune system::Naive B cells,B,head,1110
+GSE156625,broad6,ScType,Liver::Cholangiocytes,Hepatocyte,head,336
+GSE156625,broad6,ScType,Immune system::Endothelial,Endothelial,exact,174
+GSE156625,broad6,ScType,Immune system::Basophils,Myeloid,head,119
+GSE156625,broad6,scGPT,T/NK,T/NK,broad,39076
+GSE156625,broad6,scGPT,Hepatocyte,Hepatocyte,broad,12902
+GSE156625,broad6,scGPT,Endothelial,Endothelial,broad,11579
+GSE156625,broad6,scGPT,Myeloid,Myeloid,broad,5581
+GSE156625,broad6,scGPT,B,B,broad,2310
+GSE156625,broad6,scGPT,Fibroblast,Fibroblast,broad,2141
+GSE156625,broad6,CellAssign,Endothelial,Endothelial,exact,58244
+GSE156625,broad6,CellAssign,Hepatocyte,Hepatocyte,exact,10100
+GSE156625,broad6,CellAssign,Fibroblast,Fibroblast,exact,4853
+GSE156625,broad6,CellAssign,B,B,exact,343
+GSE156625,broad6,CellAssign,Myeloid,Myeloid,exact,49
+GSE156625,broad6,CyteType,Tissue-resident memory T cell precursor,T/NK,head,10042
+GSE156625,broad6,CyteType,Vδ2 γδ T cells,T/NK,head,7557
+GSE156625,broad6,CyteType,Tumor endothelial cell,Endothelial,head,5559
+GSE156625,broad6,CyteType,Proliferating effector CD8+ T cells,T/NK,head,4920
+GSE156625,broad6,CyteType,HLA-DR+ chemokine-secreting CD8+ T cells,T/NK,head,4396
+GSE156625,broad6,CyteType,Arterial endothelial cell,Endothelial,head,4011
+GSE156625,broad6,CyteType,Heat shock response CD8+ T cells,T/NK,head,3747
+GSE156625,broad6,CyteType,TFF3/PAGE2-expressing malignant hepatocyte,Hepatocyte,head,3661
+GSE156625,broad6,CyteType,Plasma protein-secreting malignant hepatocyte,Hepatocyte,head,3046
+GSE156625,broad6,CyteType,Vδ1 γδ T cells,T/NK,head,2969
+GSE156625,broad6,CyteType,Inflammatory antigen-presenting macrophage,Myeloid,head,2967
+GSE156625,broad6,CyteType,Effector regulatory T cells,T/NK,head,2866
+GSE156625,broad6,CyteType,Phagocytic M2-TAM,Myeloid,head,2649
+GSE156625,broad6,CyteType,Periportal hepatocyte - acute-phase,Hepatocyte,head,1935
+GSE156625,broad6,CyteType,Vascular smooth muscle cells,Fibroblast,head,1891
+GSE156625,broad6,CyteType,Cytotoxic effector NK cells,T/NK,head,1871
+GSE156625,broad6,CyteType,Lipogenic malignant hepatocyte,Hepatocyte,head,1842
+GSE156625,broad6,CyteType,IgG-secreting plasma cells,B,head,1376
+GSE156625,broad6,CyteType,Matrix-remodeling tumor endothelial cell,Endothelial,head,1269
+GSE156625,broad6,CyteType,MHC-II+ plasmablasts,B,head,1110
+GSE156625,broad6,CyteType,ChREBP-driven lipogenic HCC,Hepatocyte,head,947
+GSE156625,broad6,CyteType,Acute-phase response malignant hepatocyte,Hepatocyte,head,920
+GSE156625,broad6,CyteType,Proliferating exhausted CD8+ T cells,T/NK,head,573
+GSE156625,broad6,CyteType,Hepatocyte-contaminated effector memory T cell,T/NK,head,347
+GSE156625,broad6,CyteType,Cholangiocyte,Hepatocyte,head,336
+GSE156625,broad6,CyteType,Viral-associated malignant hepatocyte,Hepatocyte,head,295
+GSE156625,broad6,CyteType,Periportal hepatic sinusoidal endothelial cell,Endothelial,head,194
+GSE156625,broad6,CyteType,Collecting lymphatic vessel endothelial cell,Endothelial,head,174
+GSE156625,broad6,CyteType,IL-33 responsive mast cells,Myeloid,head,119
+GSE156625,broad6,SignacX,Unclassified,Unknown,exact,58589
+GSE156625,broad6,SignacX,T.CD8.em,T/NK,signacx-T,4874
+GSE156625,broad6,SignacX,Endothelial,Endothelial,exact,2141
+GSE156625,broad6,SignacX,NonImmune,Unknown,exact,1498
+GSE156625,broad6,SignacX,NK,T/NK,exact,1169
+GSE156625,broad6,SignacX,Epithelial,Hepatocyte,exact,895
+GSE156625,broad6,SignacX,T.CD8.naive,T/NK,signacx-T,734
+GSE156625,broad6,SignacX,T.CD4.memory,T/NK,signacx-T,662
+GSE156625,broad6,SignacX,Myeloid,Myeloid,exact,495
+GSE156625,broad6,SignacX,T.CD4.naive,T/NK,signacx-T,481
+GSE156625,broad6,SignacX,Macrophages,Myeloid,exact,409
+GSE156625,broad6,SignacX,Fibroblasts,Fibroblast,exact,404
+GSE156625,broad6,SignacX,Mon.Classical,Myeloid,exact,372
+GSE156625,broad6,SignacX,Lymphocytes,Unknown,exact,314
+GSE156625,broad6,SignacX,Mon.NonClassical,Myeloid,exact,144
+GSE156625,broad6,SignacX,DC,Myeloid,exact,115
+GSE156625,broad6,SignacX,Plasma.cells,B,exact,104
+GSE156625,broad6,SignacX,B.memory,B,exact,65
+GSE156625,broad6,SignacX,T.regs,T/NK,signacx-T,58
+GSE156625,broad6,SignacX,B.naive,B,exact,29
+GSE156625,broad6,SignacX,T.CD8.cm,T/NK,signacx-T,25
+GSE156625,broad6,SignacX,Neutrophils,Myeloid,exact,12
+GSE162616,broad6,CellTypist,Resident NK,T/NK,head,21343
+GSE162616,broad6,CellTypist,Circulating NK/NKT,T/NK,head,20004
+GSE162616,broad6,CellTypist,T cells,T/NK,head,10910
+GSE162616,broad6,CellTypist,Mono+mono derived cells,Myeloid,head,1885
+GSE162616,broad6,CellTypist,Plasma cells,B,head,1474
+GSE162616,broad6,CellTypist,B cells,B,head,686
+GSE162616,broad6,CellTypist,cDC1s,Myeloid,head,359
+GSE162616,broad6,CellTypist,Macrophages,Myeloid,exact,356
+GSE162616,broad6,CellTypist,pDCs,Myeloid,head,244
+GSE162616,broad6,SingleR,NK_cell,T/NK,head,42191
+GSE162616,broad6,SingleR,T_cells,T/NK,head,9737
+GSE162616,broad6,SingleR,Monocyte,Myeloid,head,1965
+GSE162616,broad6,SingleR,B_cell,B,head,1620
+GSE162616,broad6,SingleR,Unknown,Unknown,exact,788
+GSE162616,broad6,SingleR,Macrophage,Myeloid,head,292
+GSE162616,broad6,SingleR,DC,Myeloid,exact,180
+GSE162616,broad6,SingleR,Hepatocytes,Hepatocyte,head,124
+GSE162616,broad6,SingleR,Neutrophils,Myeloid,exact,105
+GSE162616,broad6,SingleR,Pre-B_cell_CD34-,B,head,81
+GSE162616,broad6,SingleR,BM,Unknown,excluded-lineage,56
+GSE162616,broad6,SingleR,Erythroblast,Unknown,excluded-lineage,43
+GSE162616,broad6,SingleR,GMP,Unknown,excluded-lineage,22
+GSE162616,broad6,SingleR,Pro-B_cell_CD34+,B,head,16
+GSE162616,broad6,SingleR,HSC_CD34+,Unknown,excluded-lineage,11
+GSE162616,broad6,SingleR,Smooth_muscle_cells,Fibroblast,head,4
+GSE162616,broad6,SingleR,Tissue_stem_cells,Unknown,excluded-lineage,4
+GSE162616,broad6,SingleR,Chondrocytes,Unknown,excluded-lineage,3
+GSE162616,broad6,SingleR,BM & Prog.,Unknown,excluded-lineage,3
+GSE162616,broad6,SingleR,HSC_-G-CSF,Unknown,excluded-lineage,3
+GSE162616,broad6,SingleR,Pro-Myelocyte,Myeloid,head,3
+GSE162616,broad6,SingleR,Myelocyte,Myeloid,head,2
+GSE162616,broad6,SingleR,Epithelial_cells,Hepatocyte,head,2
+GSE162616,broad6,SingleR,CMP,Unknown,excluded-lineage,2
+GSE162616,broad6,SingleR,Fibroblasts,Fibroblast,exact,1
+GSE162616,broad6,SingleR,Endothelial_cells,Endothelial,head,1
+GSE162616,broad6,SingleR,MEP,Unknown,excluded-lineage,1
+GSE162616,broad6,SingleR,Platelets,Unknown,excluded-lineage,1
+GSE162616,broad6,ScType,Immune system::Natural killer  cells,T/NK,head,32492
+GSE162616,broad6,ScType,Immune system::CD8+ NKT-like cells,T/NK,head,4543
+GSE162616,broad6,ScType,Immune system::Naive CD8+ T cells,T/NK,head,4517
+GSE162616,broad6,ScType,Immune system::Memory CD4+ T cells,T/NK,head,4035
+GSE162616,broad6,ScType,Immune system::Mast cells,Myeloid,head,2406
+GSE162616,broad6,ScType,Liver::Mast cells,Myeloid,head,2314
+GSE162616,broad6,ScType,Immune system::Plasma B cells,B,head,1501
+GSE162616,broad6,ScType,Immune system::Non-classical monocytes,Myeloid,head,1458
+GSE162616,broad6,ScType,Unknown,Unknown,exact,1315
+GSE162616,broad6,ScType,Immune system::Macrophages,Myeloid,exact,800
+GSE162616,broad6,ScType,Immune system::Pre-B cells,B,head,682
+GSE162616,broad6,ScType,Immune system::Plasmacytoid Dendritic cells,Myeloid,head,596
+GSE162616,broad6,ScType,Liver::Hepatocytes,Hepatocyte,head,495
+GSE162616,broad6,ScType,Immune system::Erythroid-like and erythroid precursor cells,Unknown,excluded-lineage,107
+GSE162616,broad6,scGPT,T/NK,T/NK,broad,51746
+GSE162616,broad6,scGPT,Myeloid,Myeloid,broad,3084
+GSE162616,broad6,scGPT,B,B,broad,2205
+GSE162616,broad6,scGPT,Hepatocyte,Hepatocyte,broad,186
+GSE162616,broad6,scGPT,Endothelial,Endothelial,broad,25
+GSE162616,broad6,scGPT,Fibroblast,Fibroblast,broad,15
+GSE162616,broad6,CellAssign,cDC2,Myeloid,head,32443
+GSE162616,broad6,CellAssign,CD16 monocyte,Myeloid,head,1625
+GSE162616,broad6,CellAssign,Memory CD4 T cell,T/NK,head,1208
+GSE162616,broad6,CellAssign,Treg cell,T/NK,head,532
+GSE162616,broad6,CellAssign,Plasma cell,B,head,528
+GSE162616,broad6,CellAssign,Red blood cell,Unknown,excluded-lineage,525
+GSE162616,broad6,CellAssign,B cell,B,exact,489
+GSE162616,broad6,CellAssign,ADAM12+ fibroblast,Fibroblast,head,392
+GSE162616,broad6,CellAssign,CD4 T cell,T/NK,head,305
+GSE162616,broad6,CellAssign,Macrophage,Myeloid,head,296
+GSE162616,broad6,CellAssign,ILC,T/NK,head,273
+GSE162616,broad6,CellAssign,cDC1,Myeloid,head,155
+GSE162616,broad6,CellAssign,Dendritic cell,Myeloid,head,134
+GSE162616,broad6,CellAssign,pDC,Myeloid,exact,111
+GSE162616,broad6,CellAssign,Myeloid pre-pDC,Myeloid,head,30
+GSE162616,broad6,CellAssign,NK cell,T/NK,head,1
+GSE162616,broad6,CyteType,"Natural Killer Cell (Activated, FCGR3A-low, Tissue Uncertain)",T/NK,head,8408
+GSE162616,broad6,CyteType,Natural Killer T-like Cell (KLRB1+ stressed),T/NK,head,7040
+GSE162616,broad6,CyteType,"Atypical Lymphocyte (EBV-transformed, NK-like)",T/NK,parenthetical,6272
+GSE162616,broad6,CyteType,"Gamma-Delta T cell (NK-like, non-hepatic)",T/NK,head,6122
+GSE162616,broad6,CyteType,"Natural Killer Cell (Activated, Peripheral, Cytotoxic)",T/NK,head,4650
+GSE162616,broad6,CyteType,"Gamma-Delta T cell (splenic, CD16+)",T/NK,head,4543
+GSE162616,broad6,CyteType,"T Cell (Stressed, TOX+ Progenitor Exhausted CD8+)",T/NK,head,3146
+GSE162616,broad6,CyteType,"Atypical T-cell (NKT2/NKT17-like, ZBTB16+, CD3low)",T/NK,head,2406
+GSE162616,broad6,CyteType,"Atypical Plasma Cell (SDC1-negative, KRT81/86-positive)",B,head,2314
+GSE162616,broad6,CyteType,Contaminant T-cell (Proliferative Treg-like),T/NK,head,2137
+GSE162616,broad6,CyteType,T Cell (Stressed Effector Memory CD4+/CD8+),T/NK,head,1898
+GSE162616,broad6,CyteType,"Plasma Cell (Activated, Non-hepatic)",B,head,1501
+GSE162616,broad6,CyteType,"Non-classical Monocyte (Activated CD14-dim, FCGR3A-bright)",Myeloid,head,1458
+GSE162616,broad6,CyteType,T Cell (Terminal Exhausted CD8+),T/NK,head,1371
+GSE162616,broad6,CyteType,Low-quality/Artifact (dying lymphoid),Unknown,qc-flag,1315
+GSE162616,broad6,CyteType,"Myeloid Debris/Artifact (apoptotic/necrotic, high mtRNA)",Unknown,qc-flag,800
+GSE162616,broad6,CyteType,B Cell (EBV-transformed Activated Naive),B,head,682
+GSE162616,broad6,CyteType,Conventional Dendritic Cell (Activated cDC1-like),Myeloid,head,596
+GSE162616,broad6,CyteType,"Monocyte-derived Macrophage (lipid-associated, efferocytic)",Myeloid,head,495
+GSE162616,broad6,CyteType,Reticulocyte (final maturation),Unknown,no-match,107
+GSE162616,broad6,SignacX,TNK,T/NK,exact,16055
+GSE162616,broad6,SignacX,MPh,Myeloid,exact,1907
+GSE162616,broad6,SignacX,Unclassified,Unknown,exact,275
+GSE162616,broad6,SignacX,B,B,exact,145
+GSE202642,broad6,CellTypist,T cells,T/NK,head,47181
+GSE202642,broad6,CellTypist,Macrophages,Myeloid,exact,25940
+GSE202642,broad6,CellTypist,Mono+mono derived cells,Myeloid,head,11318
+GSE202642,broad6,CellTypist,Endothelial cells,Endothelial,head,9762
+GSE202642,broad6,CellTypist,Hepatocytes,Hepatocyte,head,9188
+GSE202642,broad6,CellTypist,Circulating NK/NKT,T/NK,head,4118
+GSE202642,broad6,CellTypist,Resident NK,T/NK,head,3835
+GSE202642,broad6,CellTypist,Fibroblasts,Fibroblast,exact,2773
+GSE202642,broad6,CellTypist,B cells,B,head,2631
+GSE202642,broad6,CellTypist,Neutrophils,Myeloid,exact,1857
+GSE202642,broad6,CellTypist,cDC2s,Myeloid,head,1082
+GSE202642,broad6,CellTypist,Cholangiocytes,Hepatocyte,head,866
+GSE202642,broad6,CellTypist,Plasma cells,B,head,775
+GSE202642,broad6,CellTypist,cDC1s,Myeloid,head,699
+GSE202642,broad6,CellTypist,pDCs,Myeloid,head,67
+GSE202642,broad6,SingleR,T_cells,T/NK,head,34335
+GSE202642,broad6,SingleR,Hepatocytes,Hepatocyte,head,24619
+GSE202642,broad6,SingleR,Macrophage,Myeloid,head,16211
+GSE202642,broad6,SingleR,NK_cell,T/NK,head,16130
+GSE202642,broad6,SingleR,Endothelial_cells,Endothelial,head,8069
+GSE202642,broad6,SingleR,Monocyte,Myeloid,head,7410
+GSE202642,broad6,SingleR,Neutrophils,Myeloid,exact,6996
+GSE202642,broad6,SingleR,B_cell,B,head,3066
+GSE202642,broad6,SingleR,DC,Myeloid,exact,2286
+GSE202642,broad6,SingleR,Tissue_stem_cells,Unknown,excluded-lineage,1248
+GSE202642,broad6,SingleR,Smooth_muscle_cells,Fibroblast,head,695
+GSE202642,broad6,SingleR,Unknown,Unknown,exact,313
+GSE202642,broad6,SingleR,HSC_CD34+,Unknown,excluded-lineage,183
+GSE202642,broad6,SingleR,Pre-B_cell_CD34-,B,head,103
+GSE202642,broad6,SingleR,Fibroblasts,Fibroblast,exact,92
+GSE202642,broad6,SingleR,Osteoblasts,Unknown,excluded-lineage,55
+GSE202642,broad6,SingleR,Epithelial_cells,Hepatocyte,head,48
+GSE202642,broad6,SingleR,Chondrocytes,Unknown,excluded-lineage,46
+GSE202642,broad6,SingleR,HSC_-G-CSF,Unknown,excluded-lineage,39
+GSE202642,broad6,SingleR,GMP,Unknown,excluded-lineage,31
+GSE202642,broad6,SingleR,CMP,Unknown,excluded-lineage,26
+GSE202642,broad6,SingleR,Myelocyte,Myeloid,head,22
+GSE202642,broad6,SingleR,MSC,Fibroblast,head,20
+GSE202642,broad6,SingleR,Neurons,Unknown,excluded-lineage,15
+GSE202642,broad6,SingleR,Pro-B_cell_CD34+,B,head,12
+GSE202642,broad6,SingleR,Platelets,Unknown,excluded-lineage,7
+GSE202642,broad6,SingleR,Astrocyte,Unknown,excluded-lineage,4
+GSE202642,broad6,SingleR,Gametocytes,Unknown,excluded-lineage,3
+GSE202642,broad6,SingleR,Erythroblast,Unknown,excluded-lineage,3
+GSE202642,broad6,SingleR,Embryonic_stem_cells,Unknown,excluded-lineage,3
+GSE202642,broad6,SingleR,Pro-Myelocyte,Myeloid,head,2
+GSE202642,broad6,ScType,Immune system::Memory CD4+ T cells,T/NK,head,22097
+GSE202642,broad6,ScType,Liver::Hepatocytes,Hepatocyte,head,21766
+GSE202642,broad6,ScType,Immune system::CD8+ NKT-like cells,T/NK,head,21325
+GSE202642,broad6,ScType,Immune system::Macrophages,Myeloid,exact,15745
+GSE202642,broad6,ScType,Liver::Endothelial cell,Endothelial,head,9522
+GSE202642,broad6,ScType,Immune system::Neutrophils,Myeloid,exact,7093
+GSE202642,broad6,ScType,Immune system::Myeloid Dendritic cells,Myeloid,head,6565
+GSE202642,broad6,ScType,Immune system::Natural killer  cells,T/NK,head,5914
+GSE202642,broad6,ScType,Unknown,Unknown,exact,3575
+GSE202642,broad6,ScType,Immune system::Naive B cells,B,head,2729
+GSE202642,broad6,ScType,Liver::Hepatic stellate cells,Fibroblast,head,2598
+GSE202642,broad6,ScType,Immune system::Plasma B cells,B,head,1712
+GSE202642,broad6,ScType,Liver::Kupffer cells,Myeloid,head,1003
+GSE202642,broad6,ScType,Liver::Cholangiocytes,Hepatocyte,head,448
+GSE202642,broad6,scGPT,T/NK,T/NK,broad,50352
+GSE202642,broad6,scGPT,Myeloid,Myeloid,broad,40770
+GSE202642,broad6,scGPT,Hepatocyte,Hepatocyte,broad,14312
+GSE202642,broad6,scGPT,Endothelial,Endothelial,broad,10039
+GSE202642,broad6,scGPT,B,B,broad,3721
+GSE202642,broad6,scGPT,Fibroblast,Fibroblast,broad,2898
+GSE202642,broad6,CellAssign,CD4 T cell,T/NK,head,75694
+GSE202642,broad6,CellAssign,LYVE1 macrophage,Myeloid,head,14466
+GSE202642,broad6,CellAssign,Neutrophil,Myeloid,head,3404
+GSE202642,broad6,CellAssign,Treg cell,T/NK,head,1903
+GSE202642,broad6,CellAssign,Pericyte,Fibroblast,head,1519
+GSE202642,broad6,CellAssign,Memory CD4 T cell,T/NK,head,1246
+GSE202642,broad6,CellAssign,Hepatocyte,Hepatocyte,exact,900
+GSE202642,broad6,CellAssign,Lymphatic EC,Endothelial,head,828
+GSE202642,broad6,CellAssign,B cell,B,exact,806
+GSE202642,broad6,CellAssign,CD56 NK cell,T/NK,head,764
+GSE202642,broad6,CellAssign,Plasma cell,B,head,753
+GSE202642,broad6,CellAssign,CD14 monocyte,Myeloid,head,740
+GSE202642,broad6,CellAssign,BNC2+ZFPM2+ fibroblast,Fibroblast,head,644
+GSE202642,broad6,CellAssign,Venous EC,Endothelial,head,598
+GSE202642,broad6,CellAssign,cDC1,Myeloid,head,586
+GSE202642,broad6,CellAssign,Vascular smooth muscle cell,Fibroblast,head,500
+GSE202642,broad6,CellAssign,Tfh cell,T/NK,head,416
+GSE202642,broad6,CellAssign,CCL2+ pancreatic ductal cell,Hepatocyte,head,324
+GSE202642,broad6,CellAssign,CD16 NK cell,T/NK,head,324
+GSE202642,broad6,CellAssign,Macrophage,Myeloid,head,230
+GSE202642,broad6,CellAssign,MAIT cell,T/NK,head,211
+GSE202642,broad6,CellAssign,Capillary EC,Endothelial,head,210
+GSE202642,broad6,CellAssign,CXCL6+ cholangiocyte,Hepatocyte,head,209
+GSE202642,broad6,CellAssign,AFP+ fetal hepatocyte,Hepatocyte,head,198
+GSE202642,broad6,CellAssign,MMP19 macrophage,Myeloid,head,190
+GSE202642,broad6,CellAssign,GZMK CD8 T cell,T/NK,head,128
+GSE202642,broad6,CellAssign,Arterial EC,Endothelial,head,126
+GSE202642,broad6,CellAssign,cDC2,Myeloid,head,117
+GSE202642,broad6,CellAssign,Monocyte,Myeloid,head,110
+GSE202642,broad6,CellAssign,CD8 T cell,T/NK,head,87
+GSE202642,broad6,CellAssign,pDC,Myeloid,exact,77
+GSE202642,broad6,CellAssign,Cycling CXCL13 exhausted CD8 T cell,T/NK,head,54
+GSE202642,broad6,CellAssign,Ovarian cancer specific LGR5+MUC16+ epithelial cell,Hepatocyte,head,45
+GSE202642,broad6,CellAssign,GZMB CD8 T cell,T/NK,head,21
+GSE202642,broad6,CellAssign,Cycling macrophage,Myeloid,head,16
+GSE202642,broad6,CellAssign,Dendritic cell,Myeloid,head,6
+GSE202642,broad6,CellAssign,Naive CD4 T cell,T/NK,head,3
+GSE202642,broad6,CyteType,T Cell (Activated Th1/Tc1-Polarized Memory),T/NK,head,13274
+GSE202642,broad6,CyteType,CD8+ T Cell (GZMK+ Effector Memory),T/NK,head,12427
+GSE202642,broad6,CyteType,"Hepatocyte (Quiescent, Antigen-Presenting)",Hepatocyte,head,8385
+GSE202642,broad6,CyteType,"Pathological Endothelial Cell (TCF4-High, IGFBP7+)",Endothelial,head,7730
+GSE202642,broad6,CyteType,Neutrophil (Stressed/Apoptotic),Myeloid,head,7093
+GSE202642,broad6,CyteType,Dendritic Cell (Inflammatory cDC2 with monocytic features),Myeloid,head,6565
+GSE202642,broad6,CyteType,Macrophage (C1Q+ APOE-high Phagocytic),Myeloid,head,5964
+GSE202642,broad6,CyteType,"Macrophage (Monocyte-derived, M2/DAM)",Myeloid,head,5926
+GSE202642,broad6,CyteType,T Cell (TEMRA),T/NK,head,5572
+GSE202642,broad6,CyteType,"Hepatocyte (Stressed, Acute-Phase)",Hepatocyte,head,4504
+GSE202642,broad6,CyteType,Gamma-Delta T Cell (TRGV9+ NK-like),T/NK,head,3896
+GSE202642,broad6,CyteType,"Conventional Dendritic Cell type 2 (cDC2) (Activated, macrophage-like)",Myeloid,head,3855
+GSE202642,broad6,CyteType,"Transformed Hepatocyte (GPC3+, ALB+, progenitor-like immunogenic)",Hepatocyte,head,3606
+GSE202642,broad6,CyteType,Low-quality Cells (Macrophage-Plasma Cell Doublet),Unknown,qc-flag,3575
+GSE202642,broad6,CyteType,"Activated T Cell (Tissue-Resident Memory, Mixed CD4/CD8)",T/NK,head,3513
+GSE202642,broad6,CyteType,"Hepatocyte (Dyszonated, Steatotic, Pre-malignant)",Hepatocyte,head,3482
+GSE202642,broad6,CyteType,Technical Doublet (hepatocyte + activated lymphocyte),Unknown,qc-flag,3326
+GSE202642,broad6,CyteType,B Cell (CD83+ IRF4+ Atypical),B,head,2729
+GSE202642,broad6,CyteType,Regulatory T cell (PRF1+ FOXP3+ Activated Effector Memory),T/NK,head,2723
+GSE202642,broad6,CyteType,Mural Cell (RGS5+/ACTA2+ contractile),Fibroblast,head,2598
+GSE202642,broad6,CyteType,T Cell (Doublet: Activated T-cell + Hepatocyte),Unknown,qc-flag,2587
+GSE202642,broad6,CyteType,Natural Killer Cell (Terminally Differentiated Cytotoxic),T/NK,head,2018
+GSE202642,broad6,CyteType,"Endothelial Cell (Activated LSEC, Angiogenic)",Endothelial,head,1792
+GSE202642,broad6,CyteType,"Hepatocyte (Lipid-Associated, Metabolically Active)",Hepatocyte,head,1789
+GSE202642,broad6,CyteType,Doublet (Plasma Cell + Hepatocyte),Unknown,qc-flag,1712
+GSE202642,broad6,CyteType,"Macrophage (SIGLEC1+ Iron-recycling, M1/M2)",Myeloid,head,1003
+GSE202642,broad6,CyteType,"Malignant Cholangiocyte (SOX9+, partial hepatocytic)",Hepatocyte,head,448
+GSE202642,broad6,SignacX,TNK,T/NK,exact,49074
+GSE202642,broad6,SignacX,MPh,Myeloid,exact,30815
+GSE202642,broad6,SignacX,NonImmune,Unknown,exact,16696
+GSE202642,broad6,SignacX,Unclassified,Unknown,exact,8680
+GSE202642,broad6,SignacX,Plasma.cells,B,exact,1296
+GSE202642,broad6,SignacX,B,B,exact,1286
+GSE223204,broad6,CellTypist,T cells,T/NK,head,5760
+GSE223204,broad6,CellTypist,Hepatocytes,Hepatocyte,head,5521
+GSE223204,broad6,CellTypist,Endothelial cells,Endothelial,head,4051
+GSE223204,broad6,CellTypist,Macrophages,Myeloid,exact,2255
+GSE223204,broad6,CellTypist,Resident NK,T/NK,head,2217
+GSE223204,broad6,CellTypist,Mono+mono derived cells,Myeloid,head,1154
+GSE223204,broad6,CellTypist,Neutrophils,Myeloid,exact,1085
+GSE223204,broad6,CellTypist,Circulating NK/NKT,T/NK,head,286
+GSE223204,broad6,CellTypist,cDC2s,Myeloid,head,214
+GSE223204,broad6,CellTypist,Fibroblasts,Fibroblast,exact,194
+GSE223204,broad6,CellTypist,B cells,B,head,145
+GSE223204,broad6,CellTypist,cDC1s,Myeloid,head,110
+GSE223204,broad6,CellTypist,Plasma cells,B,head,100
+GSE223204,broad6,CellTypist,pDCs,Myeloid,head,49
+GSE223204,broad6,CellTypist,Cholangiocytes,Hepatocyte,head,24
+GSE223204,broad6,SingleR,Hepatocytes,Hepatocyte,head,8215
+GSE223204,broad6,SingleR,T_cells,T/NK,head,4080
+GSE223204,broad6,SingleR,NK_cell,T/NK,head,2779
+GSE223204,broad6,SingleR,Endothelial_cells,Endothelial,head,2357
+GSE223204,broad6,SingleR,Macrophage,Myeloid,head,2060
+GSE223204,broad6,SingleR,Monocyte,Myeloid,head,1241
+GSE223204,broad6,SingleR,Neutrophils,Myeloid,exact,1119
+GSE223204,broad6,SingleR,Unknown,Unknown,exact,818
+GSE223204,broad6,SingleR,B_cell,B,head,229
+GSE223204,broad6,SingleR,DC,Myeloid,exact,151
+GSE223204,broad6,SingleR,Smooth_muscle_cells,Fibroblast,head,47
+GSE223204,broad6,SingleR,Tissue_stem_cells,Unknown,excluded-lineage,27
+GSE223204,broad6,SingleR,BM,Unknown,excluded-lineage,9
+GSE223204,broad6,SingleR,Epithelial_cells,Hepatocyte,head,8
+GSE223204,broad6,SingleR,Erythroblast,Unknown,excluded-lineage,6
+GSE223204,broad6,SingleR,Fibroblasts,Fibroblast,exact,4
+GSE223204,broad6,SingleR,GMP,Unknown,excluded-lineage,4
+GSE223204,broad6,SingleR,HSC_CD34+,Unknown,excluded-lineage,4
+GSE223204,broad6,SingleR,Osteoblasts,Unknown,excluded-lineage,2
+GSE223204,broad6,SingleR,Pro-Myelocyte,Myeloid,head,2
+GSE223204,broad6,SingleR,Platelets,Unknown,excluded-lineage,2
+GSE223204,broad6,SingleR,MSC,Fibroblast,head,1
+GSE223204,broad6,ScType,Liver::Hepatocytes,Hepatocyte,head,5822
+GSE223204,broad6,ScType,Liver::Endothelial cell,Endothelial,head,3918
+GSE223204,broad6,ScType,Immune system::Macrophages,Myeloid,exact,2454
+GSE223204,broad6,ScType,Immune system::Natural killer  cells,T/NK,head,2417
+GSE223204,broad6,ScType,Immune system::Effector CD8+ T cells,T/NK,head,2362
+GSE223204,broad6,ScType,Immune system::Memory CD4+ T cells,T/NK,head,2023
+GSE223204,broad6,ScType,Immune system::Classical Monocytes,Myeloid,head,1113
+GSE223204,broad6,ScType,Immune system::Neutrophils,Myeloid,exact,1086
+GSE223204,broad6,ScType,Immune system::Memory CD8+ T cells,T/NK,head,866
+GSE223204,broad6,ScType,Immune system::Myeloid Dendritic cells,Myeloid,head,367
+GSE223204,broad6,ScType,Immune system::Memory B cells,B,head,240
+GSE223204,broad6,ScType,Liver::Hepatic stellate cells,Fibroblast,head,206
+GSE223204,broad6,ScType,Liver::Cholangiocytes,Hepatocyte,head,166
+GSE223204,broad6,ScType,Immune system::Erythroid-like and erythroid precursor cells,Unknown,excluded-lineage,76
+GSE223204,broad6,ScType,Immune system::Plasmacytoid Dendritic cells,Myeloid,head,49
+GSE223204,broad6,scGPT,T/NK,T/NK,broad,7975
+GSE223204,broad6,scGPT,Hepatocyte,Hepatocyte,broad,5621
+GSE223204,broad6,scGPT,Myeloid,Myeloid,broad,5027
+GSE223204,broad6,scGPT,Endothelial,Endothelial,broad,4071
+GSE223204,broad6,scGPT,B,B,broad,270
+GSE223204,broad6,scGPT,Fibroblast,Fibroblast,broad,201
+GSE223204,broad6,CellAssign,AFP+ fetal hepatocyte,Hepatocyte,head,12815
+GSE223204,broad6,CellAssign,Arterial EC,Endothelial,head,1766
+GSE223204,broad6,CellAssign,ILC,T/NK,head,1033
+GSE223204,broad6,CellAssign,Neutrophil,Myeloid,head,935
+GSE223204,broad6,CellAssign,NK cell,T/NK,head,706
+GSE223204,broad6,CellAssign,Cycling CXCL13 exhausted CD8 T cell,T/NK,head,624
+GSE223204,broad6,CellAssign,Venous EC,Endothelial,head,617
+GSE223204,broad6,CellAssign,CD8 T cell,T/NK,head,518
+GSE223204,broad6,CellAssign,CD14 monocyte,Myeloid,head,444
+GSE223204,broad6,CellAssign,CD16 monocyte,Myeloid,head,353
+GSE223204,broad6,CellAssign,GZMB CD8 T cell,T/NK,head,343
+GSE223204,broad6,CellAssign,cDC2,Myeloid,head,300
+GSE223204,broad6,CellAssign,Macrophage,Myeloid,head,226
+GSE223204,broad6,CellAssign,Pericyte,Fibroblast,head,183
+GSE223204,broad6,CellAssign,B cell,B,exact,181
+GSE223204,broad6,CellAssign,MMP19 macrophage,Myeloid,head,145
+GSE223204,broad6,CellAssign,cDC1,Myeloid,head,95
+GSE223204,broad6,CellAssign,Plasma cell,B,head,81
+GSE223204,broad6,CellAssign,pDC,Myeloid,exact,65
+GSE223204,broad6,CellAssign,SPP1 macrophage,Myeloid,head,45
+GSE223204,broad6,CellAssign,CD56 NK cell,T/NK,head,2
+GSE223204,broad6,CellAssign,Hepatocyte,Hepatocyte,exact,1
+GSE223204,broad6,CyteType,"Hepatocyte (Pathological, Progenitor-like)",Hepatocyte,head,4554
+GSE223204,broad6,CyteType,Liver Sinusoidal Endothelial Cell (Angiogenic),Endothelial,head,3581
+GSE223204,broad6,CyteType,Disease-Associated Macrophage (Kupffer-derived),Myeloid,head,2454
+GSE223204,broad6,CyteType,CD8+ T-cell (Tissue-Resident Effector),T/NK,head,2362
+GSE223204,broad6,CyteType,"Gamma-Delta T Cell (ZBTB16+, activated, liver-resident)",T/NK,head,2168
+GSE223204,broad6,CyteType,"Memory CD4 T-cell (Quiescent, STAT4+ Th1)",T/NK,head,2023
+GSE223204,broad6,CyteType,"Macrophage (Monocyte-derived, Neutrophil-like)",Myeloid,head,1113
+GSE223204,broad6,CyteType,Technical Artifact (Neutrophil-derived Ambient RNA),Unknown,qc-flag,1086
+GSE223204,broad6,CyteType,"Hepatocyte (Periportal, CPS1+, Transcriptionally Collapsed)",Hepatocyte,head,899
+GSE223204,broad6,CyteType,"CD8+ T-cell (TEMRA, RORA+STAT4+TBX21+)",T/NK,head,866
+GSE223204,broad6,CyteType,Mixed Population (Hepatocyte-Endothelial doublets + Hepatocyte-Macrophage subpopulation),Unknown,qc-flag,369
+GSE223204,broad6,CyteType,Dendritic Cell (Activated cDC1/cDC2 hybrid),Myeloid,head,367
+GSE223204,broad6,CyteType,Arterial Endothelial Cell (Progenitor-like),Endothelial,head,337
+GSE223204,broad6,CyteType,"NKT Cell (Activated, Proliferating, Cytotoxic Type 1)",T/NK,head,249
+GSE223204,broad6,CyteType,"B Cell (Activated Atypical, CD74-high, Viral-response)",B,head,240
+GSE223204,broad6,CyteType,Mural Cell (Activated Myofibroblastic),Fibroblast,head,206
+GSE223204,broad6,CyteType,"Neutrophil (Activated Pro-inflammatory, CXCL8-high, CSF3R+)",Myeloid,head,166
+GSE223204,broad6,CyteType,Doublet (Hepatocyte-Erythroid),Unknown,qc-flag,76
+GSE223204,broad6,CyteType,Plasmacytoid Dendritic Cell (GzmB+),Myeloid,head,49
+GSE223204,broad6,SignacX,TNK,T/NK,exact,18813
+GSE223204,broad6,SignacX,MPh,Myeloid,exact,1862
+GSE223204,broad6,SignacX,B,B,exact,1403
+GSE223204,broad6,SignacX,Unclassified,Unknown,exact,991
+GSE223204,broad6,SignacX,NonImmune,Unknown,exact,815
+GSE223204,broad6,SignacX,Plasma.cells,B,exact,22

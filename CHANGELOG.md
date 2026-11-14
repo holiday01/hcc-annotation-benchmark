@@ -1,5 +1,37 @@
 # Changelog
 
+## v1.2 — Revision 2 (2026-11-14)
+
+Accompanies the second revision of the manuscript (response to two reviewers).
+Results are in new folders; the original `expected_results/` is unchanged.
+
+### Fixed — errors in the evaluation of v1.1
+
+- Macro F1 was averaged over the union of reference and predicted classes;
+  it is now averaged over the reference classes only (e.g. scGPT on GSE162616
+  0.481 → 0.976).
+- Predictions were inner-joined to the reference, so tools were scored on
+  different cell subsets; every tool is now scored on the same cells, with
+  abstentions counted as errors.
+- Four inconsistent fine-to-broad label mappings were replaced by one
+  (`scripts/_canonical_broad.py`).
+- CellAssign received normalised values with a unit size factor; it is re-run
+  on integer counts with library-size factors (GSE149614 macro F1 0.160 → 0.918).
+- SignacX received log-normalised input on two cohorts and ran on subsets of
+  cells on others; it is re-run on raw counts for every cell.
+- The scGPT reference contained cells of four benchmark cohorts; scGPT now uses
+  a reference from which all benchmark samples are removed.
+
+### Added
+
+- Scripts 31–50, `_canonical_broad.py`, `_signacx_patched.R`,
+  `torchtext_shim_for_scgpt/` (see README, "Revision 2").
+- Tools: Seurat label transfer, scmap, scPred, SingleCellNet; SingleR with a
+  liver reference.
+- `ground_truth/GSE156625_published_ground_truth.tsv`: the GSE156625 authors'
+  cell-type labels.
+- `expected_results_rev2/`, `predictions_rev2/`, `reference_rev2/`.
+
 ## v1.1 — Revision (2026-05-28)
 
 This release accompanies the revised manuscript prepared for Cancer Reports

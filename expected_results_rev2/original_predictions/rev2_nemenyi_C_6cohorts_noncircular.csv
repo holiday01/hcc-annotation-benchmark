@@ -1,0 +1,5 @@
+,CellTypist,SingleR,CellAssign,scGPT
+CellTypist,1.0000,0.8078,0.0191,0.9961
+SingleR,0.8078,1.0000,0.1833,0.6784
+CellAssign,0.0191,0.1833,1.0000,0.0095
+scGPT,0.9961,0.6784,0.0095,1.0000
