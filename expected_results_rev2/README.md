@@ -5,7 +5,7 @@ Accuracy claims rest only on investigator-curated labels and experimental design
 * published labels, broad-6, on GSE125449, GSE149614 and GSE156625 (`GT == "published"`;
   GSE156625 labels are the authors' `CellType` from `GSE156625_HCCF_integrated.RData`,
   extracted by `scripts/38_extract_GSE156625_author_labels.R`); Friedman/Nemenyi
-  analysis `D_published_3cohorts_7tools`;
+  analysis `E_published_3cohorts_12tools` (primary; `D` = the seven original tools);
 * GSE162616, flow-sorted innate lymphoid cells: label-free lineage-specificity check
   (`rev2_GSE162616_sorted_ILC_check.csv`, `scripts/41_sorted_ILC_check_GSE162616.py`).
 The enrichR-derived labels (`GT == "enrichR"`, analyses A–C) are kept as a secondary
@@ -15,8 +15,11 @@ CyteType, and omit populations the databases do not match (e.g. 1,884 of 1,967
 author-labelled fibroblasts in GSE156625).
 
 Produced by `scripts/31_rescore_common_cells.py` (seed 42, B = 1000) from the
-same per-cell predictions as `expected_results/`. No annotation tool was
-re-run; only the label mapping and the scoring changed. The scoring rules
+per-cell predictions of `annotation_results_rev2` (SignacX, CellAssign and scGPT
+re-run; five configurations added; see the main README). Bootstrap intervals are
+patient-level where patients are known (GSE125449, GSE156625, and GSE149614,
+whose 21 samples come from 10 patients and are resampled by patient) and
+sample-level otherwise. The scoring rules
 (R1–R7) are in the script docstring; the mapping rules are in the docstring
 of `scripts/_canonical_broad.py`.
 
@@ -86,20 +89,29 @@ Folders: this folder = canonical mapping + re-run predictions (main results);
 
 | File | Content |
 |---|---|
-| `rev2_scores.csv` | One row per (cohort, GT, vocabulary, tool set, tool): N, class set, coverage, coverage-aware accuracy / macro F1 / kappa, per-class F1, selective accuracy / macro F1 on cells every tool labelled, cell- and sample-level bootstrap 95% CIs, permutation null and p |
+| `rev2_scores.csv` | One row per (cohort, GT, vocabulary, tool set, tool): N, class set, coverage, coverage-aware accuracy / macro F1 / kappa, per-class F1, selective accuracy / macro F1 on cells every tool labelled, cell- and patient-/sample-level bootstrap 95% CIs (`MacroF1_CI_sample_*`; `N_samples` = resampling units), permutation null and p |
 | `rev2_cellsets.csv` | Cells entering each (cohort, GT, tool set) comparison and which tools are in the set |
 | `rev2_pairwise_bootstrap.csv` | Paired bootstrap CIs of macro F1 differences between every tool pair |
-| `rev2_friedman.csv` | Friedman tests across enrichR cohorts (A: 6 cohorts × 6 tools without SignacX; B: 5 cohorts × 7 tools; C: 6 cohorts × 4 non-circular tools) |
+| `rev2_friedman.csv` | Friedman tests (A: enrichR, 6 cohorts × 6 original tools without SignacX; B: enrichR, 5 cohorts × 7 original tools; C: enrichR, 6 cohorts × the 10 configurations that share no resources with these labels; D: investigator labels, 3 cohorts × 7 original tools; E: investigator labels, 3 cohorts × 12 configurations, primary) |
 | `rev2_nemenyi_*.csv`, `rev2_friedman_input_*.csv` | Nemenyi p-value matrices and the score matrices each Friedman test used |
 | `rev2_label_audit.csv` | Per tool and cohort: not-run cells, abstentions, labels outside the vocabulary |
 | `rev2_vs_original.csv` | New all7 scores next to the originally reported ones |
 | `rev2_label_mapping.csv` | Every raw tool label per cohort, the broad class it maps to, the rule that fired, and the number of cells (canonical run only) |
 | `rev2_GSE162616_sorted_ILC_check.csv` | Flow-sorted ILC cohort: % of cells each tool calls T/NK, non-immune (false positives), Myeloid, B, Unknown |
-| `rev2_scgpt_k_sensitivity.csv` | scGPT macro F1 for k = 5, 10, 15, 20, 30 |
+| `rev2_scgpt_k_sensitivity.csv` | scGPT macro F1 for k = 5, 10, 15, 20, 30 (investigator labels of three cohorts and database-derived labels of six) |
+| `rev2_decomposition.csv` | Reported → rules → mapping → re-runs, per original tool and cohort (`scripts/32_rev2_decomposition.py`) |
+| `rev2_cnv_GSE125449.csv`, `rev2_cnv_GSE149614.csv`, `cnv/` | Hepatocyte-lineage calls against CNV-high cells (top quartile of the CNV score over all cells; exploratory) and per-cell CNV scores (`scripts/45_cnv_simulation_rev2.py`) |
+| `rev2_simulated.csv` | Splatter negative control |
+| `rev2_sensitivity_stromal_mapping.csv`, `rev2_sensitivity_reference_gap.csv` | Scores with the HPCA label `Tissue_stem_cells` mapped to Fibroblast instead of Unknown (only SingleR-HPCA changes), and the SingleR liver-reference − HPCA difference with patient-level paired bootstrap CIs and per-class contributions (`scripts/51_sensitivity_lopo_cnv.py`) |
+| `rev2_lopo_GSE149614.csv` | GSE149614 macro F1 with each of the 10 patients left out (`51`) |
+| `rev2_cnv_GSE149614_by_sample.csv` | CNV-high fraction of investigator-labelled hepatocytes per sample and sampling site (`51`) |
+| `rev2_cluster_purity_GSE156625.csv` | Majority-label share of the authors' clustering (used by ScType and CyteType) and of an independent re-clustering (`51`) |
+| `rev2_manuscript_numbers.md` / `.json` | Every number quoted in the manuscript with its source (`scripts/46_manuscript_numbers.py`) |
 
-Tool sets: `all7` = every tool with output on the cohort; `core` = tools that
-ran on ≥ 99% of GT-labelled cells; `noSignacX`; `noncircular` = CellTypist,
-SingleR, CellAssign, scGPT (enrichR GT only). ScType and CyteType are flagged
+Tool sets: `all7` = the seven tools of the original submission; `all` = all
+twelve configurations; `core` = tools that ran on ≥ 99% of GT-labelled cells;
+`noSignacX`; `noncircular` = every configuration except ScType and CyteType
+(enrichR GT only). ScType and CyteType are flagged
 `Circular_under_enrichR` because they share marker resources with the enrichR
 GT and, on the four validation cohorts, the same cluster partition.
 
@@ -115,10 +127,9 @@ tie-breaking in binning).
 Notes for the manuscript: DISCO also held 57 samples (80,787 cells) of
 GSE156625 and 3 of GSE162616, so four of the six cohorts leaked into the
 original scGPT reference; after exclusion the reference has 1,141 fibroblasts
-(other classes 3,000). scGPT macro F1 varies by ≤ 0.036 over k = 5–30
+(other classes 3,000). scGPT macro F1 varies by at most 0.036 over k = 5–30
 (`rev2_scgpt_k_sensitivity.csv`).
 
-Still open: the enrichR ground truth shares its cluster partition with ScType
-and CyteType on the four validation cohorts (their enrichR scores are not
-independent); no independently curated labels yet for those cohorts; the
-additional tools requested by Reviewer 1 have not been run.
+Limitations: the enrichR labels share their cluster partition with ScType and
+CyteType on four cohorts, so those two scores are concordance rather than
+accuracy; GSE202642 and GSE223204 have no investigator labels.

@@ -49,17 +49,22 @@ Tool sets
           GSE223204, so all7 there has six tools)
   core    tools that ran on >= 99% of the GT-labelled cells of the cohort
           (gives a near-complete cell set for the comparison of those tools)
-  noSignacX   (enrichR GT) every tool except SignacX, so that all six
-              cohorts can enter one Friedman test
-  noncircular (enrichR GT) CellTypist, SingleR, CellAssign, scGPT — tools
-              whose references are independent of CellMarker/PanglaoDB and
-              of the GT cluster partition
+  noSignacX   (enrichR GT) the original tools except SignacX (kept for comparison
+              with the original submission, in which SignacX had no output
+              on GSE223204)
+  noncircular (enrichR GT) every configuration except ScType and CyteType, i.e.
+              tools whose references are independent of CellMarker/PanglaoDB
+              and of the GT cluster partition (SignacX included: after the
+              revision-2 re-run it has output on every cohort)
 
 Uncertainty
 -----------
   Cell-level bootstrap (B = 1000) and, when the evaluated cells come from
   >= 5 samples/patients, sample-level bootstrap (B = 1000; samples resampled
-  with replacement, per-sample confusion matrices summed). Paired
+  with replacement, per-sample confusion matrices summed). The resampling unit
+  is the patient where patients are known: GSE125449 (one sample per patient),
+  GSE156625 (patientno) and GSE149614 (the sites of each patient, e.g. HCC07T/N/P,
+  are kept together; 10 patients). Paired
   differences between tools use the same resamples for both tools.
   Label-permutation null (B = 1000) per (evaluation, tool).
   Friedman + Nemenyi across cohorts on the primary macro F1.
@@ -286,6 +291,10 @@ def load_gt_and_samples(ds: str, gt_type: str, vocab: str, mapping: str = "canon
             import anndata as ad
             a = ad.read_h5ad(H5AD_VAL.format(ds), backed="r")
             samples = pd.Series(a.obs["sample"].astype(str).values, index=a.obs_names.astype(str))
+    if ds == "GSE149614":
+        # 21 samples from 10 patients (tumour, non-tumour, portal-vein and lymph-node sites, e.g. HCC07T,
+        # HCC07N, HCC07P): the resampling unit is the patient, so all sites of a patient stay together.
+        samples = samples.str.extract(r"^(HCC\d+)", expand=False).fillna(samples)
     gt = gt[gt.notna() & (gt != "Unknown")]
     return _clean_index(gt), _clean_index(samples)
 
@@ -516,7 +525,7 @@ def main():
             toolsets["core"] = core
         if gtt == "enrichR":
             toolsets["noSignacX"] = [t for t in orig if t != "SignacX"]
-            toolsets["noncircular"] = [t for t in preds if t not in CIRCULAR_ENRICHR and t != "SignacX"]
+            toolsets["noncircular"] = [t for t in preds if t not in CIRCULAR_ENRICHR]
         for name, ts in toolsets.items():
             rows, pairs = evaluate(ds, gtt, voc, name, gt, samples, {t: preds[t] for t in ts},
                                    args.B, SEED + k)
@@ -566,7 +575,7 @@ def main():
     six_no_signacx = [t for t in ORIGINAL7 if t != "SignacX"]
     friedman("A_6cohorts_6tools_noSignacX", COHORTS, six_no_signacx, e, "noSignacX")
     friedman("B_5cohorts_7tools", [c for c in COHORTS if c != "GSE223204"], ORIGINAL7, e, "all7")
-    nc = [t for t in TOOLS if t not in CIRCULAR_ENRICHR and t != "SignacX"
+    nc = [t for t in TOOLS if t not in CIRCULAR_ENRICHR
           and set(COHORTS) <= set(e[(e.Tool == t) & (e.ToolSet == "noncircular")].Dataset)]
     friedman("C_6cohorts_noncircular", COHORTS, nc, e, "noncircular")
     # Primary analysis of revision 2: investigator-curated (published) labels, broad-6.

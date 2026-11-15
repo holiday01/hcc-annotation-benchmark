@@ -6,15 +6,15 @@ message: >-
 title: "HCC scRNA-seq Cell Type Annotation Benchmark"
 abstract: >-
   Benchmarking pipeline for hepatocellular carcinoma single-cell RNA
-  sequencing cell-type annotation tools. Version 1.2.1 (second revision)
+  sequencing cell-type annotation tools. Version 1.2.2 (second revision)
   evaluates twelve configurations of eleven tools (reference-based,
   marker-based, neural-network, foundation-model and large-language-model)
   on six cohorts, scoring every tool on the same cells with one label
   harmonisation, against investigator-curated labels, a flow-sorted cohort
-  and inferCNV-based malignant-cell calls, with EnrichR-derived labels as a
+  and an exploratory inferCNV-based copy-number analysis, with EnrichR-derived labels as a
   secondary concordance reference.
 type: software
-version: 1.2.1
+version: 1.2.2
 date-released: 2026-11-15
 authors:
   - family-names: Chiu

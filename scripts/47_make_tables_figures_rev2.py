@@ -74,7 +74,7 @@ save_tex(f"{OUT}/tables/Table1.tex", t1)
 t2rows = [
     ("CellTypist", "Supervised classifier (logistic regression)", "Built-in Healthy Human Liver model", "No"),
     ("scPred", "Supervised classifier (SVM)", "Shared liver reference", "Yes"),
-    ("SingleCellNet", "Supervised classifier (random forest)", "Shared liver reference", "No"),
+    ("SingleCellNet", "Supervised classifier (random forest)", "Shared liver reference", "Yes (rand; none observed)"),
     ("SingleR (HPCA)", "Reference correlation", "Human Primary Cell Atlas", "Yes (pruning)"),
     ("SingleR (liver ref.)", "Reference correlation", "Shared liver reference", "Yes (pruning)"),
     ("Seurat label transfer", "Reference projection (anchors)", "Shared liver reference", "No"),
@@ -209,7 +209,10 @@ for t in order:
     ax.scatter(d.Coverage, d.MacroF1, color=c, s=22, zorder=3)
     for _, r in d.iterrows():
         if r.Coverage < 0.97:
-            ax.annotate(f"{NAME[t]}\n{r.Dataset}", (r.Coverage, r.MacroF1), fontsize=6, xytext=(3, -3),
+            right = r.Coverage > 0.94
+            ax.annotate(f"{NAME[t]}\n{r.Dataset}", (r.Coverage, r.MacroF1), fontsize=6,
+                        xytext=(-4, 3) if right else (3, -3), ha="right" if right else "left",
+                        va="bottom" if right else "baseline",
                         textcoords="offset points")
 ax.set_xlabel("Coverage (fraction of cells assigned a class)")
 ax.set_ylabel("Macro F1 (abstentions counted as errors)")
@@ -245,7 +248,7 @@ gt, _ = r31.load_gt_and_samples("GSE149614", "published", "broad6", "canonical")
 raw, _ = r31.load_raw_tools("GSE149614", "broad6", "rev2")
 cols = cls + ["Unknown"]
 SHORT = {"T/NK": "T/NK", "Myeloid": "Myeloid", "Hepatocyte": "Hepatocyte", "B": "B", "Endothelial": "Endothelial", "Fibroblast": "Fibroblast", "Unknown": "Abstention"}
-fig, axes = plt.subplots(3, 4, figsize=(12, 9.2))
+fig, axes = plt.subplots(3, 4, figsize=(8.2, 7.4), sharex=True, sharey=True)
 for ax, t in zip(axes.ravel(), order):
     p = r31.map_raw(t, raw[t], "broad6").reindex(gt.index).fillna("Unknown")
     ct = pd.crosstab(gt, p).reindex(index=cls, columns=cols, fill_value=0)
@@ -256,11 +259,11 @@ for ax, t in zip(axes.ravel(), order):
             if m[i, j] >= 0.05:
                 ax.text(j, i, f"{m[i, j]:.2f}", ha="center", va="center", fontsize=6,
                         color="white" if m[i, j] > 0.6 else "black")
-    ax.set_title(NAME[t], fontsize=9)
+    ax.set_title(NAME[t], fontsize=8)
     ax.set_xticks(range(len(cols)))
-    ax.set_xticklabels([SHORT[c] for c in cols], rotation=90, fontsize=7)
+    ax.set_xticklabels([SHORT[c] for c in cols], rotation=90, fontsize=7.5)
     ax.set_yticks(range(len(cls)))
-    ax.set_yticklabels(cls, fontsize=7)
+    ax.set_yticklabels(cls, fontsize=7.5)
 fig.supxlabel("Predicted class")
 fig.supylabel("Investigator label (GSE149614)")
 fig.tight_layout()
@@ -282,14 +285,14 @@ ax.tick_params(axis="x", rotation=45)
 ax.set_title("A  GSE125449: CNV signal by investigator label", fontsize=8.5, loc="left")
 ax = axes[1]
 x = np.arange(len(c6))
-ax.bar(x - 0.2, c6.CNV_F1, width=0.4, label="vs CNV call", color="#4c72b0")
+ax.bar(x - 0.2, c6.CNV_F1, width=0.4, label="vs CNV-high call", color="#4c72b0")
 ax.bar(x + 0.2, c6.PubGT_F1, width=0.4, label="vs published malignant + HPC-like", color="#dd8452")
 ax.set_xticks(x)
 ax.set_xticklabels([NAME[t] for t in c6.index], rotation=60, ha="right", fontsize=7.5)
-ax.set_ylabel("F1 of malignant-like (hepatocyte-lineage) calls")
+ax.set_ylabel("F1 of hepatocyte-lineage calls")
 ax.set_ylim(0, 1.05)
 ax.legend(frameon=False, fontsize=7.5)
-ax.set_title("B  Tool calls vs CNV and published labels", fontsize=8.5, loc="left")
+ax.set_title("B  Hepatocyte-lineage calls vs CNV-high and published labels", fontsize=8.5, loc="left")
 fig.tight_layout()
 fig.savefig(f"{OUT}/figures/Figure6.pdf", bbox_inches="tight")
 plt.close(fig)

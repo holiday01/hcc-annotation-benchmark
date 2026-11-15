@@ -128,6 +128,46 @@ for f in ["rev2_cnv_GSE125449.csv", "rev2_cnv_GSE149614.csv", "rev2_simulated.cs
             put(f"{f[5:-4]}_{'_'.join(str(r[c]) for c in d.columns[:2])}",
                 "; ".join(f"{c}={r[c]}" for c in d.columns[2:] if pd.notna(r[c])))
 
+# ── 51_sensitivity_lopo_cnv.py: stromal-label mapping, leave-one-patient-out, CNV-high by sample ──
+if os.path.exists(f"{E}/rev2_sensitivity_reference_gap.csv"):
+    gp = pd.read_csv(f"{E}/rev2_sensitivity_reference_gap.csv")
+    for _, r in gp.iterrows():
+        fib = r.Contribution_Fibroblast / r.Difference if r.Difference else np.nan
+        put(f"refgap_{r.Mapping}_{r.Scope}",
+            f"liver {r.MacroF1_liver_ref:.3f}; HPCA {r.MacroF1_HPCA:.3f}; diff {r.Difference:.3f} "
+            f"(95% CI {r.CI_lo:.3f} to {r.CI_hi:.3f}); fibroblast share {fib:.2f}",
+            "SingleR liver reference - SingleR HPCA; patient-level paired bootstrap")
+    sm = pd.read_csv(f"{E}/rev2_sensitivity_stromal_mapping.csv")
+    for (ds, t), d in sm[sm.Tool == "SingleR"].groupby(["Dataset", "Tool"]):
+        put(f"stromal_SingleR_HPCA_{ds}", "; ".join(f"{r.Mapping} {r.MacroF1:.3f} (fibroblast F1 {r.F1_Fibroblast:.3f})"
+                                                    for r in d.itertuples()))
+    changed = sm.pivot_table(index=["Dataset", "Tool"], columns="Mapping", values="MacroF1")
+    changed = changed[(changed.canonical - changed.lenient).abs() > 1e-9]
+    put("stromal_configs_changed", ", ".join(sorted({t for _, t in changed.index})), "configurations whose score changes")
+if os.path.exists(f"{E}/rev2_lopo_GSE149614.csv"):
+    lo = pd.read_csv(f"{E}/rev2_lopo_GSE149614.csv")
+    w = lo.pivot(index="Left_out", columns="Tool", values="MacroF1")
+    full, rest = w.loc["none"], w.drop(index="none")
+    for t in w.columns:
+        put(f"lopo_GSE149614_{t}", f"all {full[t]:.3f}; leave-one-patient-out {rest[t].min():.3f}-{rest[t].max():.3f}")
+    d = rest["SingleRdisco"] - rest["SingleR"]
+    put("lopo_GSE149614_gap_liver_minus_HPCA", f"all {full['SingleRdisco'] - full['SingleR']:.3f}; {d.min():.3f}-{d.max():.3f}")
+    put("lopo_GSE149614_max_shift", f"{(rest - full).abs().max().max():.3f}", "largest change of any configuration")
+if os.path.exists(f"{E}/rev2_cnv_GSE149614_by_sample.csv"):
+    cb = pd.read_csv(f"{E}/rev2_cnv_GSE149614_by_sample.csv")
+    for r in cb.itertuples():
+        put(f"cnvhigh_GSE149614_{r.Unit}_{r.Group}",
+            f"{r.N_CNV_high}/{r.N_hepatocytes} ({100 * r.Fraction_CNV_high:.1f}%); median score {r.Median_CNV_score:.4f}")
+    smp = cb[cb.Unit == "sample"]
+    for site in "TN":
+        x = smp[smp.Group.str.endswith(site)].Fraction_CNV_high * 100
+        put(f"cnvhigh_GSE149614_range_{site}_samples", f"{x.min():.1f}-{x.max():.1f}% ({len(x)} samples)")
+
+if os.path.exists(f"{E}/rev2_cluster_purity_GSE156625.csv"):
+    for i, r in enumerate(pd.read_csv(f"{E}/rev2_cluster_purity_GSE156625.csv").itertuples()):
+        put(f"purity_GSE156625_{'authors' if i == 0 else 'independent'}",
+            f"{100 * r.Majority_label_share:.1f}% ({r.N_clusters} clusters, {r.N_cells} cells)", r.Partition)
+
 os.makedirs(E, exist_ok=True)
 with open(f"{E}/rev2_manuscript_numbers.json", "w") as fh:
     json.dump(N, fh, indent=1, default=str)

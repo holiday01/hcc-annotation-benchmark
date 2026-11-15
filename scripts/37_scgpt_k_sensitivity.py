@@ -20,7 +20,8 @@ KDIR = "/mnt/10t/assi_result/HCC/benchmark_datasets/annotation_results_rev2/scgp
 OUT = os.path.join(os.path.dirname(HERE), "expected_results_rev2", "rev2_scgpt_k_sensitivity.csv")
 
 rows = []
-evals = [("GSE125449", "published"), ("GSE149614", "published")] + [(d, "enrichR") for d in r31.COHORTS]
+evals = [("GSE125449", "published"), ("GSE149614", "published"), ("GSE156625", "published")] + \
+        [(d, "enrichR") for d in r31.COHORTS]
 for ds, gtt in evals:
     gt, _ = r31.load_gt_and_samples(ds, gtt, "broad6", "canonical")
     k = pd.read_csv(f"{KDIR}/{ds}_scGPT_k.csv", index_col=0)
@@ -32,10 +33,10 @@ for ds, gtt in evals:
     row = {"Dataset": ds, "GT": gtt, "N": len(gt), "Classes": "|".join(present)}
     for col in k.columns:
         _, yp = r31.encode(gt, k[col].fillna("Unknown").astype(str), r31.BROAD6)
-        row[f"MacroF1_{col}"] = round(r31.metrics_from_cm(r31.confmat(yt, yp, len(r31.BROAD6)), mask)["macro_f1"], 4)
+        row[f"MacroF1_{col}"] = r31.metrics_from_cm(r31.confmat(yt, yp, len(r31.BROAD6)), mask)["macro_f1"]
     f = [row[c] for c in row if c.startswith("MacroF1_")]
-    row["Range"] = round(max(f) - min(f), 4)
+    row["Range"] = max(f) - min(f)
     rows.append(row)
 df = pd.DataFrame(rows)
-df.to_csv(OUT, index=False)
+df.to_csv(OUT, index=False, float_format="%.6f")
 print(df.to_string(index=False))

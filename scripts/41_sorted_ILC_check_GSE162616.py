@@ -36,13 +36,13 @@ def summarise(name, lab: pd.Series):
     lab = lab.reindex(cells).fillna("NotRun")
     f = lab.value_counts(normalize=True) * 100
     rows.append({"Source": name, "N_cells": len(lab),
-                 "pct_T/NK": round(f.get("T/NK", 0), 2),
-                 "pct_non_immune": round(sum(f.get(k, 0) for k in ("Hepatocyte", "Endothelial", "Fibroblast")), 2),
-                 "pct_Hepatocyte": round(f.get("Hepatocyte", 0), 2),
-                 "pct_Endothelial": round(f.get("Endothelial", 0), 2),
-                 "pct_Fibroblast": round(f.get("Fibroblast", 0), 2),
-                 "pct_Myeloid": round(f.get("Myeloid", 0), 2), "pct_B": round(f.get("B", 0), 2),
-                 "pct_Unknown": round(f.get("Unknown", 0) + f.get("NotRun", 0), 2)})
+                 "pct_T/NK": round(f.get("T/NK", 0), 4),
+                 "pct_non_immune": round(sum(f.get(k, 0) for k in ("Hepatocyte", "Endothelial", "Fibroblast")), 4),
+                 "pct_Hepatocyte": round(f.get("Hepatocyte", 0), 4),
+                 "pct_Endothelial": round(f.get("Endothelial", 0), 4),
+                 "pct_Fibroblast": round(f.get("Fibroblast", 0), 4),
+                 "pct_Myeloid": round(f.get("Myeloid", 0), 4), "pct_B": round(f.get("B", 0), 4),
+                 "pct_Unknown": round(f.get("Unknown", 0) + f.get("NotRun", 0), 4)})
 
 
 for t in r31.TOOLS:

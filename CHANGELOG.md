@@ -1,5 +1,37 @@
 # Changelog
 
+## v1.2.2 (2026-11-15)
+
+Second check of the revision before resubmission. Point estimates of the main
+scores are unchanged; the changes concern uncertainty, a secondary test,
+sensitivity analyses and the reporting of the copy-number analysis.
+
+### Fixed
+
+- `31_rescore_common_cells.py`: the non-circular tool set (secondary Friedman
+  test on the database-derived labels) still excluded SignacX, a leftover of the
+  original submission in which SignacX had no output on GSE223204; it now holds
+  the 10 configurations that share no resources with these labels
+  (chi2 = 25.75, p = 0.002; was 9 configurations, p = 0.051).
+- `31_rescore_common_cells.py`: GSE149614 bootstrap resamples its 10 patients
+  (all sampling sites of a patient together) instead of its 21 samples.
+- `37`, `41`, `45`: results stored without intermediate rounding (the
+  supplement had rounded twice, e.g. CellTypist simulated macro F1 0.042
+  instead of 0.041); `37` also scores the GSE156625 investigator labels.
+- `47`: Table 2 (SingleCellNet can abstain), Figure 6 labels (CNV-high),
+  legibility of Figures 3 and 5.
+- `48`: supplementary tables numbered in order of first citation, three tables
+  added, CNV-high wording, Supplementary Data 3a/3b.
+
+### Added
+
+- `51_sensitivity_lopo_cnv.py`: stromal-label mapping sensitivity (HPCA
+  `Tissue_stem_cells` counted as fibroblast), GSE149614 leave-one-patient-out,
+  CNV-high hepatocytes by sample and sampling site, GSE156625 cluster purity.
+- `expected_results_rev2/`: the outputs of `51`; regenerated scores, pairwise
+  bootstrap, Friedman results, comparison runs (`original_mapping/`,
+  `original_predictions/`) and manuscript numbers.
+
 ## v1.2.1 (2026-11-15)
 
 ### Added

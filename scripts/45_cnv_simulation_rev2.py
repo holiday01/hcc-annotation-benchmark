@@ -127,9 +127,9 @@ def simulated():
         lab = d["pred_celltype"].fillna("Unknown").astype(str).map(r31.cb.broad6).reindex(gt.index).fillna("NotRun")
         _, yp = r31.encode(gt, lab, r31.BROAD6)
         m = r31.metrics_from_cm(r31.confmat(yt, yp, len(r31.BROAD6)), present)
-        rows.append({"Tool": t, "N_cells": len(gt), "Coverage": round(m["coverage"], 4),
-                     "Accuracy": round(m["acc"], 4), "MacroF1": round(m["macro_f1"], 4),
-                     **{f"F1_{c}": round(v, 4) for c, v in zip(r31.BROAD6, m["f1"])}})
+        rows.append({"Tool": t, "N_cells": len(gt), "Coverage": round(m["coverage"], 6),
+                     "Accuracy": round(m["acc"], 6), "MacroF1": round(m["macro_f1"], 6),
+                     **{f"F1_{c}": round(v, 6) for c, v in zip(r31.BROAD6, m["f1"])}})
     df = pd.DataFrame(rows)
     df.to_csv(f"{OUT}/rev2_simulated.csv", index=False)
     print(df.to_string(index=False), flush=True)

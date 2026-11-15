@@ -5,7 +5,7 @@ tools for hepatocellular carcinoma (HCC) single-cell RNA sequencing,
 spanning reference-based classifiers, marker-database scoring, a Bayesian
 marker-gene model, a large language model API, and a single-cell
 foundation model, evaluated under both author-curated and database-derived
-ground truth, with an independent inferCNV-based malignant-cell validation.
+ground truth, with an exploratory inferCNV-based copy-number analysis.
 
 > **Note**: This repository contains analysis code only. Manuscript and
 > figures will be released after acceptance. See `CITATION.cff` for how to
@@ -170,7 +170,8 @@ so both can be compared.
   same cells; abstentions (Unknown, unassigned, pruned, quality-control flags)
   count as errors; macro F1 is averaged over the reference classes only (the
   same class set for every tool); coverage, Cohen's kappa and selective scores
-  are reported; sample-level bootstrap intervals, paired bootstrap differences,
+  are reported; patient-level bootstrap intervals (GSE149614: 10 patients with
+  all their sampling sites), paired bootstrap differences,
   permutation nulls and Friedman/Nemenyi tests.
 - **One label harmonisation** for every tool and for the database-derived labels
   (`scripts/_canonical_broad.py`; full table in
@@ -178,8 +179,9 @@ so both can be compared.
 - **Reference labels**: investigator-curated labels for GSE125449, GSE149614 and
   GSE156625 (the latter extracted from the authors' GEO object:
   `ground_truth/GSE156625_published_ground_truth.tsv`); the flow-sorted design of
-  GSE162616; copy-number inference. The enrichR labels are a secondary
-  concordance reference only.
+  GSE162616; copy-number signal as an exploratory analysis (CNV-high = top
+  quartile of the CNV score, a relative threshold, not a malignancy call). The
+  enrichR labels are a secondary concordance reference only.
 - **Tools**: Seurat label transfer, scmap, scPred and SingleCellNet added, and
   SingleR additionally run with a liver reference (12 configurations of 11
   tools). Every tool that accepts a reference is trained on one shared DISCO liver
@@ -197,7 +199,7 @@ so both can be compared.
 | Re-runs | `34_rerun_SignacX_rev2.R` (+ `_signacx_patched.R`), `36_rerun_CellAssign_rev2.py`, `35_scgpt_leave_cohort_out.py` (+ `torchtext_shim_for_scgpt/`) |
 | Added tools | `43_run_reference_tools_rev2.R` (Seurat label transfer, SingleR with the liver reference), `44_run_scmap_scn_scpred_rev2.R` |
 | Scoring and statistics | `31_rescore_common_cells.py`, `32_rev2_decomposition.py` (original → revised scores, step by step) |
-| Additional analyses | `37_scgpt_k_sensitivity.py`, `41_sorted_ILC_check_GSE162616.py`, `45_cnv_simulation_rev2.py` |
+| Additional analyses | `37_scgpt_k_sensitivity.py`, `41_sorted_ILC_check_GSE162616.py`, `45_cnv_simulation_rev2.py`, `51_sensitivity_lopo_cnv.py` (stromal-label mapping sensitivity, GSE149614 leave-one-patient-out, CNV-high by sample, GSE156625 cluster purity) |
 | Manuscript tables, figures and number checks | `46_manuscript_numbers.py`, `47_make_tables_figures_rev2.py`, `48_make_supplement_rev2.py`, `49_crosscheck_numbers.py` (47–49 write to the manuscript folder set in each script) |
 | Per-cell predictions | `50_export_predictions_rev2.py` → `predictions_rev2/` |
 | Optional, not used in the paper | `39_build_annotation_package.py`, `40_ingest_annotations.py` (blinded cluster-annotation package) |

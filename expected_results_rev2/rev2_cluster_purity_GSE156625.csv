@@ -1,0 +1,3 @@
+Partition,N_cells,N_clusters,Majority_label_share
+authors' clustering (used by ScType and CyteType),71809,28,0.983414
+independent re-clustering (39_build_annotation_package.py),71809,41,0.978429

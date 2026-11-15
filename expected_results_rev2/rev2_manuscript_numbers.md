@@ -9,73 +9,73 @@
 | `published_N_GSE156625` | 71809 | GT-labelled cells scored |
 | `pub_meanF1_ScType` | 0.962 | mean macro F1 over 3 published cohorts (coverage-aware) |
 | `pub_F1_ScType_GSE125449` | 0.99 | sample CI 0.976-0.995; cov 1.000; sel 0.993 |
-| `pub_F1_ScType_GSE149614` | 0.935 | sample CI 0.914-0.946; cov 1.000; sel 0.941 |
+| `pub_F1_ScType_GSE149614` | 0.935 | sample CI 0.917-0.947; cov 1.000; sel 0.941 |
 | `pub_F1_ScType_GSE156625` | 0.961 | sample CI 0.938-0.972; cov 0.978; sel 0.960 |
 | `pub_minCov_ScType` | 0.978 |  |
 | `pub_meanF1_CyteType` | 0.958 | mean macro F1 over 3 published cohorts (coverage-aware) |
 | `pub_F1_CyteType_GSE125449` | 0.982 | sample CI 0.948-0.989; cov 1.000; sel 0.984 |
-| `pub_F1_CyteType_GSE149614` | 0.928 | sample CI 0.900-0.945; cov 0.952; sel 0.937 |
+| `pub_F1_CyteType_GSE149614` | 0.928 | sample CI 0.907-0.943; cov 0.952; sel 0.937 |
 | `pub_F1_CyteType_GSE156625` | 0.964 | sample CI 0.941-0.974; cov 1.000; sel 0.960 |
 | `pub_minCov_CyteType` | 0.952 |  |
 | `pub_meanF1_SingleRdisco` | 0.939 | mean macro F1 over 3 published cohorts (coverage-aware) |
 | `pub_F1_SingleRdisco_GSE125449` | 0.921 | sample CI 0.832-0.968; cov 0.979; sel 0.925 |
-| `pub_F1_SingleRdisco_GSE149614` | 0.938 | sample CI 0.922-0.945; cov 0.999; sel 0.950 |
+| `pub_F1_SingleRdisco_GSE149614` | 0.938 | sample CI 0.927-0.944; cov 0.999; sel 0.950 |
 | `pub_F1_SingleRdisco_GSE156625` | 0.96 | sample CI 0.938-0.971; cov 0.999; sel 0.964 |
 | `pub_minCov_SingleRdisco` | 0.979 |  |
 | `pub_meanF1_scGPT` | 0.934 | mean macro F1 over 3 published cohorts (coverage-aware) |
 | `pub_F1_scGPT_GSE125449` | 0.935 | sample CI 0.870-0.964; cov 1.000; sel 0.959 |
-| `pub_F1_scGPT_GSE149614` | 0.937 | sample CI 0.922-0.946; cov 1.000; sel 0.948 |
+| `pub_F1_scGPT_GSE149614` | 0.937 | sample CI 0.923-0.945; cov 1.000; sel 0.948 |
 | `pub_F1_scGPT_GSE156625` | 0.93 | sample CI 0.868-0.949; cov 1.000; sel 0.951 |
 | `pub_minCov_scGPT` | 1.0 |  |
 | `pub_meanF1_scPred` | 0.931 | mean macro F1 over 3 published cohorts (coverage-aware) |
 | `pub_F1_scPred_GSE125449` | 0.962 | sample CI 0.925-0.971; cov 0.957; sel 0.979 |
-| `pub_F1_scPred_GSE149614` | 0.922 | sample CI 0.901-0.933; cov 0.931; sel 0.947 |
+| `pub_F1_scPred_GSE149614` | 0.922 | sample CI 0.908-0.929; cov 0.931; sel 0.947 |
 | `pub_F1_scPred_GSE156625` | 0.91 | sample CI 0.855-0.932; cov 0.873; sel 0.941 |
 | `pub_minCov_scPred` | 0.873 |  |
 | `pub_meanF1_SeuratLT` | 0.93 | mean macro F1 over 3 published cohorts (coverage-aware) |
 | `pub_F1_SeuratLT_GSE125449` | 0.964 | sample CI 0.927-0.973; cov 1.000; sel 0.974 |
-| `pub_F1_SeuratLT_GSE149614` | 0.92 | sample CI 0.902-0.931; cov 1.000; sel 0.947 |
+| `pub_F1_SeuratLT_GSE149614` | 0.92 | sample CI 0.907-0.927; cov 1.000; sel 0.947 |
 | `pub_F1_SeuratLT_GSE156625` | 0.906 | sample CI 0.843-0.938; cov 1.000; sel 0.943 |
 | `pub_minCov_SeuratLT` | 1.0 |  |
 | `pub_meanF1_CellTypist` | 0.901 | mean macro F1 over 3 published cohorts (coverage-aware) |
 | `pub_F1_CellTypist_GSE125449` | 0.972 | sample CI 0.932-0.982; cov 1.000; sel 0.978 |
-| `pub_F1_CellTypist_GSE149614` | 0.931 | sample CI 0.909-0.945; cov 1.000; sel 0.936 |
+| `pub_F1_CellTypist_GSE149614` | 0.931 | sample CI 0.910-0.945; cov 1.000; sel 0.936 |
 | `pub_F1_CellTypist_GSE156625` | 0.801 | sample CI 0.708-0.865; cov 1.000; sel 0.882 |
 | `pub_minCov_CellTypist` | 1.0 |  |
 | `pub_meanF1_CellAssign` | 0.883 | mean macro F1 over 3 published cohorts (coverage-aware) |
 | `pub_F1_CellAssign_GSE125449` | 0.817 | sample CI 0.712-0.929; cov 1.000; sel 0.837 |
-| `pub_F1_CellAssign_GSE149614` | 0.918 | sample CI 0.902-0.927; cov 1.000; sel 0.922 |
+| `pub_F1_CellAssign_GSE149614` | 0.918 | sample CI 0.903-0.927; cov 1.000; sel 0.922 |
 | `pub_F1_CellAssign_GSE156625` | 0.914 | sample CI 0.876-0.934; cov 1.000; sel 0.940 |
 | `pub_minCov_CellAssign` | 1.0 |  |
 | `pub_meanF1_SingleCellNet` | 0.849 | mean macro F1 over 3 published cohorts (coverage-aware) |
 | `pub_F1_SingleCellNet_GSE125449` | 0.838 | sample CI 0.726-0.919; cov 1.000; sel 0.857 |
-| `pub_F1_SingleCellNet_GSE149614` | 0.883 | sample CI 0.860-0.896; cov 1.000; sel 0.891 |
+| `pub_F1_SingleCellNet_GSE149614` | 0.883 | sample CI 0.862-0.896; cov 1.000; sel 0.891 |
 | `pub_F1_SingleCellNet_GSE156625` | 0.825 | sample CI 0.769-0.863; cov 1.000; sel 0.851 |
 | `pub_minCov_SingleCellNet` | 1.0 |  |
 | `pub_meanF1_scmap` | 0.842 | mean macro F1 over 3 published cohorts (coverage-aware) |
 | `pub_F1_scmap_GSE125449` | 0.824 | sample CI 0.696-0.928; cov 0.905; sel 0.852 |
-| `pub_F1_scmap_GSE149614` | 0.916 | sample CI 0.890-0.930; cov 0.980; sel 0.934 |
+| `pub_F1_scmap_GSE149614` | 0.916 | sample CI 0.894-0.929; cov 0.980; sel 0.934 |
 | `pub_F1_scmap_GSE156625` | 0.786 | sample CI 0.696-0.845; cov 0.752; sel 0.949 |
 | `pub_minCov_scmap` | 0.752 |  |
 | `pub_meanF1_SingleR` | 0.824 | mean macro F1 over 3 published cohorts (coverage-aware) |
 | `pub_F1_SingleR_GSE125449` | 0.896 | sample CI 0.854-0.921; cov 0.934; sel 0.974 |
-| `pub_F1_SingleR_GSE149614` | 0.764 | sample CI 0.712-0.808; cov 0.957; sel 0.846 |
+| `pub_F1_SingleR_GSE149614` | 0.764 | sample CI 0.705-0.809; cov 0.957; sel 0.846 |
 | `pub_F1_SingleR_GSE156625` | 0.812 | sample CI 0.776-0.835; cov 0.973; sel 0.922 |
 | `pub_minCov_SingleR` | 0.934 |  |
 | `pub_meanF1_SignacX` | 0.785 | mean macro F1 over 3 published cohorts (coverage-aware) |
 | `pub_F1_SignacX_GSE125449` | 0.852 | sample CI 0.774-0.874; cov 0.846; sel 0.939 |
-| `pub_F1_SignacX_GSE149614` | 0.8 | sample CI 0.721-0.840; cov 0.824; sel 0.917 |
+| `pub_F1_SignacX_GSE149614` | 0.8 | sample CI 0.720-0.834; cov 0.824; sel 0.917 |
 | `pub_F1_SignacX_GSE156625` | 0.704 | sample CI 0.603-0.764; cov 0.877; sel 0.861 |
 | `pub_minCov_SignacX` | 0.824 |  |
 | `pub_meanF1_range` | 0.785-0.962 |  |
 | `friedman_A_6cohorts_6tools_noSignacX` | chi2=7.91, p=0.162, n=6, k=6 |  |
 | `friedman_B_5cohorts_7tools` | chi2=15.26, p=0.0184, n=5, k=7 |  |
-| `friedman_C_6cohorts_noncircular` | chi2=15.42, p=0.0514, n=6, k=9 |  |
+| `friedman_C_6cohorts_noncircular` | chi2=25.75, p=0.00225, n=6, k=10 |  |
 | `friedman_D_published_3cohorts_7tools` | chi2=12.86, p=0.0454, n=3, k=7 |  |
 | `friedman_E_published_3cohorts_12tools` | chi2=24.08, p=0.0124, n=3, k=12 |  |
 | `nemenyi_E_min_p` | 0.126 (ScType vs SignacX) |  |
 | `pairs_sampleCI_excl0_GSE125449` | 47 of 66 |  |
-| `pairs_sampleCI_excl0_GSE149614` | 41 of 66 |  |
+| `pairs_sampleCI_excl0_GSE149614` | 38 of 66 |  |
 | `pairs_sampleCI_excl0_GSE156625` | 52 of 66 |  |
 | `b7_F1_CellTypist` | 0.817 | Malignant 0.342; HPC-like 0.531 |
 | `b7_F1_SingleR` | 0.739 | Malignant 0.779; HPC-like 0.000 |
@@ -154,19 +154,19 @@
 | `enrichR_omits_Myeloid_GSE156625` | 2838 of 5917 |  |
 | `sorted_TNK_range` | 79.6-91.4% |  |
 | `sorted_nonimmune_max` | 0.86% (ScType) |  |
-| `sorted_CellTypist` | T/NK 91.26%, Myeloid 4.97%, B 3.77%, non-immune 0.0%, Unknown 0.0% |  |
-| `sorted_SingleR` | T/NK 90.69%, Myeloid 4.45%, B 3.0%, non-immune 0.23%, Unknown 1.64% |  |
-| `sorted_ScType` | T/NK 79.61%, Myeloid 13.23%, B 3.81%, non-immune 0.86%, Unknown 2.48% |  |
-| `sorted_CellAssign` | T/NK 91.21%, Myeloid 4.32%, B 3.75%, non-immune 0.72%, Unknown 0.0% |  |
-| `sorted_SignacX` | T/NK 89.23%, Myeloid 4.08%, B 1.02%, non-immune 0.0%, Unknown 5.66% |  |
-| `sorted_CyteType` | T/NK 83.81%, Myeloid 4.45%, B 7.85%, non-immune 0.0%, Unknown 3.88% |  |
-| `sorted_scGPT` | T/NK 90.32%, Myeloid 5.75%, B 3.56%, non-immune 0.37%, Unknown 0.0% |  |
-| `sorted_SeuratLT` | T/NK 89.66%, Myeloid 6.54%, B 3.57%, non-immune 0.23%, Unknown 0.0% |  |
-| `sorted_SingleRdisco` | T/NK 91.44%, Myeloid 5.31%, B 2.37%, non-immune 0.28%, Unknown 0.6% |  |
-| `sorted_scmap` | T/NK 83.94%, Myeloid 4.48%, B 1.55%, non-immune 0.18%, Unknown 9.84% |  |
-| `sorted_scPred` | T/NK 88.94%, Myeloid 5.52%, B 3.63%, non-immune 0.23%, Unknown 1.68% |  |
-| `sorted_SingleCellNet` | T/NK 88.14%, Myeloid 5.73%, B 5.87%, non-immune 0.26%, Unknown 0.0% |  |
-| `sorted_enrichR GT (reference only)` | T/NK 65.82%, Myeloid 5.85%, B 3.81%, non-immune 0.0%, Unknown 24.52% |  |
+| `sorted_CellTypist` | T/NK 91.2611%, Myeloid 4.9667%, B 3.7722%, non-immune 0.0%, Unknown 0.0% |  |
+| `sorted_SingleR` | T/NK 90.6865%, Myeloid 4.4481%, B 2.9986%, non-immune 0.2305%, Unknown 1.6364% |  |
+| `sorted_ScType` | T/NK 79.6127%, Myeloid 13.2272%, B 3.8124%, non-immune 0.8645%, Unknown 2.4834% |  |
+| `sorted_CellAssign` | T/NK 91.2087%, Myeloid 4.3206%, B 3.746%, non-immune 0.7248%, Unknown 0.0% |  |
+| `sorted_SignacX` | T/NK 89.2335%, Myeloid 4.0813%, B 1.0234%, non-immune 0.0%, Unknown 5.6618% |  |
+| `sorted_CyteType` | T/NK 83.8145%, Myeloid 4.4515%, B 7.8535%, non-immune 0.0%, Unknown 3.8805% |  |
+| `sorted_scGPT` | T/NK 90.3233%, Myeloid 5.7456%, B 3.5609%, non-immune 0.3702%, Unknown 0.0% |  |
+| `sorted_SeuratLT` | T/NK 89.6614%, Myeloid 6.5385%, B 3.5714%, non-immune 0.2288%, Unknown 0.0% |  |
+| `sorted_SingleRdisco` | T/NK 91.4375%, Myeloid 5.3143%, B 2.3699%, non-immune 0.2829%, Unknown 0.5955% |  |
+| `sorted_scmap` | T/NK 83.9385%, Myeloid 4.483%, B 1.5525%, non-immune 0.1816%, Unknown 9.8444% |  |
+| `sorted_scPred` | T/NK 88.9401%, Myeloid 5.5203%, B 3.6255%, non-immune 0.2305%, Unknown 1.6835% |  |
+| `sorted_SingleCellNet` | T/NK 88.1385%, Myeloid 5.7299%, B 5.8749%, non-immune 0.2567%, Unknown 0.0% |  |
+| `sorted_enrichR GT (reference only)` | T/NK 65.8162%, Myeloid 5.8487%, B 3.8124%, non-immune 0.0%, Unknown 24.5228% |  |
 | `disco_removed_GSE125449` | 0 cells / 0 samples |  |
 | `disco_removed_GSE149614` | 0 cells / 0 samples |  |
 | `disco_removed_GSE156625` | 80787 cells / 57 samples |  |
@@ -217,6 +217,63 @@
 | `cnv_GSE149614_scmap_20729` | Frac_Hepatocyte_pred_that_is_CNV_Mal=0.631; Precision_CNV_Mal=0.631; Recall_CNV_Mal=0.727; F1_CNV_Mal=0.676 |  |
 | `cnv_GSE149614_scPred_22168` | Frac_Hepatocyte_pred_that_is_CNV_Mal=0.621; Precision_CNV_Mal=0.621; Recall_CNV_Mal=0.766; F1_CNV_Mal=0.686 |  |
 | `cnv_GSE149614_SingleCellNet_21782` | Frac_Hepatocyte_pred_that_is_CNV_Mal=0.626; Precision_CNV_Mal=0.626; Recall_CNV_Mal=0.758; F1_CNV_Mal=0.685 |  |
-| `simulated_CellTypist_5000` | Coverage=1.0; Accuracy=0.1422; MacroF1=0.0415; F1_T/NK=0.0; F1_Myeloid=0.0; F1_Hepatocyte=0.249; F1_B=0.0; F1_Endothelial=0.0; F1_Fibroblast=0.0 |  |
-| `simulated_ScType_5000` | Coverage=1.0; Accuracy=0.2882; MacroF1=0.1208; F1_T/NK=0.4617; F1_Myeloid=0.1806; F1_Hepatocyte=0.0824; F1_B=0.0; F1_Endothelial=0.0; F1_Fibroblast=0.0 |  |
-| `simulated_SingleR_5000` | Coverage=0.9214; Accuracy=0.1082; MacroF1=0.0347; F1_T/NK=0.0; F1_Myeloid=0.2084; F1_Hepatocyte=0.0; F1_B=0.0; F1_Endothelial=0.0; F1_Fibroblast=0.0 |  |
+| `simulated_CellTypist_5000` | Coverage=1.0; Accuracy=0.1422; MacroF1=0.041499; F1_T/NK=0.0; F1_Myeloid=0.0; F1_Hepatocyte=0.248993; F1_B=0.0; F1_Endothelial=0.0; F1_Fibroblast=0.0 |  |
+| `simulated_ScType_5000` | Coverage=1.0; Accuracy=0.2882; MacroF1=0.120775; F1_T/NK=0.461667; F1_Myeloid=0.180564; F1_Hepatocyte=0.082418; F1_B=0.0; F1_Endothelial=0.0; F1_Fibroblast=0.0 |  |
+| `simulated_SingleR_5000` | Coverage=0.9214; Accuracy=0.1082; MacroF1=0.034726; F1_T/NK=0.0; F1_Myeloid=0.208357; F1_Hepatocyte=0.0; F1_B=0.0; F1_Endothelial=0.0; F1_Fibroblast=0.0 |  |
+| `refgap_canonical_GSE125449` | liver 0.921; HPCA 0.896; diff 0.025 (95% CI -0.061 to 0.080); fibroblast share 2.58 | SingleR liver reference - SingleR HPCA; patient-level paired bootstrap |
+| `refgap_canonical_GSE149614` | liver 0.937; HPCA 0.764; diff 0.173 (95% CI 0.132 to 0.229); fibroblast share 0.61 | SingleR liver reference - SingleR HPCA; patient-level paired bootstrap |
+| `refgap_canonical_GSE156625` | liver 0.960; HPCA 0.812; diff 0.147 (95% CI 0.130 to 0.172); fibroblast share 0.69 | SingleR liver reference - SingleR HPCA; patient-level paired bootstrap |
+| `refgap_canonical_Mean` | liver 0.939; HPCA 0.824; diff 0.115 (95% CI 0.083 to 0.142); fibroblast share 0.79 | SingleR liver reference - SingleR HPCA; patient-level paired bootstrap |
+| `refgap_lenient_GSE125449` | liver 0.921; HPCA 0.964; diff -0.043 (95% CI -0.126 to -0.001); fibroblast share 0.10 | SingleR liver reference - SingleR HPCA; patient-level paired bootstrap |
+| `refgap_lenient_GSE149614` | liver 0.937; HPCA 0.851; diff 0.086 (95% CI 0.041 to 0.157); fibroblast share 0.22 | SingleR liver reference - SingleR HPCA; patient-level paired bootstrap |
+| `refgap_lenient_GSE156625` | liver 0.960; HPCA 0.900; diff 0.060 (95% CI 0.043 to 0.097); fibroblast share 0.23 | SingleR liver reference - SingleR HPCA; patient-level paired bootstrap |
+| `refgap_lenient_Mean` | liver 0.939; HPCA 0.905; diff 0.034 (95% CI 0.006 to 0.066); fibroblast share 0.28 | SingleR liver reference - SingleR HPCA; patient-level paired bootstrap |
+| `stromal_SingleR_HPCA_GSE125449` | canonical 0.896 (fibroblast F1 0.560); lenient 0.964 (fibroblast F1 0.967) |  |
+| `stromal_SingleR_HPCA_GSE149614` | canonical 0.764 (fibroblast F1 0.317); lenient 0.851 (fibroblast F1 0.840) |  |
+| `stromal_SingleR_HPCA_GSE156625` | canonical 0.812 (fibroblast F1 0.362); lenient 0.900 (fibroblast F1 0.887) |  |
+| `stromal_configs_changed` | SingleR | configurations whose score changes |
+| `lopo_GSE149614_CellAssign` | all 0.918; leave-one-patient-out 0.914-0.921 |  |
+| `lopo_GSE149614_CellTypist` | all 0.931; leave-one-patient-out 0.925-0.935 |  |
+| `lopo_GSE149614_CyteType` | all 0.928; leave-one-patient-out 0.923-0.935 |  |
+| `lopo_GSE149614_ScType` | all 0.935; leave-one-patient-out 0.930-0.940 |  |
+| `lopo_GSE149614_SeuratLT` | all 0.920; leave-one-patient-out 0.916-0.922 |  |
+| `lopo_GSE149614_SignacX` | all 0.800; leave-one-patient-out 0.778-0.816 |  |
+| `lopo_GSE149614_SingleCellNet` | all 0.883; leave-one-patient-out 0.875-0.890 |  |
+| `lopo_GSE149614_SingleR` | all 0.764; leave-one-patient-out 0.751-0.777 |  |
+| `lopo_GSE149614_SingleRdisco` | all 0.937; leave-one-patient-out 0.935-0.940 |  |
+| `lopo_GSE149614_scGPT` | all 0.937; leave-one-patient-out 0.932-0.939 |  |
+| `lopo_GSE149614_scPred` | all 0.922; leave-one-patient-out 0.918-0.924 |  |
+| `lopo_GSE149614_scmap` | all 0.916; leave-one-patient-out 0.911-0.924 |  |
+| `lopo_GSE149614_gap_liver_minus_HPCA` | all 0.173; 0.158-0.184 |  |
+| `lopo_GSE149614_max_shift` | 0.022 | largest change of any configuration |
+| `cnvhigh_GSE149614_sample_HCC01T` | 21/71 (29.6%); median score 0.0097 |  |
+| `cnvhigh_GSE149614_sample_HCC02T` | 1866/2157 (86.5%); median score 0.0138 |  |
+| `cnvhigh_GSE149614_sample_HCC03N` | 180/827 (21.8%); median score 0.0102 |  |
+| `cnvhigh_GSE149614_sample_HCC03T` | 894/3474 (25.7%); median score 0.0097 |  |
+| `cnvhigh_GSE149614_sample_HCC04N` | 132/326 (40.5%); median score 0.0108 |  |
+| `cnvhigh_GSE149614_sample_HCC04T` | 2017/2454 (82.2%); median score 0.0128 |  |
+| `cnvhigh_GSE149614_sample_HCC05N` | 22/53 (41.5%); median score 0.0106 |  |
+| `cnvhigh_GSE149614_sample_HCC05T` | 805/1226 (65.7%); median score 0.0118 |  |
+| `cnvhigh_GSE149614_sample_HCC06N` | 170/248 (68.5%); median score 0.0128 |  |
+| `cnvhigh_GSE149614_sample_HCC06T` | 143/239 (59.8%); median score 0.0120 |  |
+| `cnvhigh_GSE149614_sample_HCC07N` | 27/53 (50.9%); median score 0.0113 |  |
+| `cnvhigh_GSE149614_sample_HCC07P` | 113/150 (75.3%); median score 0.0156 |  |
+| `cnvhigh_GSE149614_sample_HCC07T` | 62/85 (72.9%); median score 0.0146 |  |
+| `cnvhigh_GSE149614_sample_HCC08N` | 5/42 (11.9%); median score 0.0078 |  |
+| `cnvhigh_GSE149614_sample_HCC08P` | 2979/3179 (93.7%); median score 0.0147 |  |
+| `cnvhigh_GSE149614_sample_HCC08T` | 1040/1842 (56.5%); median score 0.0117 |  |
+| `cnvhigh_GSE149614_sample_HCC09N` | 31/140 (22.1%); median score 0.0096 |  |
+| `cnvhigh_GSE149614_sample_HCC09T` | 1455/1489 (97.7%); median score 0.0167 |  |
+| `cnvhigh_GSE149614_sample_HCC10L` | 519/1463 (35.5%); median score 0.0102 |  |
+| `cnvhigh_GSE149614_sample_HCC10N` | 43/99 (43.4%); median score 0.0106 |  |
+| `cnvhigh_GSE149614_sample_HCC10T` | 624/1165 (53.6%); median score 0.0114 |  |
+| `cnvhigh_GSE149614_site_L` | 519/1463 (35.5%); median score 0.0102 |  |
+| `cnvhigh_GSE149614_site_N` | 610/1788 (34.1%); median score 0.0104 |  |
+| `cnvhigh_GSE149614_site_P` | 3092/3329 (92.9%); median score 0.0147 |  |
+| `cnvhigh_GSE149614_site_T` | 8927/14202 (62.9%); median score 0.0122 |  |
+| `cnvhigh_GSE149614_all_all` | 13148/20782 (63.3%); median score 0.0123 |  |
+| `cnvhigh_GSE149614_threshold_all cells` | 17979/71915 (25.0%); median score 0.0112 |  |
+| `cnvhigh_GSE149614_range_T_samples` | 25.7-97.7% (10 samples) |  |
+| `cnvhigh_GSE149614_range_N_samples` | 11.9-68.5% (8 samples) |  |
+| `purity_GSE156625_authors` | 98.3% (28 clusters, 71809 cells) | authors' clustering (used by ScType and CyteType) |
+| `purity_GSE156625_independent` | 97.8% (41 clusters, 71809 cells) | independent re-clustering (39_build_annotation_package.py) |
