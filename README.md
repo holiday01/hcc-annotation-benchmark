@@ -52,6 +52,15 @@ default by `scripts/10_build_enrichr_groundtruth.py`; pass `--refresh` to
 re-query the live EnrichR API (results may drift if upstream databases
 have changed).
 
+The snapshots were built by three scripts, all using the top 100 t-test marker
+genes per cluster and the CellMarker_2024 term with the smallest adjusted
+p-value: `10_build_enrichr_groundtruth.py` (GSE125449 and GSE149614, Leiden
+clustering at resolution 0.5 and 0.3), `10b_enrichr_gt_original3.py`
+(GSE162616, GSE202642 and GSE223204, clusters stored in the input objects; kept
+as run, with the input paths of the original analysis) and
+`16_prepare_gse156625_external.py` (GSE156625, the authors' Louvain clusters and
+marker ranking).
+
 ---
 
 ## Datasets

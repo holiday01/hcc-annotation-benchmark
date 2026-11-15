@@ -1,5 +1,19 @@
 # Changelog
 
+## Unreleased
+
+### Added
+
+- `scripts/10b_enrichr_gt_original3.py`: the script that built the enrichR
+  labels of GSE162616, GSE202642 and GSE223204 (previously missing from the
+  repository), kept as run on 2026-04-04.
+
+### Fixed
+
+- Docstring of `scripts/10_build_enrichr_groundtruth.py` and README: snapshot
+  dates (2026-04-04 and 2026-04-14), the term-selection rule (smallest adjusted
+  p-value; all labels from CellMarker_2024) and which script built each cohort.
+
 ## v1.2 — Revision 2 (2026-11-14)
 
 Accompanies the second revision of the manuscript (response to two reviewers).

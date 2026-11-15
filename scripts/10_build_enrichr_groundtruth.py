@@ -8,18 +8,23 @@ Default behaviour (deterministic / reproducible):
 
 Refresh behaviour (re-queries the live EnrichR API; non-deterministic):
     pass --refresh on the command line. The pipeline is:
-        1. Leiden cluster at a resolution that approximates the number of
-           known cell types.
-        2. rank_genes_groups (t-test) to find top marker genes per cluster.
-        3. enrichR against CellMarker_2024 + PanglaoDB_Augmented_2021 per
-           cluster.
-        4. Top hit becomes the cluster label.
+        1. Leiden clustering (resolution 0.5 for GSE125449, 0.3 for GSE149614).
+        2. rank_genes_groups (t-test) to find the top 100 marker genes per cluster.
+        3. enrichR against CellMarker_2024 per cluster (PanglaoDB_Augmented_2021,
+           then Tabula_Sapiens, only if a library returns no result).
+        4. The term with the smallest adjusted p-value becomes the cluster label.
         5. Broad-category mapping to standardised labels.
         6. Save 'ground_truth_enrichr_broad' to h5ad and overwrite the snapshot.
 
-EnrichR snapshots shipped in this repository were generated on 2026-04-09
+EnrichR snapshots shipped in this repository are dated 2026-04-04
 (GSE125449, GSE149614, GSE162616, GSE202642, GSE223204) and 2026-04-14
-(GSE156625) against CellMarker_2024 + PanglaoDB_Augmented_2021.
+(GSE156625). Every label comes from CellMarker_2024; the fallback libraries
+were never reached. This script builds GSE125449 and GSE149614.
+GSE162616, GSE202642 and GSE223204 were built by 10b_enrichr_gt_original3.py
+from the clusters stored in the input objects, and GSE156625 by
+16_prepare_gse156625_external.py from the authors' Louvain clusters and marker
+ranking. Re-deriving the markers and the Enrichr query from the stored clusters
+reproduces the snapshot term for all 115 clusters of the five cohorts.
 
 Usage:
     # Re-attach shipped labels to h5ad (default)
